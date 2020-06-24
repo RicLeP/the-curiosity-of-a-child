@@ -1,0 +1,4 @@
+name: thecuriosityofachild
+recipe: laravel
+config:
+  webroot: public
