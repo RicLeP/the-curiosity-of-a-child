@@ -4,8 +4,97 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7aa6df30a1ec85bae8d498aa7d7e5e89",
+    "content-hash": "f34996e6fd423b7a3e98f572aa7cf72b",
     "packages": [
+        {
+            "name": "apix/cache",
+            "version": "1.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apix/cache.git",
+                "reference": "1ed9395a0c42c9029c17462df1927d4536b513da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apix/cache/zipball/1ed9395a0c42c9029c17462df1927d4536b513da",
+                "reference": "1ed9395a0c42c9029c17462df1927d4536b513da",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/cache": "^1.0"
+            },
+            "provide": {
+                "psr/cache-implementation": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "satooshi/php-coveralls": "~0.7.1"
+            },
+            "suggest": {
+                "ext-apc": "Allows to cache into APC data store ~ up to PHP 5.4.",
+                "ext-apcu": "Allows to use APCu userland caching ~ any PHP version.",
+                "ext-igbinary": "Fast and small serialization format",
+                "ext-memcached": "Allows to use Memcached distributed memory caching system",
+                "ext-mongo": "Allows to cache into MongoDB instances using http://php.net/mongo  ~ up to PHP 5.6.",
+                "ext-mongodb": "Allows to cache into MongoDB instances using https://php.net/mongodb ~ from PHP 7 and above and HHVM.",
+                "ext-pdo": "Allows to cache into PDO supported DBs such as Oracle, MS SQL server, IBM DB2.",
+                "ext-pdo_mysql": "Allows to use MySQL.",
+                "ext-pdo_pgsql": "Allows to use PostgreSQL",
+                "ext-pdo_sqlite": "Allows to cache into SQLite.",
+                "ext-redis": "So you can cache into Redis servers.",
+                "msgpack/msgpack-php": "MessagePack serialization format"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Apix\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Franck Cassedanne",
+                    "email": "franck@ouarz.net"
+                },
+                {
+                    "name": "Apix Cache Community",
+                    "homepage": "https://github.com/frqnck/apix-cache/contributors"
+                }
+            ],
+            "description": "A thin PSR-6 cache wrapper with a generic interface to various caching backends emphasising cache taggging and indexing to Redis, Memcached, PDO/SQL, APC and other adapters.",
+            "homepage": "https://github.com/frqnck/apix-cache",
+            "keywords": [
+                "apc",
+                "apcu",
+                "cache",
+                "caching",
+                "filesystem",
+                "igbinary",
+                "json",
+                "memcache",
+                "memcached",
+                "mongo",
+                "mongodb",
+                "msgpack",
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "psr-6",
+                "psr-cache",
+                "psrCache",
+                "redis",
+                "serializer",
+                "session",
+                "sqlite",
+                "tagging"
+            ],
+            "time": "2020-06-11T09:10:14+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.1",
@@ -742,6 +831,66 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
+            "name": "imliam/laravel-env-set-command",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imliam/laravel-env-set-command.git",
+                "reference": "b579306ff613e82a44ea77eeebf058b3026a5b06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imliam/laravel-env-set-command/zipball/b579306ff613e82a44ea77eeebf058b3026a5b06",
+                "reference": "b579306ff613e82a44ea77eeebf058b3026a5b06",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "*",
+                "illuminate/support": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5",
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ImLiam\\EnvironmentSetCommand\\EnvironmentSetCommandServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ImLiam\\EnvironmentSetCommand\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liam Hammett",
+                    "email": "liam@liamhammett.com",
+                    "homepage": "https://liamhammett.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Set a .env file variable from the command line",
+            "homepage": "https://github.com/imliam/laravel-env-set-command",
+            "keywords": [
+                "artisan",
+                "env",
+                "environment",
+                "imliam",
+                "laravel-env-set-command",
+                "variables"
+            ],
+            "time": "2020-05-27T17:38:29+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v7.17.1",
             "source": {
@@ -1058,6 +1207,140 @@
             "time": "2020-06-21T20:50:13+00:00"
         },
         {
+            "name": "league/commonmark-ext-autolink",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark-ext-autolink.git",
+                "reference": "1e90bb2e2accac569c60bfeee1b9ef6cec2b5f12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark-ext-autolink/zipball/1e90bb2e2accac569c60bfeee1b9ef6cec2b5f12",
+                "reference": "1e90bb2e2accac569c60bfeee1b9ef6cec2b5f12",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "^1.3",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5"
+            },
+            "type": "commonmark-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\CommonMark\\Ext\\Autolink\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "https://www.colinodell.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Extension for league/commonmark which autolinks URLs, emails, and @-mentions",
+            "homepage": "https://github.com/thephpleague/commonmark-ext-autolink",
+            "keywords": [
+                "autolink",
+                "commonmark",
+                "extension",
+                "gfm",
+                "github",
+                "markdown",
+                "twitter"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/colinodell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/colinodell",
+                    "type": "patreon"
+                }
+            ],
+            "abandoned": "league/commonmark",
+            "time": "2020-04-04T14:19:36+00:00"
+        },
+        {
+            "name": "league/commonmark-ext-table",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark-ext-table.git",
+                "reference": "3228888ea69636e855efcf6636ff8e6316933fe7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark-ext-table/zipball/3228888ea69636e855efcf6636ff8e6316933fe7",
+                "reference": "3228888ea69636e855efcf6636ff8e6316933fe7",
+                "shasum": ""
+            },
+            "require": {
+                "league/commonmark": "~0.19.3|^1.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpstan/phpstan": "~0.11",
+                "phpunit/phpunit": "^7.0|^8.0",
+                "symfony/var-dumper": "^4.0",
+                "vimeo/psalm": "^3.0"
+            },
+            "type": "commonmark-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\CommonMark\\Ext\\Table\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Hasoň",
+                    "email": "martin.hason@gmail.com"
+                },
+                {
+                    "name": "Webuni s.r.o.",
+                    "homepage": "https://www.webuni.cz"
+                },
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "https://www.colinodell.com"
+                }
+            ],
+            "description": "Table extension for league/commonmark",
+            "homepage": "https://github.com/thephpleague/commonmark-ext-table",
+            "keywords": [
+                "commonmark",
+                "extension",
+                "markdown",
+                "table"
+            ],
+            "abandoned": "league/commonmark",
+            "time": "2019-09-26T13:28:33+00:00"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.0.69",
             "source": {
@@ -1146,6 +1429,73 @@
                 }
             ],
             "time": "2020-05-18T15:13:39+00:00"
+        },
+        {
+            "name": "masterminds/html5",
+            "version": "2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Masterminds/html5-php.git",
+                "reference": "a3edfe52f9e7380e498d33157e1330e85386645d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/a3edfe52f9e7380e498d33157e1330e85386645d",
+                "reference": "a3edfe52f9e7380e498d33157e1330e85386645d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35",
+                "sami/sami": "~2.0",
+                "satooshi/php-coveralls": "1.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masterminds\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Butcher",
+                    "email": "technosophos@gmail.com"
+                },
+                {
+                    "name": "Matt Farina",
+                    "email": "matt@mattfarina.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                }
+            ],
+            "description": "An HTML5 parser and serializer.",
+            "homepage": "http://masterminds.github.io/html5-php",
+            "keywords": [
+                "HTML5",
+                "dom",
+                "html",
+                "parser",
+                "querypath",
+                "serializer",
+                "xml"
+            ],
+            "time": "2020-02-06T11:39:04+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1237,6 +1587,69 @@
                 }
             ],
             "time": "2020-05-22T08:12:19+00:00"
+        },
+        {
+            "name": "mundschenk-at/php-typography",
+            "version": "v6.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mundschenk-at/php-typography.git",
+                "reference": "67af39c936751f96a959b9bf211044512675283c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mundschenk-at/php-typography/zipball/67af39c936751f96a959b9bf211044512675283c",
+                "reference": "67af39c936751f96a959b9bf211044512675283c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pcre": "*",
+                "masterminds/html5": "^2.5.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^2.2.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "ext-curl": "*",
+                "mundschenk-at/phpunit-cross-version": "dev-master",
+                "phpbench/phpbench": "^0.17||^1.0@dev",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "5.*||6.*||7.*|8.*|9.*",
+                "squizlabs/php_codesniffer": "^3",
+                "wp-coding-standards/wpcs": "^2.0"
+            },
+            "bin": [
+                "src/bin/update-patterns.php",
+                "src/bin/update-iana.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Peter Putzer",
+                    "email": "github@mundschenk.at",
+                    "homepage": "https://code.mundschenk.at",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Jeffrey D. King",
+                    "email": "jeff.king@weathersource.com",
+                    "homepage": "http://kingdesk.com",
+                    "role": "Original author"
+                }
+            ],
+            "description": "A PHP library for improving your web typography",
+            "time": "2020-04-05T12:14:12+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1498,6 +1911,52 @@
                 }
             ],
             "time": "2020-06-07T10:40:07+00:00"
+        },
+        {
+            "name": "psr/cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
@@ -1998,6 +2457,161 @@
                 }
             ],
             "time": "2020-03-29T20:13:32+00:00"
+        },
+        {
+            "name": "riclep/laravel-storyblok",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RicLeP/laravel-storyblok.git",
+                "reference": "01691f24361871520b68127b84f9f6603a36f12b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/01691f24361871520b68127b84f9f6603a36f12b",
+                "reference": "01691f24361871520b68127b84f9f6603a36f12b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/support": "^6.0|^7.0",
+                "imliam/laravel-env-set-command": "^1.0",
+                "league/commonmark": "^1.0",
+                "league/commonmark-ext-autolink": "^1.0",
+                "league/commonmark-ext-table": "^2.1",
+                "mundschenk-at/php-typography": "^6.5",
+                "php": "^7.1",
+                "storyblok/php-client": "^1.3",
+                "storyblok/richtext-resolver": "dev-master"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "orchestra/testbench": "4.0.*",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Riclep\\Storyblok\\StoryblokServiceProvider"
+                    ],
+                    "aliases": {
+                        "Storyblok": "Riclep\\Storyblok\\StoryblokFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Riclep\\Storyblok\\": "src",
+                    "Testcomponents\\Storyblok\\": "testcomponents/Storyblok"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Richard Le Poidevin",
+                    "email": "ric@wearebwi.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel wrapper around the Storyblok API to provide a familiar experience for Laravel devs",
+            "homepage": "https://bitbucket.org/rlepoidevin/storyblok/src",
+            "keywords": [
+                "cms",
+                "content management",
+                "headless cms",
+                "laravel",
+                "storyblok"
+            ],
+            "time": "2020-06-17T10:09:49+00:00"
+        },
+        {
+            "name": "storyblok/php-client",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/storyblok/php-client.git",
+                "reference": "1a244e96d5302e1e70cb312f7d7f635dae13be69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/storyblok/php-client/zipball/1a244e96d5302e1e70cb312f7d7f635dae13be69",
+                "reference": "1a244e96d5302e1e70cb312f7d7f635dae13be69",
+                "shasum": ""
+            },
+            "require": {
+                "apix/cache": "^1.2",
+                "guzzlehttp/guzzle": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Storyblok": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Feiglstorfer",
+                    "email": "delooks@gmail.com"
+                },
+                {
+                    "name": "Dominik Angerer",
+                    "email": "dominikangerer1@gmail.com"
+                }
+            ],
+            "description": "Storyblok Client to easily call the publishing api",
+            "keywords": [
+                "storyblok"
+            ],
+            "time": "2020-06-22T13:07:55+00:00"
+        },
+        {
+            "name": "storyblok/richtext-resolver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/storyblok/storyblok-php-richtext-renderer.git",
+                "reference": "a54d66074b9feaea2aa707fda248c266b1cd1cb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/storyblok/storyblok-php-richtext-renderer/zipball/a54d66074b9feaea2aa707fda248c266b1cd1cb3",
+                "reference": "a54d66074b9feaea2aa707fda248c266b1cd1cb3",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Storyblok\\RichtextRender\\": "src/"
+                },
+                "psr-0": {
+                    "Storyblok\\RichtextRender\\": "src/"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ademar Cardoso",
+                    "email": "ac@storyblok.com"
+                }
+            ],
+            "time": "2020-06-19T12:45:05+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4290,6 +4904,227 @@
     ],
     "packages-dev": [
         {
+            "name": "daverogers/serverpilot-php",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/daverogers/serverpilot-php.git",
+                "reference": "a5f846c178b0a6ca6d42d26df08286234cbd9f47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/daverogers/serverpilot-php/zipball/a5f846c178b0a6ca6d42d26df08286234cbd9f47",
+                "reference": "a5f846c178b0a6ca6d42d26df08286234cbd9f47",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Rogers",
+                    "email": "redcore@gmail.com"
+                }
+            ],
+            "description": "ServerPilot: the best way to run PHP websites.",
+            "homepage": "https://serverpilot.io/",
+            "keywords": [
+                "api",
+                "control panel",
+                "server management",
+                "serverpilot"
+            ],
+            "time": "2017-06-01T07:20:02+00:00"
+        },
+        {
+            "name": "deployer/deployer",
+            "version": "v6.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/deployer.git",
+                "reference": "4e243a64ed61e779fbb31c5a74e258a8e52fdaff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/4e243a64ed61e779fbb31c5a74e258a8e52fdaff",
+                "reference": "4e243a64ed61e779fbb31c5a74e258a8e52fdaff",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/phar-update": "~2.2",
+                "php": "^7.2",
+                "pimple/pimple": "~3.0",
+                "symfony/console": "~2.7|~3.0|~4.0|~5.0",
+                "symfony/process": "~2.7|~3.0|~4.0|~5.0",
+                "symfony/yaml": "~2.7|~3.0|~4.0|~5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "bin": [
+                "bin/dep"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Deployer\\": "src/"
+                },
+                "files": [
+                    "src/Support/helpers.php",
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "Deployment Tool",
+            "homepage": "https://deployer.org",
+            "funding": [
+                {
+                    "url": "https://github.com/antonmedv",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/deployer",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-04-25T16:05:31+00:00"
+        },
+        {
+            "name": "deployer/phar-update",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/phar-update.git",
+                "reference": "9ad07422f2cd43a1382ee8e134bdcd3a374848e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/phar-update/zipball/9ad07422f2cd43a1382ee8e134bdcd3a374848e3",
+                "reference": "9ad07422f2cd43a1382ee8e134bdcd3a374848e3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/console": "~2.7|~3.0|~4.0|~5.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.1.0",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/process": "~2.7|~3.0|~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Deployer\\Component\\PharUpdate\\": "src/",
+                    "Deployer\\Component\\PHPUnit\\": "src/PHPUnit/",
+                    "Deployer\\Component\\Version\\": "src/Version/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Herrera",
+                    "email": "kevin@herrera.io",
+                    "homepage": "http://kevin.herrera.io"
+                },
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io",
+                    "homepage": "https://medv.io"
+                }
+            ],
+            "description": "Integrates Phar Update to Symfony Console.",
+            "homepage": "https://github.com/deployphp/phar-update",
+            "keywords": [
+                "console",
+                "phar",
+                "update"
+            ],
+            "time": "2019-12-12T13:45:57+00:00"
+        },
+        {
+            "name": "deployer/recipes",
+            "version": "6.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/recipes.git",
+                "reference": "84b3229c518c094a950e1fe785b7b8f9598770fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/recipes/zipball/84b3229c518c094a950e1fe785b7b8f9598770fe",
+                "reference": "84b3229c518c094a950e1fe785b7b8f9598770fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.0"
+            },
+            "replace": {
+                "deployer/recipes": "self.version"
+            },
+            "require-dev": {
+                "deployer/deployer": "^6.3"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "3rd party deployer recipes",
+            "homepage": "https://github.com/deployphp/recipes",
+            "keywords": [
+                "cachetool",
+                "cloudflare",
+                "deploy",
+                "deployer",
+                "deployment",
+                "hipchat",
+                "newrelic",
+                "rabbit",
+                "recipes",
+                "sentry",
+                "slack",
+                "yarn"
+            ],
+            "abandoned": true,
+            "time": "2019-06-27T06:47:18+00:00"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "1.3.1",
             "source": {
@@ -4692,6 +5527,57 @@
                 "test"
             ],
             "time": "2016-01-20T08:20:44+00:00"
+        },
+        {
+            "name": "lorisleiva/laravel-deployer",
+            "version": "v0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lorisleiva/laravel-deployer.git",
+                "reference": "615ef1b18845bee60a22118c16cf532c95b57cb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lorisleiva/laravel-deployer/zipball/615ef1b18845bee60a22118c16cf532c95b57cb2",
+                "reference": "615ef1b18845bee60a22118c16cf532c95b57cb2",
+                "shasum": ""
+            },
+            "require": {
+                "deployer/deployer": "^6.1",
+                "deployer/recipes": "^6.0",
+                "illuminate/support": "^5.8|^6.0|^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lorisleiva\\LaravelDeployer\\LaravelDeployerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lorisleiva\\LaravelDeployer\\": "src/LaravelDeployer"
+                },
+                "files": [
+                    "src/autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loris LEIVA",
+                    "email": "loris.leiva@gmail.com"
+                }
+            ],
+            "description": "Laravel Deployer is a lightweight wrapper of Deployer giving Artisan the power of zero-downtime deployment.",
+            "time": "2020-04-07T13:22:32+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -5552,6 +6438,120 @@
             "time": "2020-06-22T07:06:58+00:00"
         },
         {
+            "name": "pimple/pimple",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silexphp/Pimple.git",
+                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/e55d12f9d6a0e7f9c85992b73df1267f46279930",
+                "reference": "e55d12f9d6a0e7f9c85992b73df1267f46279930",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5",
+                "psr/container": "^1.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^3.4|^4.4|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pimple": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Pimple, a simple Dependency Injection Container",
+            "homepage": "https://pimple.symfony.com",
+            "keywords": [
+                "container",
+                "dependency injection"
+            ],
+            "time": "2020-03-03T09:12:48+00:00"
+        },
+        {
+            "name": "riclep/serverpilot-deployer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:betleywhitehorneimage/serverpilot-deployer.git",
+                "reference": "7d38f334663a4d0969090e7e5aa9a2d421659c8c"
+            },
+            "require": {
+                "daverogers/serverpilot-php": "1.*",
+                "illuminate/support": "^7.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.1",
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Riclep\\ServerpilotDeployer\\ServerpilotDeployerServiceProvider"
+                    ],
+                    "aliases": {
+                        "ServerpilotDeployer": "Riclep\\ServerpilotDeployer\\ServerpilotDeployerFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Riclep\\ServerpilotDeployer\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Riclep\\ServerpilotDeployer\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Richard Le Poidevin",
+                    "email": "ric@wearebwi.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Set up a ServerPilot App with Deployer",
+            "homepage": "https://github.com/riclep/serverpilot-deployer",
+            "keywords": [
+                "riclep",
+                "serverpilot-deployer"
+            ],
+            "time": "2020-06-19T13:29:25+00:00"
+        },
+        {
             "name": "scrivo/highlight.php",
             "version": "v9.18.1.1",
             "source": {
@@ -6242,6 +7242,83 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "ea342353a3ef4f453809acc4ebc55382231d4d23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/ea342353a3ef4f453809acc4ebc55382231d4d23",
+                "reference": "ea342353a3ef4f453809acc4ebc55382231d4d23",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "symfony/console": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-20T17:43:50+00:00"
+        },
+        {
             "name": "theseer/tokenizer",
             "version": "1.1.3",
             "source": {
@@ -6333,7 +7410,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "riclep/serverpilot-deployer": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
