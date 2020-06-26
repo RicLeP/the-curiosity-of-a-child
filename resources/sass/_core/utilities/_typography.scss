@@ -1,0 +1,98 @@
+
+
+/*
+Typographic utilities
+*/
+
+html {
+	color: map_get($colours, body-text);
+}
+
+b, strong {
+	font-weight: $font-1-bold;
+}
+
+
+/*
+Utilities
+*/
+.t {
+	&-regular {
+		font-weight: $font-1-family;
+	}
+
+	&-bold {
+		font-weight: $font-1-bold;
+	}
+
+	&-uppercase {
+		text-transform: uppercase;
+	}
+
+	&-centred {
+		text-align: center;
+	}
+
+	&-underline {
+		text-decoration: underline;
+	}
+
+	&-leading-loose {
+		line-height: $leading-loose !important; // has to override scopes
+	}
+
+	&-leading-standard {
+		line-height: $leading-standard;
+	}
+
+	&-leading-tight {
+		line-height: $leading-tight !important; // has to override scopes
+	}
+
+	/*
+	Used to keep words together. This is a sentence, keep <span class="t-widows">these words together</span>
+	*/
+	&-widows {
+		white-space: nowrap;
+
+		&--s {
+			@media all and (max-width: 599px) {
+				white-space: nowrap;
+			}
+		}
+
+		&--m {
+			@media all and (min-height: 600px) and (max-width: 1023px) {
+				white-space: nowrap;
+			}
+		}
+
+		&--l {
+			@media all and (min-height: 1024px) {
+				white-space: nowrap;
+			}
+		}
+	}
+
+	&-break {
+		word-break: break-all;
+
+		&--s {
+			@media all and (max-width: 599px) {
+				word-break: break-all;
+			}
+		}
+
+		&--m {
+			@media all and (min-height: 600px) and (max-width: 1023px) {
+				word-break: break-all;
+			}
+		}
+
+		&--l {
+			@media all and (min-height: 1024px) {
+				word-break: break-all;
+			}
+		}
+	}
+}

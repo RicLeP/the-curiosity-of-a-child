@@ -1,50 +1,40 @@
 <?php
-//dd($story);
+//ddd($story);
 ?>
 
+@extends('layouts._default')
 
-@foreach($story->features as $feature)
-	@foreach($feature->body as $block)
+@section('content')
+	<main class="bgc-black l-episode">
+		<header class="u-v hero">
+			<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593170731/coac/ep16/ep16_hero_sc6pih.mp4" autoplay="true" muted="true" loop="true" width="100%">
+			</cld-video>
 
+			<div class="hero__overlay">
+				<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593206959/coac/common/ink_txqlf2.mp4" autoplay="true" muted="true" width="100%">
+				</cld-video>
+			</div>
 
-		<?php dump($block->componentPath); ?>
-		Is child of body: {{ $block->isChildOf('body') }}<br>
-		Is ancestor of features: {{ $block->isAncestorOf('features') }}<br>
-		Is layout: {{ $block->isLayout() }}<br>
-		Inside layout: {{ $block->getLayout() }}<br>
-		Class with parent: {{ $block->cssClassWithParent() }}<br>
-		Class with layout: {{ $block->cssClassWithLayout() }}<br>
-		<?php // dump($block); ?>
+			<div class="hero__content fgc-white">
+				<h1 class="u-mb-10 hero__title">{{ $story->title }}</h1>
+				<h2 class="hero__subtitle">{{ $story->subtitle }}</h2>
+			</div>
+		</header>
 
-		@foreach($block->content() as $item)
-			@if ($item instanceof \Riclep\Storyblok\Block)
-				<?php dump($item->componentPath); ?>
-				Is child of body: {{ $item->isChildOf('body') }}<br>
-				Is ancestor of features: {{ $item->isAncestorOf('features') }}<br>
-				Is layout: {{ $item->isLayout() }}<br>
-				Inside layout: {{ $item->getLayout() }}<br>
-				Class with parent: {{ $item->cssClassWithParent() }}<br>
-				Class with layout: {{ $item->cssClassWithLayout() }}<br>
+		<div class="t-3 fgc-white u-mb-30 l-episode__centre">
+			{!! $story->intro_html !!}
+		</div>
 
-				<?php // dump($item); ?>
+		@foreach($story->features as $feature)
+			<section class="u-mb-100 fgc-white l-episode__centre feature">
+				<h3 class="t-2 u-mb-30">
+					{{ $feature->title }}
+				</h3>
 
-				@foreach($item as $item2)
-					@if ($item2 instanceof \Riclep\Storyblok\Block)
-						<?php dump($item2->componentPath); ?>
-						Is child of body: {{ $item2->isChildOf('body') }}<br>
-						Is ancestor of features: {{ $item2->isAncestorOf('features') }}<br>
-						Is layout: {{ $item2->isLayout() }}<br>
-						Inside layout: {{ $item2->getLayout() }}<br>
-						Class with parent: {{ $item2->cssClassWithParent() }}<br>
-						Class with layout: {{ $item2->cssClassWithLayout() }}<br>
-					@endif
+				@foreach($feature->body as $section)
+					@include('storyblok.blocks._' . $section->component(), ['content' => $section])
 				@endforeach
-			@endif
+			</section>
 		@endforeach
-		<hr><br><br>
-	@endforeach
-	<?php
-	exit();
-	?>
-	<hr><br><br>
-@endforeach
+	</main>
+@endsection

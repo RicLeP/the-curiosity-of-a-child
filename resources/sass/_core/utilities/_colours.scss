@@ -1,0 +1,52 @@
+/*
+
+Takes all the colours in the $colours map and turns them into classes for the foreground and background
+
+Example;
+$colours: (
+	body-text: #222
+);
+
+becomes
+
+.bgc-body-text {
+	background-color :#222;
+}
+
+.fgc-body-text {
+	color: #222;
+}
+
+.fill-body-text {
+	color: #222;
+}
+
+Colours are defined in _settings.scss
+
+*/
+
+/* purgecss start ignore */
+.bgc {
+	@each $key, $value in $colours {
+		&-#{$key} {
+			background-color: map_get($colours, $key)
+		}
+	}
+}
+
+.fgc {
+	@each $key, $value in $colours {
+		&-#{$key} {
+			color: map_get($colours, $key)
+		}
+	}
+}
+
+.fill {
+	@each $key, $value in $colours {
+		&-#{$key} {
+			fill: map_get($colours, $key)
+		}
+	}
+}
+/* purgecss end ignore */

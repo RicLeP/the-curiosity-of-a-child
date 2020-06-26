@@ -1,0 +1,11 @@
+
+
+.l-episode {
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: 1fr 1000px 1fr;
+
+	&__centre {
+		grid-column: 2;
+	}
+}

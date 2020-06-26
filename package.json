@@ -9,13 +9,24 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "devDependencies": {
+    "devDependencies": {},
+    "dependencies": {
         "axios": "^0.19",
+        "babel-polyfill": "^6.26.0",
+        "browser-sync": "^2.26",
+        "browser-sync-webpack-plugin": "^2.2",
+        "cloudinary-vue": "^1.1.1",
         "cross-env": "^7.0",
+        "glob-all": "^3.1.0",
         "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.13",
-        "resolve-url-loader": "^3.1.0",
-        "sass": "^1.15.2",
-        "sass-loader": "^8.0.0"
+        "laravel-mix-bundle-analyzer": "^1.0.5",
+        "purgecss": "^1.4.2",
+        "purgecss-webpack-plugin": "^1.6",
+        "sass": "^1.20.1",
+        "sass-loader": "^8.0.0",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10",
+        "vue-tweet-embed": "^2.4.0",
+        "vue2-google-maps": "^0.10.7"
     }
 }

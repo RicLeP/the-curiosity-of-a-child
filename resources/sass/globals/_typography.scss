@@ -1,0 +1,42 @@
+/*
+Specify all the typographic styles that are going to be reused.
+*/
+
+html {
+	font-family: $font-1-family;
+	font-weight: $font-1-regular;
+	font-size: 17px;
+}
+
+// Helper for each font used on the website. Use these only when a .t-# style doesn’t fit
+.f-1 {
+	font-family: $font-1-family;
+}
+
+/*
+Type styles for all major reusable typographic elements.
+If type is very context reliant for styling such as heroes that scale a lot with
+the screen size then create their styles within the block itself
+*/
+.t {
+	&-1 {
+		font-family: $font-1-family;
+		font-size: 50px;
+		font-weight: $font-1-bold;
+		line-height: 1.09;
+	}
+
+	&-2 {
+		font-family: $font-1-family;
+		font-size: 35px;
+		font-weight: $font-1-bold;
+		line-height: 1.09;
+	}
+
+	&-3 {
+		font-family: $font-1-family;
+		font-size: 24px;
+		font-weight: $font-1-bold;
+		line-height: 1.6;
+	}
+}

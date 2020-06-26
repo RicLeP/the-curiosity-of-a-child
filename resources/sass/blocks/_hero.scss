@@ -1,0 +1,31 @@
+
+
+.hero {
+	grid-column: span 3;
+
+	position: relative;
+
+	&__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+
+		mix-blend-mode: multiply;
+	}
+
+	&__content {
+		position: absolute;
+		bottom: 100px;
+		left: 5%;
+	}
+
+	&__title {
+		font-size: 100px;
+		letter-spacing: -.01em;
+	}
+
+	&__subtitle {
+		font-size: 30px;
+	}
+}
