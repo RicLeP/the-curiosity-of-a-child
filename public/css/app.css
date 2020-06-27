@@ -21,7 +21,23 @@ CSS weights
 
 Font 1:
 The first font should be te primary one used for the majority of body copy
-TODO - say where it is from Some font-name from some foundry
+Ric’s Typekit
+Kepler Std Condensed Display
+font-family: kepler-std-condensed-display, serif;
+font-weight: 400;
+font-style: normal;
+
+Font 2:
+FreightSans Pro Book
+font-family: freight-sans-pro, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Font 3:
+FreightSansCndPro Bold
+font-family: freight-sans-condensed-pro, sans-serif;
+font-weight: 700;
+font-style: normal;
 */
 /*
 We reset the line-height to 1 stop odd spacing being added, here
@@ -3083,10 +3099,6 @@ html {
   color: #707375;
 }
 
-b, strong {
-  font-weight: 500;
-}
-
 /*
 Utilities
 */
@@ -3096,10 +3108,7 @@ Utilities
   */
 }
 .t-regular {
-  font-weight: "Some font", Arial, sans-serif;
-}
-.t-bold {
-  font-weight: 500;
+  font-weight: "kepler-std-condensed-display", Georgia, serif;
 }
 .t-uppercase {
   text-transform: uppercase;
@@ -3208,13 +3217,24 @@ this file shouldn’t contain much stuff.
 Specify all the typographic styles that are going to be reused.
 */
 html {
-  font-family: "Some font", Arial, sans-serif;
+  font-family: "freight-sans-pro", Arial, sans-serif;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 .f-1 {
-  font-family: "Some font", Arial, sans-serif;
+  font-family: "kepler-std-condensed-display", Georgia, serif;
+  font-weight: 400;
+}
+
+.f-2 {
+  font-family: "freight-sans-pro", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.f-3 {
+  font-family: "freight-sans-condensed-pro", Arial, sans-serif;
+  font-weight: 700;
 }
 
 /*
@@ -3223,22 +3243,28 @@ If type is very context reliant for styling such as heroes that scale a lot with
 the screen size then create their styles within the block itself
 */
 .t-1 {
-  font-family: "Some font", Arial, sans-serif;
-  font-size: 50px;
-  font-weight: 500;
+  font-family: "kepler-std-condensed-display", Georgia, serif;
+  font-size: 80px;
+  font-weight: 400;
   line-height: 1.09;
 }
 .t-2 {
-  font-family: "Some font", Arial, sans-serif;
-  font-size: 35px;
-  font-weight: 500;
+  font-family: "kepler-std-condensed-display", Georgia, serif;
+  font-size: 60px;
+  font-weight: 400;
   line-height: 1.09;
 }
 .t-3 {
-  font-family: "Some font", Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 500;
+  font-family: "freight-sans-pro", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
   line-height: 1.6;
+}
+.t-4 {
+  font-family: "freight-sans-pro", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 /* purgecss start ignore */
@@ -3288,15 +3314,48 @@ It sets up basic formatting rules so the user is not required to
 .l-episode {
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: 1fr 1000px 1fr;
+  grid-template-columns: 1fr 100px 800px 100px 1fr;
+  grid-auto-flow: column;
 }
 .l-episode__centre {
-  grid-column: 2;
+  grid-column: 3/span 1;
+}
+.l-episode__centre--wide {
+  grid-column: 2/span 3;
 }
 
+.episode-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+  top: 70px;
+  height: 90px;
+  width: 90px;
+  background-color: #fff;
+  border-radius: 100%;
+  font-family: "kepler-std-condensed-display", Georgia, serif;
+  font-size: 50px;
+  font-weight: 400;
+  animation: episode-number 0.3s cubic-bezier(0, 0, 0.38, 1.7) backwards;
+  animation-delay: 0.3s;
+  transform: rotate(-20deg);
+}
+
+@keyframes episode-number {
+  from {
+    transform: scale(0) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(-20deg);
+  }
+}
 .hero {
-  grid-column: span 3;
+  grid-column: span 5;
   position: relative;
+  height: 36vw;
+  margin-bottom: 5vh;
 }
 .hero__overlay {
   position: absolute;
@@ -3311,13 +3370,46 @@ It sets up basic formatting rules so the user is not required to
   left: 5%;
 }
 .hero__title {
+  font-family: "kepler-std-condensed-display", Georgia, serif;
   font-size: 100px;
-  letter-spacing: -0.01em;
+  font-weight: 400;
+  letter-spacing: 0.05ch;
+  animation: episode-title 2s ease-out backwards;
+  animation-delay: 0.5s;
 }
 .hero__subtitle {
-  font-size: 30px;
+  font-family: "kepler-std-condensed-display", Georgia, serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0.05ch;
+  animation: episode-subtitle 1s ease-out backwards;
+  animation-delay: 2.3s;
+}
+.hero__date {
+  animation: episode-subtitle 1s ease-out backwards;
+  animation-delay: 1.2s;
 }
 
+@keyframes episode-title {
+  from {
+    opacity: 0;
+    letter-spacing: 0.3ch;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.05ch;
+    transform: translateX(0px);
+  }
+}
+@keyframes episode-subtitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   /* purgecss start ignore */
   /* purgecss end ignore */

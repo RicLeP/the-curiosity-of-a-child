@@ -110,8 +110,6 @@
       <path value="$PROJECT_DIR$/vendor/riclep/serverpilot-deployer" />
       <path value="$PROJECT_DIR$/vendor/riclep/laravel-storyblok" />
       <path value="$PROJECT_DIR$/vendor/imliam/laravel-env-set-command" />
-      <path value="$PROJECT_DIR$/vendor/league/commonmark-ext-autolink" />
-      <path value="$PROJECT_DIR$/vendor/league/commonmark-ext-table" />
       <path value="$PROJECT_DIR$/vendor/apix/cache" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/mundschenk-at/php-typography" />

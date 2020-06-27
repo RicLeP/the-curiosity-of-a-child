@@ -1,6 +1,6 @@
 
 
-<div class="l-2-sections">
+<div class="l-2-sections @if (!$content->getLayout()) l-episode__centre @endif">
 	@foreach($content->content() as $section)
 		@include('storyblok.blocks._' . $section->component(), ['content' => $section])
 	@endforeach

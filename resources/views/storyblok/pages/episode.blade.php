@@ -5,29 +5,32 @@
 @extends('layouts._default')
 
 @section('content')
-	<main class="bgc-black l-episode">
+	<main class="bgc-black">
 		<header class="u-v hero">
-			<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593170731/coac/ep16/ep16_hero_sc6pih.mp4" autoplay="true" muted="true" loop="true" width="100%">
-			</cld-video>
-
-			<div class="hero__overlay">
-				<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593206959/coac/common/ink_txqlf2.mp4" autoplay="true" muted="true" width="100%">
-				</cld-video>
-			</div>
+			<video-hero></video-hero>
 
 			<div class="hero__content fgc-white">
-				<h1 class="u-mb-10 hero__title">{{ $story->title }}</h1>
+				<p class="t-uppercase t-4 hero__date">{{ $story->formatted_date }}</p>
+				<h1 class="hero__title">{{ $story->title }}</h1>
 				<h2 class="hero__subtitle">{{ $story->subtitle }}</h2>
 			</div>
 		</header>
 
-		<div class="t-3 fgc-white u-mb-30 l-episode__centre">
-			{!! $story->intro_html !!}
+		<div class="episode-number fgc-black">
+			<span>
+				{{ $story->number }}
+			</span>
+		</div>
+
+		<div class="l-episode">
+			<div class="t-3 fgc-white u-mb-30 l-episode__centre u-mb-80">
+				{!! $story->intro_html !!}
+			</div>
 		</div>
 
 		@foreach($story->features as $feature)
-			<section class="u-mb-100 fgc-white l-episode__centre feature">
-				<h3 class="t-2 u-mb-30">
+			<section class="u-mb-100 fgc-white feature l-episode">
+				<h3 class="t-2 u-mb-30 l-episode__centre">
 					{{ $feature->title }}
 				</h3>
 
@@ -36,5 +39,6 @@
 				@endforeach
 			</section>
 		@endforeach
+		</div>
 	</main>
 @endsection

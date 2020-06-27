@@ -3,9 +3,14 @@
 .l-episode {
 	display: grid;
 	grid-gap: 40px;
-	grid-template-columns: 1fr 1000px 1fr;
+	grid-template-columns: 1fr 100px 800px 100px 1fr;
+	grid-auto-flow: column;
 
 	&__centre {
-		grid-column: 2;
+		grid-column: 3 / span 1;
+
+		&--wide {
+			grid-column: 2 / span 3;
+		}
 	}
 }

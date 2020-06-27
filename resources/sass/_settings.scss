@@ -29,12 +29,35 @@ CSS weights
 
 Font 1:
 The first font should be te primary one used for the majority of body copy
-TODO - say where it is from Some font-name from some foundry
+Ric’s Typekit
+Kepler Std Condensed Display
+font-family: kepler-std-condensed-display, serif;
+font-weight: 400;
+font-style: normal;
+
+Font 2:
+FreightSans Pro Book
+font-family: freight-sans-pro, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Font 3:
+FreightSansCndPro Bold
+font-family: freight-sans-condensed-pro, sans-serif;
+font-weight: 700;
+font-style: normal;
 */
 
-$font-1-family: "Some font", Arial, sans-serif;
-$font-1-regular: 400; // book
-$font-1-bold: 500; // medium
+
+
+$font-1-family: "kepler-std-condensed-display", Georgia, serif;
+$font-1-regular: 400;
+
+$font-2-family: "freight-sans-pro", Arial, sans-serif;
+$font-2-regular: 400;
+
+$font-3-family: "freight-sans-condensed-pro", Arial, sans-serif;
+$font-3-bold: 700;
 
 /*
 We reset the line-height to 1 stop odd spacing being added, here

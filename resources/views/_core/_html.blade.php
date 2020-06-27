@@ -20,6 +20,8 @@
 
 	@yield('meta')
 
+	<link rel="stylesheet" href="https://use.typekit.net/sqb5yuy.css">
+
 	<link href="{{ mix('css/app.css') }}" rel="stylesheet">
 	<script src="{{ mix('js/app.js') }}" defer></script>
 

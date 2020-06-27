@@ -1,9 +1,12 @@
 
 
 .hero {
-	grid-column: span 3;
+	grid-column: span 5;
 
 	position: relative;
+
+	height: 36vw;
+	margin-bottom: 5vh;
 
 	&__overlay {
 		position: absolute;
@@ -21,11 +24,55 @@
 	}
 
 	&__title {
+		font-family: $font-1-family;
 		font-size: 100px;
-		letter-spacing: -.01em;
+		font-weight: $font-1-regular;
+		letter-spacing: .05ch;
+
+		animation: episode-title 2s ease-out backwards;
+		animation-delay: .5s;
 	}
 
 	&__subtitle {
-		font-size: 30px;
+		font-family: $font-1-family;
+		font-size: 40px;
+		font-weight: $font-1-regular;
+		letter-spacing: .05ch;
+
+		animation: episode-subtitle 1s ease-out backwards;
+		animation-delay: 2.3s;
+	}
+
+	&__date {
+		animation: episode-subtitle 1s ease-out backwards;
+		animation-delay: 1.2s;
+	}
+}
+
+@keyframes episode-title {
+	from {
+		opacity: 0;
+
+		letter-spacing: .3ch;
+
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+
+		letter-spacing: .05ch;
+
+		transform: translateX(0px);
+	}
+}
+
+@keyframes episode-subtitle {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
