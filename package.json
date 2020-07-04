@@ -24,7 +24,9 @@
         "purgecss-webpack-plugin": "^1.6",
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
+        "swiper": "^6.0.0",
         "vue": "^2.5.17",
+        "vue-awesome-swiper": "^4.1.1",
         "vue-template-compiler": "^2.6.10",
         "vue-tweet-embed": "^2.4.0",
         "vue2-google-maps": "^0.10.7"

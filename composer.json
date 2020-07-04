@@ -20,7 +20,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "riclep/laravel-storyblok": "^1.0"
+        "printful/php-api-sdk": "^2.2",
+        "riclep/laravel-storyblok": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

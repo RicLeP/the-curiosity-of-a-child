@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593170731/coac/ep16/ep16_hero_sc6pih.mp4" muted="true" loop="true" width="100%" autoplay="true">
+		<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593170731/coac/ep16/ep16_hero_sc6pih.mp4" muted="true" loop="true" width="100%" autoplay="false">
 		</cld-video>
 
 		<div class="hero__overlay">
-			<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4" muted="true" width="100%" autoplay="true">
+			<cld-video cloud-name="sirric" public-id="https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4" muted="true" width="100%" autoplay="false">
 			</cld-video>
 		</div>
 	</div>

@@ -6,6 +6,7 @@
 
 @import "_core/core-reset";
 @import "_core/utilities/colours";
+@import "_core/utilities/image";
 @import "_core/utilities/margins";
 @import "_core/utilities/padding";
 @import "_core/utilities/typography";
@@ -14,7 +15,7 @@
 
 /* purgecss start ignore */
 // vendor css
-
+@import "vendor/swiper";
 /* purgecss end ignore */
 
 @import "globals/animations";
@@ -31,8 +32,14 @@
 @import "layouts/l-episode";
 
 // blocks
+@import "blocks/episode";
 @import "blocks/episode-number";
+@import "blocks/feature";
+@import "blocks/gallery-image";
 @import "blocks/hero";
+@import "blocks/quote";
+@import "blocks/rich-link";
+@import "blocks/tweet";
 
 // This is where any nasty css lives
 @import "shame";

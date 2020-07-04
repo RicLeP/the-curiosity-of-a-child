@@ -18,7 +18,18 @@ It sets up basic formatting rules so the user is not required to
 		margin-top: 0;
 
 		&:not(:last-child) {
-			margin-bottom: 1.5em;
+			margin-bottom: 1.8em;
+		}
+	}
+
+	ol, ul {
+		&::after {
+			content: url("../img/swirl-1.svg");
+
+			display: block;
+
+			margin: 2.4em auto 4em;
+			width: 19%;
 		}
 	}
 
@@ -38,7 +49,16 @@ It sets up basic formatting rules so the user is not required to
 
 	li {
 		&:not(:last-child) {
-			margin-bottom: .8em;
+			&::after {
+				content: '';
+
+				display: block;
+
+				margin: 1.6em auto;
+				width: 38%;
+
+				border-bottom: solid 1px #444;
+			}
 		}
 	}
 

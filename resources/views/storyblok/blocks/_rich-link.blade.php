@@ -3,14 +3,17 @@
 //dd($content);
 ?>
 
-<div class="u-mb-25 @if (!$content->getLayout()) l-episode__centre @endif">
-	<img src="{{ $content->image }}" alt="{{ $content->label }}" width="250">
+<div class="u-mb-25 rich-link @if (!$content->getLayout()) l-episode__centre @endif">
+	<img src="{{ $content->image }}" alt="{{ $content->label }}" class="u-w">
 
-	<a href="{{ $content->link }}" class="">
-		{{ $content->label }}
-	</a>
+	<div>
+		<a href="{{ $content->link }}">
+			{{ $content->label }}
+		</a>
 
-	<div class="scope-cms u-mt-10">
-		<p>{{ $content->description }}</p>
+		<div class="scope-cms u-mt-10 t-5">
+			<p>{{ $content->description }}</p>
+		</div>
 	</div>
+
 </div>

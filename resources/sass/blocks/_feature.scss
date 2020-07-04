@@ -1,0 +1,13 @@
+
+
+.feature {
+	&__hero {
+		position: relative;
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 20px;
+		left: 5%;
+	}
+}

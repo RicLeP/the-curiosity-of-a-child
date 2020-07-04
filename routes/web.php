@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{slug?}', '\Riclep\Storyblok\Http\Controllers\StoryblokController@show')->where('slug', '(.*)');
+Route::get('/{slug?}', '\App\Http\Controllers\EpisodeController@show')->where('slug', '(.*)');

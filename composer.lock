@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f34996e6fd423b7a3e98f572aa7cf72b",
+    "content-hash": "77f329d1b36361cc422cda5ed224ce89",
     "packages": [
         {
             "name": "apix/cache",
@@ -892,16 +892,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.17.2",
+            "version": "v7.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d16ff3a0a66d98e04163456b39c4b7302cf50a40"
+                "reference": "116b508bafd81de97b1c09744445d32a91076b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d16ff3a0a66d98e04163456b39c4b7302cf50a40",
-                "reference": "d16ff3a0a66d98e04163456b39c4b7302cf50a40",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/116b508bafd81de97b1c09744445d32a91076b60",
+                "reference": "116b508bafd81de97b1c09744445d32a91076b60",
                 "shasum": ""
             },
             "require": {
@@ -1045,7 +1045,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-06-24T13:11:25+00:00"
+            "time": "2020-06-30T13:52:36+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1113,16 +1113,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "fc33ca12575e98e57cdce7d5f38b2ca5335714b3"
+                "reference": "6d74caf6abeed5fd85d6ec20da23d7269cd0b46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/fc33ca12575e98e57cdce7d5f38b2ca5335714b3",
-                "reference": "fc33ca12575e98e57cdce7d5f38b2ca5335714b3",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/6d74caf6abeed5fd85d6ec20da23d7269cd0b46f",
+                "reference": "6d74caf6abeed5fd85d6ec20da23d7269cd0b46f",
                 "shasum": ""
             },
             "require": {
@@ -1204,7 +1204,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-06-21T20:50:13+00:00"
+            "time": "2020-06-27T12:50:08+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1298,16 +1298,16 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "a3edfe52f9e7380e498d33157e1330e85386645d"
+                "reference": "6c5dea561d99641f66caed6a6d3b8827a8052205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/a3edfe52f9e7380e498d33157e1330e85386645d",
-                "reference": "a3edfe52f9e7380e498d33157e1330e85386645d",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/6c5dea561d99641f66caed6a6d3b8827a8052205",
+                "reference": "6c5dea561d99641f66caed6a6d3b8827a8052205",
                 "shasum": ""
             },
             "require": {
@@ -1361,7 +1361,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2020-02-06T11:39:04+00:00"
+            "time": "2020-07-01T09:47:09+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1519,16 +1519,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.35.0",
+            "version": "2.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "4b9bd835261ef23d36397a46a76b496a458305e5"
+                "reference": "d0b65958d9942fd1b501fdb0800c67e8323aa08d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4b9bd835261ef23d36397a46a76b496a458305e5",
-                "reference": "4b9bd835261ef23d36397a46a76b496a458305e5",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d0b65958d9942fd1b501fdb0800c67e8323aa08d",
+                "reference": "d0b65958d9942fd1b501fdb0800c67e8323aa08d",
                 "shasum": ""
             },
             "require": {
@@ -1540,9 +1540,10 @@
             "require-dev": {
                 "doctrine/orm": "^2.7",
                 "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
-                "kylekatarnls/multi-tester": "^1.1",
+                "kylekatarnls/multi-tester": "^2.0",
                 "phpmd/phpmd": "^2.8",
-                "phpstan/phpstan": "^0.11",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^0.12.30",
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
             },
@@ -1558,6 +1559,11 @@
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
+                    ]
+                },
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
                     ]
                 }
             },
@@ -1598,20 +1604,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-24T18:27:52+00:00"
+            "time": "2020-06-25T20:20:01+00:00"
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.5.0",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463"
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/53c2753d756f5adb586dca79c2ec0e2654dd9463",
-                "reference": "53c2753d756f5adb586dca79c2ec0e2654dd9463",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c346bbfafe2ff60680258b631afb730d186ed864",
+                "reference": "c346bbfafe2ff60680258b631afb730d186ed864",
                 "shasum": ""
             },
             "require": {
@@ -1650,7 +1656,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-06-03T07:24:19+00:00"
+            "time": "2020-07-02T17:12:47+00:00"
         },
         {
             "name": "opis/closure",
@@ -1777,6 +1783,44 @@
                 }
             ],
             "time": "2020-06-07T10:40:07+00:00"
+        },
+        {
+            "name": "printful/php-api-sdk",
+            "version": "v2.2.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/printful/php-api-sdk.git",
+                "reference": "4f47b450e4d04d773ac20bd4de19423253bf31ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/printful/php-api-sdk/zipball/4f47b450e4d04d773ac20bd4de19423253bf31ad",
+                "reference": "4f47b450e4d04d773ac20bd4de19423253bf31ad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Printful\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Printful",
+                    "email": "dev@theprintful.com"
+                }
+            ],
+            "description": "Printful API wrapper",
+            "time": "2020-01-03T10:59:49+00:00"
         },
         {
             "name": "psr/cache",
@@ -2326,16 +2370,16 @@
         },
         {
             "name": "riclep/laravel-storyblok",
-            "version": "1.1.2",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RicLeP/laravel-storyblok.git",
-                "reference": "49745b0b5cb0ee171d5b0a1e899b36cc2767e032"
+                "reference": "0076ce5dcacc5895cc691f2c50fe0d12d9937473"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/49745b0b5cb0ee171d5b0a1e899b36cc2767e032",
-                "reference": "49745b0b5cb0ee171d5b0a1e899b36cc2767e032",
+                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/0076ce5dcacc5895cc691f2c50fe0d12d9937473",
+                "reference": "0076ce5dcacc5895cc691f2c50fe0d12d9937473",
                 "shasum": ""
             },
             "require": {
@@ -2345,8 +2389,9 @@
                 "league/commonmark": "^1.5",
                 "mundschenk-at/php-typography": "^6.5",
                 "php": "^7.1",
+                "spatie/schema-org": "^2.14",
                 "storyblok/php-client": "^1.3",
-                "storyblok/richtext-resolver": "dev-master"
+                "storyblok/richtext-resolver": "dev-master#3f096cc26a0bb86f8614933c4ddc233dcbdd254d"
             },
             "require-dev": {
                 "mockery/mockery": "^1.2",
@@ -2376,12 +2421,12 @@
             "authors": [
                 {
                     "name": "Richard Le Poidevin",
-                    "email": "ric@wearebwi.com",
+                    "email": "ric@sirric.co.uk",
                     "role": "Developer"
                 }
             ],
             "description": "A Laravel wrapper around the Storyblok API to provide a familiar experience for Laravel devs",
-            "homepage": "https://bitbucket.org/rlepoidevin/storyblok/src",
+            "homepage": "https://github.com/RicLeP/laravel-storyblok/",
             "keywords": [
                 "cms",
                 "content management",
@@ -2389,7 +2434,76 @@
                 "laravel",
                 "storyblok"
             ],
-            "time": "2020-06-25T16:55:44+00:00"
+            "time": "2020-07-03T15:02:11+00:00"
+        },
+        {
+            "name": "spatie/schema-org",
+            "version": "2.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/schema-org.git",
+                "reference": "a17c65150f97caf81cea490294b376fd37bee660"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/schema-org/zipball/a17c65150f97caf81cea490294b376fd37bee660",
+                "reference": "a17c65150f97caf81cea490294b376fd37bee660",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "graham-campbell/analyzer": "^2.3",
+                "league/flysystem": "^1.0",
+                "phpunit/phpunit": "^8.0",
+                "symfony/console": "^3.2",
+                "symfony/css-selector": "^3.2",
+                "symfony/dom-crawler": "^3.2",
+                "twig/twig": "^1.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\SchemaOrg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tom Witkowski",
+                    "email": "dev.gummibeer@gmail.com",
+                    "homepage": "https://gummibeer.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent builder Schema.org types and ld+json generator",
+            "homepage": "https://github.com/spatie/schema-org",
+            "keywords": [
+                "schema-org",
+                "spatie"
+            ],
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/spatie",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-06-10T17:06:18+00:00"
         },
         {
             "name": "storyblok/php-client",
@@ -2441,12 +2555,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/storyblok/storyblok-php-richtext-renderer.git",
-                "reference": "a54d66074b9feaea2aa707fda248c266b1cd1cb3"
+                "reference": "adfcc21cba3c771b35400b0866a89b53db1c4638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/storyblok/storyblok-php-richtext-renderer/zipball/a54d66074b9feaea2aa707fda248c266b1cd1cb3",
-                "reference": "a54d66074b9feaea2aa707fda248c266b1cd1cb3",
+                "url": "https://api.github.com/repos/storyblok/storyblok-php-richtext-renderer/zipball/adfcc21cba3c771b35400b0866a89b53db1c4638",
+                "reference": "adfcc21cba3c771b35400b0866a89b53db1c4638",
                 "shasum": ""
             },
             "require-dev": {
@@ -2474,7 +2588,7 @@
                     "email": "ac@storyblok.com"
                 }
             ],
-            "time": "2020-06-19T12:45:05+00:00"
+            "time": "2020-06-30T14:49:04+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5512,20 +5626,20 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.9.5",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef"
+                "reference": "969b211f9a51aa1f6c01d1d2aef56d3bd91598e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/b2c28789e80a97badd14145fda39b545d83ca3ef",
-                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/969b211f9a51aa1f6c01d1d2aef56d3bd91598e5",
+                "reference": "969b211f9a51aa1f6c01d1d2aef56d3bd91598e5",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": "^7.1 || ^8.0"
             },
             "replace": {
                 "myclabs/deep-copy": "self.version"
@@ -5556,7 +5670,13 @@
                 "object",
                 "object graph"
             ],
-            "time": "2020-01-17T21:11:47+00:00"
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-29T13:22:24+00:00"
         },
         {
             "name": "nunomaduro/collision",

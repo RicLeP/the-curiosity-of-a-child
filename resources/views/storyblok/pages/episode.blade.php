@@ -4,8 +4,16 @@
 
 @extends('layouts._default')
 
+@section('title')
+	{{ $story->title() }}
+
+	-
+
+	@parent
+@stop
+
 @section('content')
-	<main class="bgc-black">
+	<main class="bgc-black episode">
 		<header class="u-v hero">
 			<video-hero></video-hero>
 
@@ -23,16 +31,18 @@
 		</div>
 
 		<div class="l-episode">
-			<div class="t-3 fgc-white u-mb-30 l-episode__centre u-mb-80">
+			<div class="t-4 fgc-white l-episode__centre episode__intro">
 				{!! $story->intro_html !!}
 			</div>
 		</div>
 
 		@foreach($story->features as $feature)
 			<section class="u-mb-100 fgc-white feature l-episode">
-				<h3 class="t-2 u-mb-30 l-episode__centre">
-					{{ $feature->title }}
-				</h3>
+				<header class="l-episode__span feature__hero u-mb-60">
+					@foreach($feature->hero as $hero)
+						@include('storyblok.blocks._feature-' . $feature->hero[0]->component(), ['content' => $feature->hero[0], 'title' => $feature->title])
+					@endforeach
+				</header>
 
 				@foreach($feature->body as $section)
 					@include('storyblok.blocks._' . $section->component(), ['content' => $section])

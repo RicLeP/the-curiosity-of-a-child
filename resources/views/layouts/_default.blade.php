@@ -1,6 +1,11 @@
 
 @extends('_core._html')
 
+@section('title')
+	The Curiosity of a Child Podcast
+@stop
+
+
 @section('meta')
 	<meta property="description" content="">
 
