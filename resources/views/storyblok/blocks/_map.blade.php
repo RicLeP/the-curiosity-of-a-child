@@ -4,7 +4,7 @@
 			:center="{lat:{{ $content->latitude }}, lng:{{ $content->longitude }}}"
 			:zoom="{{ $content->zoom }}"
 			map-type-id="{{ $content->style }}"
-			style="width: 370px; height: 370px"
+			class="map"
 	></gmap-map>
 </div>
 

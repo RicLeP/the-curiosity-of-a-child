@@ -3,5 +3,13 @@
 .rich-link {
 	display: grid;
 	grid-gap: 30px;
-	grid-template-columns: 100px 1fr;
+
+	@media all and (min-width: 550px) {
+		grid-template-columns: 100px 1fr;
+	}
+
+	&__logo {
+		width: 100%;
+		max-width: 150px;
+	}
 }

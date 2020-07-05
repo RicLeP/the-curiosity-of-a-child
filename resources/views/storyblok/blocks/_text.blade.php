@@ -1,6 +1,6 @@
 
 
-<div class="scope-cms u-mb-40 @if (!$content->getLayout()) l-episode__centre @endif">
+<div class="scope-cms u-mb-40 @if (!$content->getLayout() || !$content->parent()->noLayout) l-episode__centre @endif">
 	{!! $content->text_html !!}
 </div>
 

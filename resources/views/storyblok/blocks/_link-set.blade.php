@@ -1,7 +1,7 @@
 
 
 <section class="@if (!$content->getLayout()) l-episode__centre @endif">
-	<h4 class="t-3 um20">
+	<h4 class="t-3 u-mb-20">
 		{{ $content->title }}
 	</h4>
 

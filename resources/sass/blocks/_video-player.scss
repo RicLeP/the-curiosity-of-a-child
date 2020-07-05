@@ -1,0 +1,24 @@
+
+
+.video-player {
+	&__scaler {
+		width: 100%;
+		max-width: 1000px;
+	}
+
+
+	&__player {
+		height: 0;
+		padding-bottom: 56.25%; // 16:9
+		position: relative;
+		padding-top: 25px;
+	}
+
+	&__embed {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}

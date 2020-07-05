@@ -5,11 +5,7 @@
 @extends('layouts._default')
 
 @section('title')
-	{{ $story->title() }}
-
-	-
-
-	@parent
+	{{ $story->title() }} - @parent
 @stop
 
 @section('content')
@@ -49,6 +45,9 @@
 				@endforeach
 			</section>
 		@endforeach
-		</div>
 	</main>
 @endsection
+
+<?php
+//ddd($story);
+?>

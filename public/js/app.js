@@ -48921,7 +48921,17 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     VideoHero: _components_VideoHero__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
-    return {};
+    return {
+      gallerySwiper: {
+        pagination: {
+          el: '.swiper-pagination'
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
+    };
   },
   mounted: function mounted() {}
 });

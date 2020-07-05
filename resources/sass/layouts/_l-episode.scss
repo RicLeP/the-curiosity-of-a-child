@@ -2,19 +2,39 @@
 
 .l-episode {
 	display: grid;
-	grid-gap: 40px;
-	grid-template-columns: 1fr min(5%, 100px) 800px min(5%, 100px) 1fr;
+	grid-gap: 20px;
+	grid-template-columns: 5% 1fr 5%;
 	grid-auto-flow: column;
 
 	&__centre {
-		grid-column: 3 / span 1;
+		grid-column: 2 / span 1;
 
 		&--wide {
-			grid-column: 2 / span 3;
+			grid-column: 1 / span 3;
 		}
 	}
 
 	&__span {
-		grid-column: 1 / span 5;
+		grid-column: 1 / span 3;
+	}
+
+	@media all and (min-width: 800px) {
+		grid-gap: 40px;
+	}
+
+	@media all and (min-width: 800px) {
+		grid-template-columns: 1fr min(5%, 100px) minmax(550px, 800px) min(5%, 100px) 1fr;
+
+		&__centre {
+			grid-column: 3 / span 1;
+
+			&--wide {
+				grid-column: 2 / span 3;
+			}
+		}
+
+		&__span {
+			grid-column: 1 / span 5;
+		}
 	}
 }

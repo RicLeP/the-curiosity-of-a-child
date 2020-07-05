@@ -27,6 +27,15 @@ const app = new Vue({
 
 	data() {
 		return {
+			gallerySwiper: {
+				pagination: {
+					el: '.swiper-pagination'
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				}
+			}
 		}
 	},
 

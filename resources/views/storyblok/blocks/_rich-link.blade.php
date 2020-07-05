@@ -4,10 +4,10 @@
 ?>
 
 <div class="u-mb-25 rich-link @if (!$content->getLayout()) l-episode__centre @endif">
-	<img src="{{ $content->image }}" alt="{{ $content->label }}" class="u-w">
+	<img src="{{ $content->image }}" alt="{{ $content->label }}" class="rich-link__logo">
 
 	<div>
-		<a href="{{ $content->link }}">
+		<a href="{{ $content->link }}" class="link-underlined">
 			{{ $content->label }}
 		</a>
 

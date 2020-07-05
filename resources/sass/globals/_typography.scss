@@ -39,24 +39,41 @@ the screen size then create their styles within the block itself
 
 	&-2 {
 		font-family: $font-1-family;
-		font-size: 65px;
+		font-size: 45px;
 		font-weight: $font-1-regular;
 		line-height: 1.09;
+
+		@media all and (min-width: 600px) {
+			font-size: 10vw;
+		}
+
+		@media all and (min-width: 1000px) {
+			font-size: 70px;
+		}
 	}
 
 	&-3 {
 		font-family: $font-1-family;
-		font-size: 38px;
+		font-size: 28px;
 		font-weight: $font-1-regular;
 		letter-spacing: .06ch;
 		line-height: 1.2;
+
+		@media all and (min-width: 600px) {
+			font-size: 38px;
+		}
 	}
 
 	&-4 {
 		font-family: $font-2-family;
-		font-size: 28px;
+		font-size: 24px;
 		font-weight: $font-2-regular;
-		line-height: 1.8;
+		line-height: 1.6;
+
+		@media all and (min-width: 600px) {
+			font-size: 28px;
+			line-height: 1.8;
+		}
 	}
 
 	&-5 {

@@ -22,7 +22,7 @@
 @stop
 
 @section('body')
-	<div id="app">
+	<div id="app" class="bgc-black">
 		@include('partials._header')
 
 		@yield('content')

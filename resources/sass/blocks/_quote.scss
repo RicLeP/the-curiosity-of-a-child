@@ -1,7 +1,7 @@
 
 
 .quote {
-	> p {
+	p {
 		&::before {
 			content: '‘';
 		}
