@@ -5,5 +5,5 @@
 		{{ $content->title }}
 	</h4>
 
-	{!! $content->text_html !!}
+	{!! $content->text !!}
 </section>

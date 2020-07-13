@@ -1,5 +1,7 @@
+<?php
+//dd($content);
+?>
 
-
-@foreach($content->content() as $section)
+@foreach($content as $section)
 	@include('storyblok.blocks._' . $section->component(), ['content' => $section])
 @endforeach

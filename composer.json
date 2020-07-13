@@ -21,7 +21,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "printful/php-api-sdk": "^2.2",
-        "riclep/laravel-storyblok": "^1.1"
+        "riclep/laravel-storyblok": "dev-develop"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

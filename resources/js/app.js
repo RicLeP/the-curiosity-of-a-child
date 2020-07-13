@@ -3,6 +3,7 @@ import Cloudinary from 'cloudinary-vue';
 import { Tweet } from 'vue-tweet-embed'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VideoHero from "./components/VideoHero";
+import PixiHero from "./components/PixiHero";
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 
 Vue.use(Cloudinary);
@@ -22,6 +23,7 @@ const app = new Vue({
 		Swiper,
 		SwiperSlide,
 		Tweet,
+		PixiHero,
 		VideoHero
 	},
 

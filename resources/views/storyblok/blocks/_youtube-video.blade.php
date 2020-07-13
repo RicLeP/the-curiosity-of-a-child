@@ -1,4 +1,6 @@
-
+<?php
+//dd($content->url);
+?>
 
 <div class="u-mv-30 @if (!$content->getLayout()) l-episode__centre l-episode__centre--wide @endif">
 	<div class="video-player__scaler">

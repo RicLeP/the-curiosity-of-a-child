@@ -1,8 +1,8 @@
 <?php
-// dd($content);
+ //dd((string) $content->text);
 ?>
 
 
 <div class="t-4 fgc-white l-episode__centre">
-	{!! $content->text_html !!}
+	{!! $content->text !!}
 </div>

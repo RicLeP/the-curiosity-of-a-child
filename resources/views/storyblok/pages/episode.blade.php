@@ -5,7 +5,7 @@
 @extends('layouts._default')
 
 @section('title')
-	{{ $story->title() }} - @parent
+	{{ $story->title }} - @parent
 @stop
 
 @section('content')
@@ -28,7 +28,7 @@
 
 		<div class="l-episode">
 			<div class="t-4 fgc-white l-episode__centre episode__intro">
-				{!! $story->intro_html !!}
+				{!! $story->intro !!}
 			</div>
 		</div>
 
