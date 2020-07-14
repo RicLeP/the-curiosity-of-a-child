@@ -118,6 +118,7 @@
       <path value="$PROJECT_DIR$/vendor/storyblok/php-client" />
       <path value="$PROJECT_DIR$/vendor/printful/php-api-sdk" />
       <path value="$PROJECT_DIR$/vendor/spatie/schema-org" />
+      <path value="$PROJECT_DIR$/vendor/ozdemirburak/iris" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

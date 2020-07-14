@@ -1,8 +1,10 @@
 
 
 .episode {
+	background: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
+
 	&__intro {
-		margin-bottom: 24vh;
+		margin-bottom: calc(10vh + 200px);
 		margin-top: 7vh;
 	}
 }

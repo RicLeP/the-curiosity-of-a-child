@@ -5,7 +5,7 @@
 <div class="l-episode__centre--wide">
 	<div class="gallery">
 		<swiper class="swiper" :options="gallerySwiper">
-			@foreach($content->images->content as $image)
+			@foreach($content->images as $image)
 				@include('storyblok.blocks._gallery-image', ['content' => $image])
 			@endforeach
 

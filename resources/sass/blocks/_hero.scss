@@ -7,6 +7,10 @@
 
 	margin-bottom: 5vh;
 
+	@media all and (max-width: 499px) {
+		margin-top: 40px;
+	}
+
 	&__overlay {
 		position: absolute;
 		left: 0;
@@ -17,16 +21,16 @@
 	}
 
 	&__content {
-		margin-left: 5%;
-		margin-right: 5%;
+		margin-left: 8%;
+		margin-right: 8%;
 
 		@media all and (min-width: 1000px) {
 			position: absolute;
-			bottom: 10px;
+			bottom: -30px;
 		}
 
-		@media all and (min-width: 1200px) {
-			bottom: 100px;
+		@media all and (min-width: 1300px) {
+			bottom: 50px;
 		}
 	}
 
@@ -38,9 +42,6 @@
 		font-weight: $font-1-regular;
 		letter-spacing: .05ch;
 
-		animation: episode-title 2s ease-out backwards;
-		animation-delay: .5s;
-
 		@media all and (min-width: 415px) {
 			font-size: 15vw;
 		}
@@ -49,6 +50,11 @@
 			margin-bottom: 0;
 
 			font-size: 100px;
+		}
+
+		@media all and (min-width: 1000px) {
+			animation: episode-title 2s ease-out backwards;
+			animation-delay: .5s;
 		}
 	}
 

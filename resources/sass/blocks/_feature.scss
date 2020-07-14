@@ -1,8 +1,21 @@
 
 
 .feature {
+	margin-top: -300px;
+	padding-top: 100px;
+	padding-bottom: 300px;
+
+	background: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
+
 	&__hero {
 		position: relative;
+	}
+
+	&__hero-image {
+		mask-image: url(../img/image-border--2.png);
+		mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		mask-position: center;
 	}
 
 	&__title {

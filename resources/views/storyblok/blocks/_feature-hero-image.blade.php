@@ -1,9 +1,13 @@
 <?php
-//dd($content);
+//dd($content->image->desktop_image);
 ?>
 
-<img src="{{ asset('img/image-border--2.png') }}" class="u-w background-cover" alt="{{ $content->image->alt }}" style="background-image: url({{ $content->image->filename }})">
+<picture>
+	<source srcset="{{ $content->image->desktop_image }}" media="(min-width: 700px)">
+	<img src="{{ $content->image->mobile_image }}" class="u-w background-cover feature__hero-image" alt="{{ $content->image->alt }}">
+</picture>
+
 
 <h3 class="t-2 feature__title">
-	{{ $title }}
+	{!! $title !!}
 </h3>

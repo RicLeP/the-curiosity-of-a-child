@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Storyblok\Assets;
+namespace App\Storyblok\Fields;
 
 
-class GalleryImage extends \App\Storyblok\DefaultAsset
+class GalleryImage extends Image
 {
-	/*public function getDesktopImageAttribute()
+	public function getDesktopImageAttribute()
 	{
 		return str_replace('//a.storyblok.com', '//img2.storyblok.com/1600x990/filters:quality(40):focal(' . $this->focus . ')', $this->filename);
 	}
@@ -18,5 +18,5 @@ class GalleryImage extends \App\Storyblok\DefaultAsset
 
 	public function getAltAttribute() {
 		return $this->content['alt'] ?: $this->title;
-	}*/
+	}
 }
