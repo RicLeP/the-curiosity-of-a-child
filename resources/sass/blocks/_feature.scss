@@ -16,6 +16,11 @@
 		mask-size: 100% 100%;
 		mask-repeat: no-repeat;
 		mask-position: center;
+
+		-webkit-mask-image: url(../img/image-border--2.png);
+		-webkit-mask-size: 100% 100%;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-position: center;
 	}
 
 	&__title {

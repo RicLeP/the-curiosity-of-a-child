@@ -1,6 +1,11 @@
 <template>
 	<div>
-		<canvas id="pixi" style="width: 100%"></canvas>
+		<template v-if="isMobile">
+			<cld-video cloud-name="sirric" :public-id="videoSrc" muted="true" loop="true" width="100%" autoplay="true"></cld-video>
+		</template>
+		<template v-else>
+			<canvas id="pixi" style="width: 100%"></canvas>
+		</template>
 	</div>
 </template>
 
@@ -14,7 +19,8 @@
 
 		data() {
 			return {
-				pixiApp: null
+				pixiApp: null,
+				isMobile: false
 			}
 		},
 
@@ -23,34 +29,40 @@
 		},
 
 		mounted() {
-			const canvas = document.getElementById('pixi');
+			this.isMobile = !window.matchMedia('(min-width: 600px)').matches;
 
-			this.pixiApp = new PIXI.Application({
-				view: canvas,
-				width: window.innerWidth,
-				height: (window.innerWidth * .364),
-				transparent: true
-			});
+			if (!this.isMobile) {
+				setTimeout(() => {
+					const canvas = document.getElementById('pixi');
 
-			const container = new PIXI.Container();
-			this.pixiApp.stage.addChild(container);
+					this.pixiApp = new PIXI.Application({
+						view: canvas,
+						width: window.innerWidth,
+						height: (window.innerWidth * .364),
+						transparent: true
+					});
 
-			let videoSource = new PIXI.Texture.from(this.videoSrc);
-			videoSource.baseTexture.resource.source.loop = true; ////////////////////
+					const container = new PIXI.Container();
+					this.pixiApp.stage.addChild(container);
+
+					let videoSource = new PIXI.Texture.from(this.videoSrc);
+					videoSource.baseTexture.resource.source.loop = true;
 
 
-			let video = new PIXI.Sprite(videoSource);
-			video.width = this.pixiApp.renderer.width;
-			video.height = this.pixiApp.renderer.height;
+					let video = new PIXI.Sprite(videoSource);
+					video.width = this.pixiApp.renderer.width;
+					video.height = this.pixiApp.renderer.height;
 
-			let mask = new PIXI.Sprite.from('https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4');
-			mask.width = this.pixiApp.renderer.width;
-			mask.height = this.pixiApp.renderer.height;
+					let mask = new PIXI.Sprite.from('https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4');
+					mask.width = this.pixiApp.renderer.width;
+					mask.height = this.pixiApp.renderer.height;
 
-			video.mask = mask;
+					video.mask = mask;
 
-			container.addChild(mask);
-			this.pixiApp.stage.addChild(video);
+					container.addChild(mask);
+					this.pixiApp.stage.addChild(video);
+				}, 1500);
+			}
 		}
 	}
 </script>

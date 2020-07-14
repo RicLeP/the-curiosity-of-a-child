@@ -35905,38 +35905,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "PixiHero",
   props: ['videoSrc'],
   data: function data() {
     return {
-      pixiApp: null
+      pixiApp: null,
+      isMobile: false
     };
   },
   methods: {},
   mounted: function mounted() {
-    var canvas = document.getElementById('pixi');
-    this.pixiApp = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Application"]({
-      view: canvas,
-      width: window.innerWidth,
-      height: window.innerWidth * .364,
-      transparent: true
-    });
-    var container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Container"]();
-    this.pixiApp.stage.addChild(container);
-    var videoSource = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Texture"].from(this.videoSrc);
-    videoSource.baseTexture.resource.source.loop = true; ////////////////////
+    var _this = this;
 
-    var video = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"](videoSource);
-    video.width = this.pixiApp.renderer.width;
-    video.height = this.pixiApp.renderer.height;
-    var mask = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"].from('https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4');
-    mask.width = this.pixiApp.renderer.width;
-    mask.height = this.pixiApp.renderer.height;
-    video.mask = mask;
-    container.addChild(mask);
-    this.pixiApp.stage.addChild(video);
+    this.isMobile = !window.matchMedia('(min-width: 600px)').matches;
+
+    if (!this.isMobile) {
+      setTimeout(function () {
+        var canvas = document.getElementById('pixi');
+        _this.pixiApp = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Application"]({
+          view: canvas,
+          width: window.innerWidth,
+          height: window.innerWidth * .364,
+          transparent: true
+        });
+        var container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Container"]();
+
+        _this.pixiApp.stage.addChild(container);
+
+        var videoSource = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Texture"].from(_this.videoSrc);
+        videoSource.baseTexture.resource.source.loop = true;
+        var video = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"](videoSource);
+        video.width = _this.pixiApp.renderer.width;
+        video.height = _this.pixiApp.renderer.height;
+        var mask = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"].from('https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4');
+        mask.width = _this.pixiApp.renderer.width;
+        mask.height = _this.pixiApp.renderer.height;
+        video.mask = mask;
+        container.addChild(mask);
+
+        _this.pixiApp.stage.addChild(video);
+      }, 1500);
+    }
   }
 });
 
@@ -74258,18 +74274,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    [
+      _vm.isMobile
+        ? [
+            _c("cld-video", {
+              attrs: {
+                "cloud-name": "sirric",
+                "public-id": _vm.videoSrc,
+                muted: "true",
+                loop: "true",
+                width: "100%",
+                autoplay: "true"
+              }
+            })
+          ]
+        : [
+            _c("canvas", {
+              staticStyle: { width: "100%" },
+              attrs: { id: "pixi" }
+            })
+          ]
+    ],
+    2
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("canvas", { staticStyle: { width: "100%" }, attrs: { id: "pixi" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

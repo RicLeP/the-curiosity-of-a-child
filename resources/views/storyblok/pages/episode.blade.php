@@ -1,5 +1,5 @@
 <?php
-//ddd($story->block());
+//ddd($story->listen_links);
 ?>
 
 @extends('layouts._default')
@@ -42,6 +42,18 @@
 		<div class="l-episode">
 			<div class="t-4 fgc-white l-episode__centre episode__intro">
 				{!! $story->intro !!}
+
+				<aside class="listen-links t-3 t-centred u-mt-50 u-mb-30">
+					<h2 class="u-mb-20">Listen to the episode</h2>
+
+					<div class="t-5">
+						<a href="{{ $story->listen_links[0]->podchaser }}" class="link-underlined" target="_blank">Podchaser</a>
+						<a href="{{ $story->listen_links[0]->podbean }}" class="link-underlined" target="_blank">Podbean</a>
+						<a href="{{ $story->listen_links[0]->spotify }}" class="link-underlined" target="_blank">Spotify</a>
+						<a href="{{ $story->listen_links[0]->apple_podcasts }}" class="link-underlined" target="_blank">Apple Podcasts</a>
+						<a href="{{ $story->listen_links[0]->google_podcasts }}" class="link-underlined" target="_blank">Google Podcasts</a>
+					</div>
+				</aside>
 			</div>
 		</div>
 

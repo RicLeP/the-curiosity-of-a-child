@@ -4200,6 +4200,10 @@ It sets up basic formatting rules so the user is not required to
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   mask-position: center;
+  -webkit-mask-image: url(../img/image-border--2.png);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 .feature__title {
   position: absolute;
@@ -4290,8 +4294,9 @@ It sets up basic formatting rules so the user is not required to
     right: 5%;
     top: 40px;
     width: auto;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     transition: all 0.2s linear;
+    backdrop-filter: blur(8px);
   }
   .header__nav:hover {
     background-color: #fff;
@@ -4441,13 +4446,44 @@ It sets up basic formatting rules so the user is not required to
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   mask-position: center;
+  -webkit-mask-image: url(../img/image-overlay.png);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
+.quote {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.quote::after {
+  content: url("../img/swirl-1.svg");
+  display: block;
+  margin: 2em auto 1em;
+  width: 60%;
+}
+@media all and (min-width: 600px) {
+  .quote::after {
+    margin: 2.4em auto 1em;
+    width: 19%;
+  }
+}
+.quote p {
+  position: relative;
+}
 .quote p::before {
   content: "\2018";
+  position: absolute;
+  left: -0.5ch;
+  font-size: 4em;
+  line-height: 0.95;
 }
 .quote p::after {
   content: "\2019";
+  position: absolute;
+  margin-left: 0.3ch;
+  font-size: 1.5em;
+  line-height: 1.3;
 }
 
 .rich-link {
