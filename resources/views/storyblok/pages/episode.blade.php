@@ -1,6 +1,14 @@
 <?php
 //ddd($story->listen_links);
+/*
+$story->listen_links[0]->transform(function ($item, $key) {
+	dump($key);
+});
+*/
+//dd($story->listen_links)
 ?>
+
+
 
 @extends('layouts._default')
 
@@ -47,11 +55,9 @@
 					<h2 class="u-mb-20">Listen to the episode</h2>
 
 					<div class="t-5">
-						<a href="{{ $story->listen_links[0]->podchaser }}" class="link-underlined" target="_blank">Podchaser</a>
-						<a href="{{ $story->listen_links[0]->podbean }}" class="link-underlined" target="_blank">Podbean</a>
-						<a href="{{ $story->listen_links[0]->spotify }}" class="link-underlined" target="_blank">Spotify</a>
-						<a href="{{ $story->listen_links[0]->apple_podcasts }}" class="link-underlined" target="_blank">Apple Podcasts</a>
-						<a href="{{ $story->listen_links[0]->google_podcasts }}" class="link-underlined" target="_blank">Google Podcasts</a>
+						@foreach($story->listen_links[0] as $key => $listen_link)
+							<a href="{{ $listen_link }}" class="link-underlined" target="_blank">{{ ucwords(str_replace('_', ' ', $key)) }}</a>
+						@endforeach
 					</div>
 				</aside>
 			</div>
