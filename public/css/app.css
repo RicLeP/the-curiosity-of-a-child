@@ -4132,11 +4132,20 @@ It sets up basic formatting rules so the user is not required to
 }
 
 .episode {
-  background: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
+  background: url(../img/bg-texture.jpg), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
+  background-blend-mode: soft-light;
+  background-size: 100%;
 }
 .episode__intro {
   margin-bottom: calc(10vh + 200px);
   margin-top: 7vh;
+}
+
+.episodes__episode {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 .episode-number {
@@ -4190,7 +4199,17 @@ It sets up basic formatting rules so the user is not required to
   margin-top: -300px;
   padding-top: 100px;
   padding-bottom: 300px;
-  background: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
+  background: url(../img/bg-texture.jpg), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
+  background-blend-mode: soft-light;
+  background-size: 100%;
+  mask-image: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: linear-gradient(180deg, #0000 0%, #000 4%, #000 96%, #0000 100%);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 .feature__hero {
   position: relative;
@@ -4436,6 +4455,18 @@ It sets up basic formatting rules so the user is not required to
   }
 }
 
+.listen-links {
+  padding: 30px 30px 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.listen-links__links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .map {
   height: 300px;
   width: 100%;
@@ -4491,7 +4522,7 @@ It sets up basic formatting rules so the user is not required to
   grid-gap: 30px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
+  border-radius: 10px;
 }
 @media all and (min-width: 550px) {
   .rich-link {
@@ -4506,6 +4537,8 @@ It sets up basic formatting rules so the user is not required to
 .tweet {
   margin: 80px auto;
   max-width: 500px;
+  mix-blend-mode: soft-light;
+  filter: drop-shadow(0px 0px 29px black);
 }
 
 .video-player__scaler {

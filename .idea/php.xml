@@ -119,6 +119,8 @@
       <path value="$PROJECT_DIR$/vendor/printful/php-api-sdk" />
       <path value="$PROJECT_DIR$/vendor/spatie/schema-org" />
       <path value="$PROJECT_DIR$/vendor/ozdemirburak/iris" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

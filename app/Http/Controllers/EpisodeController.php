@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Storyblok\Folder;
+use App\Storyblok\Folders\Episodes;
 use Printful\PrintfulApiClient;
 use Riclep\Storyblok\StoryblokFacade as StoryBlok;
 
@@ -12,10 +12,13 @@ class EpisodeController extends Controller
 {
 
 	public function index() {
-		$folder = new Folder();
+		$folder = new Episodes();
 		$folder->slug('episodes');
 
-		dd($folder->read());
+		return Storyblok::read('home')->render([
+			'episodes' => $folder->read(),
+		]);
+
 	}
 
 	public function show($slug)

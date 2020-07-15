@@ -1,11 +1,11 @@
 <?php
-//ddd($story->listen_links);
+//ddd($story);
 /*
 $story->listen_links[0]->transform(function ($item, $key) {
 	dump($key);
 });
 */
-//dd($story->listen_links)
+//dd($story)
 ?>
 
 
@@ -13,13 +13,13 @@ $story->listen_links[0]->transform(function ($item, $key) {
 @extends('layouts._default')
 
 @section('title')
-	{{ $story->title }} - @parent
+	{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - @parent
 @stop
 
 @section('content')
 	<main class="bgc-black episode" style="{{ $story->block()->theme() }}">
 		<header class="u-v hero">
-			<pixi-hero video-src="https://res.cloudinary.com/sirric/video/upload/v1593170731/coac/ep16/ep16_hero_sc6pih.mp4"></pixi-hero>
+			@include('storyblok.blocks._' . $story->hero[0]->component(), ['content' => $story->hero[0]])
 
 			<div class="hero__content fgc-white">
 				<div class="episode-number fgc-black">
@@ -54,7 +54,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 				<aside class="listen-links t-3 t-centred u-mt-50 u-mb-30">
 					<h2 class="u-mb-20">Listen to the episode</h2>
 
-					<div class="t-5">
+					<div class="t-5 listen-links__links">
 						@foreach($story->listen_links[0] as $key => $listen_link)
 							<a href="{{ $listen_link }}" class="link-underlined" target="_blank">{{ ucwords(str_replace('_', ' ', $key)) }}</a>
 						@endforeach
