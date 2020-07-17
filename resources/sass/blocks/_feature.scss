@@ -2,19 +2,15 @@
 
 .feature {
 	margin-top: -300px;
-	padding-top: 100px;
+	padding-top: 170px;
 	padding-bottom: 300px;
-
-	background: url(../img/bg-texture.jpg), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
-	background-blend-mode: soft-light;
-	background-size: 100%;
 
 	mask-image: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
 	mask-size: 100% 100%;
 	mask-repeat: no-repeat;
 	mask-position: center;
 
-	-webkit-mask-image: linear-gradient(180deg, #0000 0%, #000 4%, #000 96%, #0000 100%);
+	-webkit-mask-image: linear-gradient(180deg, #0000 0%, #000 200px, #000 calc(100% - 150px), #0000 100%);
 	-webkit-mask-size: 100% 100%;
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;

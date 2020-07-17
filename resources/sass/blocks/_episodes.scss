@@ -3,9 +3,25 @@
 .episodes {
 	&__episode {
 		margin-bottom: 30px;
-		padding: 30px;
+		overflow: hidden;
 
 		background-color: rgba(255, 255, 255, .1);
 		border-radius: 10px;
+	}
+
+	&__episode-image {
+		mask-image: url(../img/episodes-mask.png);
+		mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		mask-position: bottom;
+
+		-webkit-mask-image: url(../img/episodes-mask.png);
+		-webkit-mask-size: 100% 100%;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-position: bottom;
+	}
+
+	&__episode-body {
+		padding: 30px;
 	}
 }

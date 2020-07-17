@@ -11,26 +11,35 @@
 		margin-top: 40px;
 	}
 
-	&__overlay {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-
-		mix-blend-mode: multiply;
-	}
 
 	&__content {
 		margin-left: 8%;
 		margin-right: 8%;
 
-		@media all and (min-width: 1000px) {
-			position: absolute;
-			bottom: -30px;
+		margin-top: 50px;
+
+		@media all and (min-width: 400px) {
+			margin-top: 0;
 		}
 
-		@media all and (min-width: 1300px) {
-			bottom: 50px;
+		@media all and (min-width: 450px) {
+			margin-top: 40px;
+		}
+
+		@media all and (min-width: 670px) {
+			margin-top: -40px;
+		}
+
+		@media all and (min-width: 900px) {
+			margin-top: -100px;
+		}
+
+		@media all and (min-width: 1100px) {
+			margin-top: -170px;
+		}
+
+		@media all and (min-width: 1400px) {
+			margin-top: -220px;
 		}
 	}
 

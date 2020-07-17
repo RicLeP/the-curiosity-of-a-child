@@ -23,7 +23,7 @@
 	}
 
 	@media all and (min-width: 800px) {
-		grid-template-columns: 1fr min(5%, 100px) minmax(550px, 800px) min(5%, 100px) 1fr;
+		grid-template-columns: 1fr min(8%, 100px) minmax(550px, 800px) min(8%, 100px) 1fr;
 
 		&__centre {
 			grid-column: 3 / span 1;

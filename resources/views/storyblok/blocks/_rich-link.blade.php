@@ -3,7 +3,7 @@
 //dd($content);
 ?>
 
-<div class="u-mb-25 rich-link @if (!$content->getLayout()) l-episode__centre @endif">
+<div class="u-mb-35 rich-link @if (!$content->getLayout()) l-episode__centre @endif">
 	<img src="{{ $content->image }}" alt="{{ $content->label }}" class="rich-link__logo">
 
 	<div>

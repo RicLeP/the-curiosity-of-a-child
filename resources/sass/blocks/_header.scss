@@ -21,10 +21,8 @@
 	}
 
 	&__nav {
-		display: grid;
-		justify-content: center;
-		grid-gap: 18px;
-		grid-template-columns: max-content max-content;
+		display: flex;
+		gap: 18px;
 
 		position: fixed;
 		top: 0;
@@ -46,10 +44,6 @@
 			transition: all .2s linear;
 
 			backdrop-filter: blur(8px);
-
-			&:hover {
-				background-color: #fff;
-			}
 		}
 
 		a:link, a:visited {
@@ -57,10 +51,6 @@
 			font-weight: bold;
 			letter-spacing: .04ch;
 			text-decoration: none;
-
-			@media all and (min-width: 500px) {
-				color: #000;
-			}
 		}
 	}
 }

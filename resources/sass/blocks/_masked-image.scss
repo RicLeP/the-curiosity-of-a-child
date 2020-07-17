@@ -1,5 +1,5 @@
 
-
+// mulitple masks are possible!
 .masked-image {
 	mask-image: url(../img/image-overlay.png);
 	mask-size: 100% 100%;
@@ -10,4 +10,11 @@
 	-webkit-mask-size: 100% 100%;
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;
+
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		mask-size: 120% 120%;
+		-webkit-mask-size: 120% 120%;
+	}
 }

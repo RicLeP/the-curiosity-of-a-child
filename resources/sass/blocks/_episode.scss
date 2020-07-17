@@ -1,10 +1,6 @@
 
 
 .episode {
-	background: url(../img/bg-texture.jpg), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
-	background-blend-mode: soft-light;
-	background-size: 100%;
-
 	&__intro {
 		margin-bottom: calc(10vh + 200px);
 		margin-top: 7vh;

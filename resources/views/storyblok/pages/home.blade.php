@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-	<main class="bgc-black episode" style="{{ $story->block()->theme() }}">
+	<main class="bgc-black bg-texture" style="{{ $story->block()->theme() }}">
 
 		<section class="u-w--centred u-w-s u-pv-80 fgc-white">
 			<p class="bgc-white fgc-black u-p-20 u-mb-20">Hey! What are you doing here? This website isn’t finished yet! Expect errors...</p>
@@ -23,17 +23,22 @@
 				{!! $story->intro !!}
 			</div>
 
-			<div class=" episodes">
+			<div class="episodes">
 				@foreach($episodes as $episode)
 					<article class="episodes__episode">
-						<h2 class="t-3">{!! $episode->title  !!}</h2>
-						<p class="t-5 u-mb-20">{{ $episode->date }}</p>
+						<img src="{{ $episode->teaser_image }}" alt="" class="u-w episodes__episode-image">
 
-						<div class="scope-cms u-mb-20">{!! $episode->intro !!}</div>
+						<div class="episodes__episode-body">
+							<h2 class="t-3">{!! $episode->title  !!}</h2>
+							<p class="t-5 u-mb-20">{{ $episode->date }}</p>
 
-						<p>
-							<a href="{{ $episode->meta()['slug'] }}" class="link-underlined">Explore the episode</a>
-						</p>
+							<div class="scope-cms u-mb-20">{!! $episode->intro !!}</div>
+
+							<p>
+								<a href="{{ $episode->meta()['slug'] }}" class="link-underlined">Explore the episode</a>
+							</p>
+						</div>
+
 					</article>
 				@endforeach
 			</div>

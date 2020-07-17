@@ -4118,7 +4118,7 @@ It sets up basic formatting rules so the user is not required to
 }
 @media all and (min-width: 800px) {
   .l-episode {
-    grid-template-columns: 1fr min(5%, 100px) minmax(550px, 800px) min(5%, 100px) 1fr;
+    grid-template-columns: 1fr min(8%, 100px) minmax(550px, 800px) min(8%, 100px) 1fr;
   }
   .l-episode__centre {
     grid-column: 3/span 1;
@@ -4131,11 +4131,12 @@ It sets up basic formatting rules so the user is not required to
   }
 }
 
-.episode {
-  background: url(../img/bg-texture.jpg), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
+.bg-texture {
+  background: var(--theme-texture), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
   background-blend-mode: soft-light;
   background-size: 100%;
 }
+
 .episode__intro {
   margin-bottom: calc(10vh + 200px);
   margin-top: 7vh;
@@ -4143,9 +4144,22 @@ It sets up basic formatting rules so the user is not required to
 
 .episodes__episode {
   margin-bottom: 30px;
-  padding: 30px;
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+}
+.episodes__episode-image {
+  mask-image: url(../img/episodes-mask.png);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: bottom;
+  -webkit-mask-image: url(../img/episodes-mask.png);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+}
+.episodes__episode-body {
+  padding: 30px;
 }
 
 .episode-number {
@@ -4197,16 +4211,13 @@ It sets up basic formatting rules so the user is not required to
 }
 .feature {
   margin-top: -300px;
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 300px;
-  background: url(../img/bg-texture.jpg), linear-gradient(180deg, var(--theme-from) 0%, var(--theme-to) 100%);
-  background-blend-mode: soft-light;
-  background-size: 100%;
   mask-image: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   mask-position: center;
-  -webkit-mask-image: linear-gradient(180deg, #0000 0%, #000 4%, #000 96%, #0000 100%);
+  -webkit-mask-image: linear-gradient(180deg, #0000 0%, #000 200px, #000 calc(100% - 150px), #0000 100%);
   -webkit-mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -4297,10 +4308,8 @@ It sets up basic formatting rules so the user is not required to
   }
 }
 .header__nav {
-  display: grid;
-  justify-content: center;
-  grid-gap: 18px;
-  grid-template-columns: max-content max-content;
+  display: flex;
+  gap: 18px;
   position: fixed;
   top: 0;
   padding: 10px 14px;
@@ -4317,20 +4326,12 @@ It sets up basic formatting rules so the user is not required to
     transition: all 0.2s linear;
     backdrop-filter: blur(8px);
   }
-  .header__nav:hover {
-    background-color: #fff;
-  }
 }
 .header__nav a:link, .header__nav a:visited {
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.04ch;
   text-decoration: none;
-}
-@media all and (min-width: 500px) {
-  .header__nav a:link, .header__nav a:visited {
-    color: #000;
-  }
 }
 
 .hero {
@@ -4343,26 +4344,39 @@ It sets up basic formatting rules so the user is not required to
     margin-top: 40px;
   }
 }
-.hero__overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  mix-blend-mode: multiply;
-}
 .hero__content {
   margin-left: 8%;
   margin-right: 8%;
+  margin-top: 50px;
 }
-@media all and (min-width: 1000px) {
+@media all and (min-width: 400px) {
   .hero__content {
-    position: absolute;
-    bottom: -30px;
+    margin-top: 0;
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 450px) {
   .hero__content {
-    bottom: 50px;
+    margin-top: 40px;
+  }
+}
+@media all and (min-width: 670px) {
+  .hero__content {
+    margin-top: -40px;
+  }
+}
+@media all and (min-width: 900px) {
+  .hero__content {
+    margin-top: -100px;
+  }
+}
+@media all and (min-width: 1100px) {
+  .hero__content {
+    margin-top: -170px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .hero__content {
+    margin-top: -220px;
   }
 }
 .hero__title {
@@ -4440,7 +4454,7 @@ It sets up basic formatting rules so the user is not required to
 }
 @media all and (min-width: 600px) {
   .image-and-text {
-    grid-gap: 60px;
+    grid-gap: 80px;
   }
 }
 @media all and (max-width: 900px) {
@@ -4459,12 +4473,22 @@ It sets up basic formatting rules so the user is not required to
   padding: 30px 30px 45px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  box-shadow: 0 0 29px rgba(0, 0, 0, 0.5);
 }
 .listen-links__links {
   display: flex;
-  gap: 30px;
+  gap: 45px;
   flex-wrap: wrap;
   justify-content: center;
+}
+.listen-links__link {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.listen-links__icon {
+  display: block;
+  margin: 0 auto 10px;
 }
 
 .map {
@@ -4481,6 +4505,11 @@ It sets up basic formatting rules so the user is not required to
   -webkit-mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
+  transition: all 0.3s ease-in-out;
+}
+.masked-image:hover {
+  mask-size: 120% 120%;
+  -webkit-mask-size: 120% 120%;
 }
 
 .quote {
@@ -4523,6 +4552,7 @@ It sets up basic formatting rules so the user is not required to
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  box-shadow: 0 0 29px rgba(0, 0, 0, 0.5);
 }
 @media all and (min-width: 550px) {
   .rich-link {
@@ -4537,13 +4567,15 @@ It sets up basic formatting rules so the user is not required to
 .tweet {
   margin: 80px auto;
   max-width: 500px;
-  mix-blend-mode: soft-light;
   filter: drop-shadow(0px 0px 29px black);
 }
 
 .video-player__scaler {
   width: 100%;
-  max-width: 1000px;
+  /*mask-image: url(../img/image-overlay.png);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;*/
 }
 .video-player__player {
   height: 0;
@@ -4561,9 +4593,23 @@ It sets up basic formatting rules so the user is not required to
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   /* purgecss start ignore */
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      .episode, .feature {
+        background-size: 100vw 2400px, 100%;
+      }
+    }
+  }
   /* purgecss end ignore */
 }
 @supports not (display: grid) {
   /* purgecss start ignore */
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      .episode, .feature {
+        background-size: 100vw 2400px, 100%;
+      }
+    }
+  }
   /* purgecss end ignore */
 }

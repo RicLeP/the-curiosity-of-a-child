@@ -25,6 +25,16 @@
 	<link href="{{ mix('css/app.css') }}" rel="stylesheet">
 	<script src="{{ mix('js/app.js') }}" defer></script>
 
+	<style type="text/css">
+		@media not all and (min-resolution:.001dpcm)
+		{ @supports (-webkit-appearance:none) {
+
+			.bg-texture {
+				background-size: 100vw 2400px, 100%;
+			}
+		}}
+	</style>
+
 	@if (config('app.debug'))
 		<meta name="robots" content="noindex">
 	@endif
