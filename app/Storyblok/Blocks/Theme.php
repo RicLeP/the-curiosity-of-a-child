@@ -9,11 +9,11 @@ use OzdemirBurak\Iris\Color\Hex;
 class Theme extends \App\Storyblok\Block
 {
 	public function theme() {
-		$fromHex = new Hex($this->from);
+		$fromHex = new Hex(($this->from ?: '#f00'));
 		$fromRgba = $fromHex->toRgba();
 		$fromRgbaAlpha = $fromHex->toRgba()->alpha(0);
 
-		$toHex = new Hex($this->to);
+		$toHex = new Hex($this->to ?: '#f00');
 		$toRgba = $toHex->toRgba();
 		$toRgbaAlpha = $toRgba->toRgba();
 

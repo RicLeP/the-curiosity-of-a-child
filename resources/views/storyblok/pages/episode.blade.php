@@ -74,9 +74,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 		@foreach($story->features as $feature)
 			<section class="fgc-white feature bg-texture l-episode" style="{{ $feature->theme() }}">
 				<header class="l-episode__span feature__hero u-mb-60">
-					@foreach($feature->hero as $hero)
-						@include('storyblok.blocks._feature-' . $feature->hero[0]->component(), ['content' => $feature->hero[0], 'title' => $feature->title])
-					@endforeach
+					@include('storyblok.blocks._feature-' . $feature->hero[0]->component(), ['content' => $feature->hero[0], 'title' => $feature->title])
 				</header>
 
 				@foreach($feature->body as $section)

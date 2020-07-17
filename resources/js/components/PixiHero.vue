@@ -47,6 +47,7 @@
 
 					let videoSource = new PIXI.Texture.from(this.videoSrc);
 					videoSource.baseTexture.resource.source.loop = true;
+					videoSource.baseTexture.resource.source.muted = true;
 
 
 					let video = new PIXI.Sprite(videoSource);

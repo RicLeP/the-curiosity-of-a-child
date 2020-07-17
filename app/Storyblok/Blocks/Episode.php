@@ -18,7 +18,7 @@ class Episode extends \App\Storyblok\Block
 	protected $applyTypography = ['title', 'subtitle'];
 
 	public function theme() {
-		return $this->theme[0];
+		return $this->theme[0] ?? null;
 	}
 
 	public function getDateAttribute() {

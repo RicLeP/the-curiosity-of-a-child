@@ -35941,6 +35941,7 @@ __webpack_require__.r(__webpack_exports__);
 
         var videoSource = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Texture"].from(_this.videoSrc);
         videoSource.baseTexture.resource.source.loop = true;
+        videoSource.baseTexture.resource.source.muted = true;
         var video = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"](videoSource);
         video.width = _this.pixiApp.renderer.width;
         video.height = _this.pixiApp.renderer.height;
@@ -35953,6 +35954,82 @@ __webpack_require__.r(__webpack_exports__);
         _this.pixiApp.stage.addChild(video);
       }, 1500);
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PixiImageHero.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PixiImageHero.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "PixiImageHero",
+  props: ['imageSrc'],
+  data: function data() {
+    return {
+      pixiApp: null,
+      isMobile: false
+    };
+  },
+  methods: {},
+  mounted: function mounted() {
+    var _this = this;
+
+    this.isMobile = !window.matchMedia('(min-width: 600px)').matches;
+    var loader = pixi_js__WEBPACK_IMPORTED_MODULE_0__["Loader"].shared;
+    var sprites = {};
+    loader.add('hero', this.imageSrc);
+    loader.load(function (loader, resources) {
+      sprites.hero = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Texture"].from('https://res.cloudinary.com/sirric/image/upload/v1580590237/coac/ep1/Guernsey_July_2010_Le_D%C3%A9hus_14_zhbv7j.jpg');
+    });
+    loader.onComplete.add(function () {
+      console.log(sprites.hero);
+
+      if (!_this.isMobile) {
+        setTimeout(function () {
+          var canvas = document.getElementById('pixi');
+          _this.pixiApp = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Application"]({
+            view: canvas,
+            width: window.innerWidth,
+            height: window.innerWidth * .364,
+            transparent: true
+          });
+          var container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Container"]();
+
+          _this.pixiApp.stage.addChild(container);
+
+          var image = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"](sprites.hero);
+          image.width = _this.pixiApp.renderer.width;
+          image.height = _this.pixiApp.renderer.height;
+          var mask = new pixi_js__WEBPACK_IMPORTED_MODULE_0__["Sprite"].from('https://res.cloudinary.com/sirric/video/upload/v1593250901/coac/common/smoke2_cdjkoi.mp4');
+          mask.width = _this.pixiApp.renderer.width;
+          mask.height = _this.pixiApp.renderer.height;
+          image.mask = mask;
+          container.addChild(mask);
+
+          _this.pixiApp.stage.addChild(image);
+        }, 1500);
+      }
+    });
   }
 });
 
@@ -74307,6 +74384,54 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PixiImageHero.vue?vue&type=template&id=42689ae0&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PixiImageHero.vue?vue&type=template&id=42689ae0& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm.isMobile
+        ? [
+            _c("cld-video", {
+              attrs: {
+                "cloud-name": "sirric",
+                "public-id": _vm.imageSrc,
+                muted: "true",
+                loop: "true",
+                width: "100%",
+                autoplay: "true"
+              }
+            })
+          ]
+        : [
+            _c("canvas", {
+              staticStyle: { width: "100%" },
+              attrs: { id: "pixi" }
+            })
+          ]
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/VideoHero.vue?vue&type=template&id=0e228a8c&":
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/VideoHero.vue?vue&type=template&id=0e228a8c& ***!
@@ -89374,8 +89499,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue2_google_maps__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue2_google_maps__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_VideoHero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/VideoHero */ "./resources/js/components/VideoHero.vue");
 /* harmony import */ var _components_PixiHero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/PixiHero */ "./resources/js/components/PixiHero.vue");
-/* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-awesome-swiper */ "./node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js");
-/* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_PixiImageHero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/PixiImageHero */ "./resources/js/components/PixiImageHero.vue");
+/* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-awesome-swiper */ "./node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js");
+/* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -89393,10 +89520,11 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',
   comments: true,
   components: {
-    swiper: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_6__["swiper"],
-    swiperSlide: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_6__["swiperSlide"],
+    swiper: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_7__["swiper"],
+    swiperSlide: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_7__["swiperSlide"],
     Tweet: vue_tweet_embed__WEBPACK_IMPORTED_MODULE_2__["Tweet"],
     PixiHero: _components_PixiHero__WEBPACK_IMPORTED_MODULE_5__["default"],
+    PixiImageHero: _components_PixiImageHero__WEBPACK_IMPORTED_MODULE_6__["default"],
     VideoHero: _components_VideoHero__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
@@ -89481,6 +89609,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiHero_vue_vue_type_template_id_89ac15a2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiHero_vue_vue_type_template_id_89ac15a2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PixiImageHero.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/PixiImageHero.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PixiImageHero_vue_vue_type_template_id_42689ae0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PixiImageHero.vue?vue&type=template&id=42689ae0& */ "./resources/js/components/PixiImageHero.vue?vue&type=template&id=42689ae0&");
+/* harmony import */ var _PixiImageHero_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PixiImageHero.vue?vue&type=script&lang=js& */ "./resources/js/components/PixiImageHero.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PixiImageHero_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PixiImageHero_vue_vue_type_template_id_42689ae0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PixiImageHero_vue_vue_type_template_id_42689ae0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PixiImageHero.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/PixiImageHero.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/PixiImageHero.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiImageHero_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PixiImageHero.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PixiImageHero.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiImageHero_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/PixiImageHero.vue?vue&type=template&id=42689ae0&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/PixiImageHero.vue?vue&type=template&id=42689ae0& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiImageHero_vue_vue_type_template_id_42689ae0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PixiImageHero.vue?vue&type=template&id=42689ae0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PixiImageHero.vue?vue&type=template&id=42689ae0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiImageHero_vue_vue_type_template_id_42689ae0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PixiImageHero_vue_vue_type_template_id_42689ae0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -89573,8 +89770,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\www\thecuriosityofachild.com\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\www\thecuriosityofachild.com\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\www\the-curiosity-of-a-child\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\www\the-curiosity-of-a-child\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
