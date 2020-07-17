@@ -26,10 +26,12 @@
 			<div class="episodes">
 				@foreach($episodes as $episode)
 					<article class="episodes__episode">
-						<img src="{{ $episode->teaser_image }}" alt="" class="u-w episodes__episode-image">
+						<a href="{{ $episode->meta()['slug'] }}"><img src="{{ $episode->teaser_image }}" alt="" class="u-w episodes__episode-image"></a>
 
 						<div class="episodes__episode-body">
-							<h2 class="t-3">{!! $episode->title  !!}</h2>
+							<h2 class="t-2"><a href="{{ $episode->meta()['slug'] }}" class="link">{{ $episode->number }}: {!! $episode->title !!}</a></h2>
+							<h3 class="t-4 u-mb-10">{!! $episode->subtitle !!}</h3>
+
 							<p class="t-5 u-mb-20">{{ $episode->date }}</p>
 
 							<div class="scope-cms u-mb-20">{!! $episode->intro !!}</div>

@@ -4,5 +4,9 @@
 	&__intro {
 		margin-bottom: calc(10vh + 200px);
 		margin-top: 7vh;
+
+		@media all and (min-width: 1200px) {
+			margin-top: 14vh;
+		}
 	}
 }

@@ -2,4 +2,4 @@
  //dd($content);
 ?>
 
-<pixi-image-hero image-src="{{ $content->image }}"></pixi-image-hero>
+<img src="{{ $content->image }}" alt="" class="u-w hero-image">

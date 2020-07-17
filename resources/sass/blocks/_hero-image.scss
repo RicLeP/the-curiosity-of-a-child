@@ -1,0 +1,14 @@
+
+
+
+.hero-image {
+	mask-image: url(../img/hero-overlay.png);
+	mask-size: 100% 100%;
+	mask-repeat: no-repeat;
+	mask-position: bottom;
+
+	-webkit-mask-image: url(../img/hero-overlay.png);
+	-webkit-mask-size: 100% 100%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: bottom;
+}

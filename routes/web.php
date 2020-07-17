@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', '\App\Http\Controllers\EpisodeController@index');
 Route::get('/{slug?}', '\App\Http\Controllers\EpisodeController@show')->where('slug', '(.*)');
+
+Route::get('ffff', function () {
+
+})->name('clear-storyblok-cache');
