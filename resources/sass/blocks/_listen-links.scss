@@ -1,6 +1,8 @@
 
 
 .listen-links {
+	position: relative;
+
 	padding: 30px 30px 45px;
 
 	background-color: rgba(255, 255, 255, .1);
@@ -11,13 +13,17 @@
 
 	&__links {
 		display: flex;
-		gap: 45px;
+		//gap: 45px;
 		flex-wrap: wrap;
 
 		justify-content: center;
 	}
 
 	&__link {
+		display: block;
+
+		margin: 0 20px;
+
 		color: #fff;
 		text-align: center;
 		text-decoration: none;

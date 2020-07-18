@@ -15,8 +15,6 @@
 	<main class="bgc-black bg-texture" style="{{ $story->block()->theme() }}">
 
 		<section class="u-w--centred u-w-s u-pv-80 fgc-white">
-			<p class="bgc-white fgc-black u-p-20 u-mb-20">Hey! What are you doing here? This website isn’t finished yet! Expect errors...</p>
-
 			<h1 class="t-1 u-mb-30">{!! $story->title !!}</h1>
 
 			<div class="t-4 u-mb-50">

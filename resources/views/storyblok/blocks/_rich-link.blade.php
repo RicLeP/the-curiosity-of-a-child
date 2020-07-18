@@ -3,6 +3,8 @@
 //dd($content);
 ?>
 
+
+{!! $content->editLink() !!}
 <div class="u-mb-35 rich-link @if (!$content->getLayout()) l-episode__centre @endif">
 	<img src="{{ $content->image }}" alt="{{ $content->label }}" class="rich-link__logo">
 

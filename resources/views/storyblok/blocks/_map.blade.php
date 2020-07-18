@@ -1,4 +1,6 @@
 
+
+{!! $content->editLink() !!}
 <div>
 	<gmap-map
 			:center="{lat:{{ $content->latitude }}, lng:{{ $content->longitude }}}"

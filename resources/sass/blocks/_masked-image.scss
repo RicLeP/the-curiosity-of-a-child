@@ -11,10 +11,22 @@
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-position: center;
 
-	transition: all .3s ease-in-out;
+	transition: all 1s ease-in-out;
 
 	&:hover {
+		transition: all .3s ease-in-out;
+
 		mask-size: 120% 120%;
 		-webkit-mask-size: 120% 120%;
+	}
+
+	&--small {
+		mask-size: 120% 120%;
+		-webkit-mask-size: 120% 120%;
+
+		&:hover {
+			mask-size: 130% 130%;
+			-webkit-mask-size: 130% 130%;
+		}
 	}
 }

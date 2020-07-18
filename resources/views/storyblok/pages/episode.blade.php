@@ -5,7 +5,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	dump($key);
 });
 */
-//dd($story->features[1]->body)
+//dd()
 ?>
 
 
@@ -17,7 +17,8 @@ $story->listen_links[0]->transform(function ($item, $key) {
 @stop
 
 @section('content')
-	<main class="bgc-black episode">
+	{!! $story->block()->editLink() !!}
+	<main class="bgc-black episode bg-texture" style="{{ $story->block()->theme() }}">
 		<div class="bg-texture" style="{{ $story->block()->theme() }}">
 			<header class="u-v hero">
 				@include('storyblok.blocks._' . $story->hero[0]->component(), ['content' => $story->hero[0]])
@@ -52,9 +53,10 @@ $story->listen_links[0]->transform(function ($item, $key) {
 				<div class="t-4 fgc-white l-episode__centre episode__intro">
 					{!! $story->intro !!}
 
-					<aside class="listen-links t-centred u-mt-50 u-mb-30">
+					<aside class="listen-links t-centred u-mt-100 u-mb-30">
 						<h2 class="u-mb-20 t-3">Listen to the episode</h2>
 
+						{!! $story->listen_links[0]->editLink() !!}
 						<div class="t-5 listen-links__links u-mb-25">
 							@foreach($story->listen_links[0] as $key => $listen_link)
 								<a href="{{ $listen_link }}" class="listen-links__link" target="_blank">
@@ -65,13 +67,14 @@ $story->listen_links[0]->transform(function ($item, $key) {
 							@endforeach
 						</div>
 
-						<p class="t-5">Please leave a review on one of the networks above and why not say hi on Twitter?</p>
+						<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a>?</p>
 					</aside>
 				</div>
 			</div>
 		</div>
 
 		@foreach($story->features as $feature)
+			{!! $feature->editLink() !!}
 			<section class="fgc-white feature bg-texture l-episode" style="{{ $feature->theme() }}">
 				<header class="l-episode__span feature__hero u-mb-60">
 					@include('storyblok.blocks._feature-' . $feature->hero[0]->component(), ['content' => $feature->hero[0], 'title' => $feature->title])
@@ -82,6 +85,31 @@ $story->listen_links[0]->transform(function ($item, $key) {
 				@endforeach
 			</section>
 		@endforeach
+
+		@if (!count($story->features))
+			<section class="fgc-white feature bg-texture l-episode">
+				<h2 class="t-3 l-episode__span t-centred">Full show notes coming soon.</h2>
+			</section>
+		@endif
+
+		@if (count($story->features))
+			<aside class="listen-links t-centred u-mt-minus-150 t-4 fgc-white">
+				<h2 class="u-mb-20 t-3">Listen to the episode</h2>
+
+				{!! $story->listen_links[0]->editLink() !!}
+				<div class="t-5 listen-links__links u-mb-25">
+					@foreach($story->listen_links[0] as $key => $listen_link)
+						<a href="{{ $listen_link }}" class="listen-links__link" target="_blank">
+							<img src="{{ asset('img/icon-' . str_replace('_', '-', $key) . '.svg') }}" alt="" width="50" class="listen-links__icon">
+
+							{{ ucwords(str_replace('_', ' ', $key)) }}
+						</a>
+					@endforeach
+				</div>
+
+				<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a></p>
+			</aside>
+		@endif
 	</main>
 @endsection
 

@@ -20,4 +20,8 @@ class Image extends \Riclep\Storyblok\Fields\Image
 	public function getAltAttribute() {
 		return $this->content['alt'] ?: $this->title;
 	}
+
+	public function getMaskAttribute() {
+		return $this->block()->mask ?: 'masked-image';
+	}
 }

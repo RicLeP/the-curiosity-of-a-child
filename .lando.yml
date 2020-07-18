@@ -2,3 +2,4 @@ name: thecuriosityofachild
 recipe: laravel
 config:
   webroot: public
+  php: 7.4

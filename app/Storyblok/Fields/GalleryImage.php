@@ -19,4 +19,8 @@ class GalleryImage extends Image
 	public function getAltAttribute() {
 		return $this->content['alt'] ?: $this->title;
 	}
+
+	public function getTitleAttribute() {
+		return $this->content['title'] ??= $this->content['name'];
+	}
 }

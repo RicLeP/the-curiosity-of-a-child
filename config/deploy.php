@@ -37,7 +37,7 @@ return [
     | Hooks
     |--------------------------------------------------------------------------
     |
-    | Hooks let you customize your deployments conveniently by pushing tasks 
+    | Hooks let you customize your deployments conveniently by pushing tasks
     | into strategic places of your deployment flow. Each of the official
     | strategies invoke hooks in different ways to implement their logic.
     |
@@ -48,38 +48,41 @@ return [
         'start' => [
             //
         ],
-        
+
         // Code and composer vendors are ready but nothing is built.
         'build' => [
-            //
+
+
         ],
-        
+
         // Deployment is done but not live yet (before symlink)
         'ready' => [
             'artisan:storage:link',
             'artisan:view:clear',
             'artisan:cache:clear',
             'artisan:config:cache',
+
+
         ],
-        
+
         // Deployment is done and live
         'done' => [
-            //
+
         ],
-        
+
         // Deployment succeeded.
         'success' => [
-            //
+            'serverpilot:symlink_public',
         ],
-        
+
         // Deployment failed.
         'fail' => [
             //
         ],
-        
+
         // After a deployment has been rolled back.
         'rollback' => [
-            //
+
         ],
     ],
 
@@ -96,7 +99,8 @@ return [
 
     'options' => [
         'application' => env('APP_NAME', 'Laravel'),
-        'repository' => 'https://github.com/RicLeP/the-curiosity-of-a-child.git',
+        'repository' => 'https://'  . env('GITHUB') . '@github.com/RicLeP/the-curiosity-of-a-child.git',
+        'php_fpm_service' => 'php7.3-fpm',
     ],
 
     /*
@@ -111,9 +115,9 @@ return [
     */
 
     'hosts' => [
-        'thecuriosityofachild.com' => [
-            'deploy_path' => '/deployment/path',
-            'user' => 'root',
+        '161.35.47.17' => [
+            'deploy_path' => '/srv/users/thecuriosityofachild-com/deployments/thecuriosityofachild-com',
+            'user' => 'thecuriosityofachild-com',
         ],
     ],
 
@@ -137,14 +141,14 @@ return [
     | Include additional Deployer recipes
     |--------------------------------------------------------------------------
     |
-    | Here, you can add any third party recipes to provide additional tasks, 
+    | Here, you can add any third party recipes to provide additional tasks,
     | options and strategies. Therefore, it also allows you to create and
     | include your own recipes to define more complex deployment flows.
     |
     */
 
     'include' => [
-        //
+        'vendor/riclep/serverpilot-deployer/recipe/deploy-recipe.php',
     ],
 
     /*

@@ -1,5 +1,5 @@
 <?php
-//dd($content->image->desktop_image);
+//dd($content->image);
 ?>
 
 <picture>

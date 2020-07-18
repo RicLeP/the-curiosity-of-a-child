@@ -1,5 +1,5 @@
 <?php
- //dd($content);
+// dd($content);
 ?>
 
 <swiper-slide>
