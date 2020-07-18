@@ -1,5 +1,6 @@
 
 // mulitple masks are possible!
+/* purgecss start ignore */
 .masked-image {
 	mask-image: url(../img/image-overlay.png);
 	mask-size: 100% 100%;
@@ -30,3 +31,4 @@
 		}
 	}
 }
+/* purgecss end ignore */

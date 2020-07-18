@@ -2473,12 +2473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RicLeP/laravel-storyblok.git",
-                "reference": "0be8f34e009b128cc9f07a68b5ed496503d02f62"
+                "reference": "686f176ea3d4b23374aee7a4bd72b2866cbb68b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/0be8f34e009b128cc9f07a68b5ed496503d02f62",
-                "reference": "0be8f34e009b128cc9f07a68b5ed496503d02f62",
+                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/686f176ea3d4b23374aee7a4bd72b2866cbb68b5",
+                "reference": "686f176ea3d4b23374aee7a4bd72b2866cbb68b5",
                 "shasum": ""
             },
             "require": {
@@ -2533,7 +2533,7 @@
                 "laravel",
                 "storyblok"
             ],
-            "time": "2020-07-17T14:33:21+00:00"
+            "time": "2020-07-18T15:41:34+00:00"
         },
         {
             "name": "spatie/schema-org",

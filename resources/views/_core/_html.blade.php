@@ -30,7 +30,8 @@
 		{ @supports (-webkit-appearance:none) {
 
 			.bg-texture {
-				background-size: 100vw 2400px, 100%;
+				background-size: 1500px 2400px, 100%;
+				background-position: center;
 			}
 		}}
 	</style>

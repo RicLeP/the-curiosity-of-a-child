@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-	<main class="bgc-black bg-texture" style="{{ $story->block()->theme() }}">
+	<main class="bgc-black bg-texture home" style="{{ $story->block()->theme() }}">
 
 		<section class="u-w--centred u-w-s u-pv-80 fgc-white">
 			<h1 class="t-1 u-mb-30">{!! $story->title !!}</h1>
