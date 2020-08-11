@@ -2,5 +2,5 @@
  //dd($content);
 ?>
 
-{!! $content->editLink() !!}
+{!! $content->editorLink() !!}
 <img src="{{ $content->image }}" alt="" class="u-w hero-image">

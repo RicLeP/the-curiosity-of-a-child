@@ -17,7 +17,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 @stop
 
 @section('content')
-	{!! $story->block()->editLink() !!}
+	{!! $story->block()->editorLink() !!}
 	<main class="bgc-black episode bg-texture" style="{{ $story->block()->theme() }}">
 		<div class="bg-texture" style="{{ $story->block()->theme() }}">
 			<header class="u-v hero">
@@ -57,7 +57,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 						<aside class="listen-links t-centred u-mt-100 u-mb-30">
 							<h2 class="u-mb-20 t-3">Listen to the episode</h2>
 
-							{!! $story->listen_links[0]->editLink() !!}
+							{!! $story->listen_links[0]->editorLink() !!}
 							<div class="t-5 listen-links__links u-mb-25">
 								@foreach($story->listen_links[0] as $key => $listen_link)
 									<a href="{{ $listen_link }}" class="listen-links__link" target="_blank">
@@ -76,7 +76,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 		</div>
 
 		@foreach($story->features as $feature)
-			{!! $feature->editLink() !!}
+			{!! $feature->editorLink() !!}
 			<section class="fgc-white feature bg-texture l-episode" style="{{ $feature->theme() }}">
 				<header class="l-episode__span feature__hero u-mb-60">
 					@include('storyblok.blocks._feature-' . $feature->hero[0]->component(), ['content' => $feature->hero[0], 'title' => $feature->title])
@@ -98,7 +98,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 			<aside class="listen-links t-centred u-mt-minus-150 t-4 fgc-white">
 				<h2 class="u-mb-20 t-3">Listen to the episode</h2>
 
-				{!! $story->listen_links[0]->editLink() !!}
+				{!! $story->listen_links[0]->editorLink() !!}
 				<div class="t-5 listen-links__links u-mb-25">
 					@foreach($story->listen_links[0] as $key => $listen_link)
 						<a href="{{ $listen_link }}" class="listen-links__link" target="_blank">

@@ -3,7 +3,7 @@
 ?>
 
 @if ($content->image->hasFile())
-	{!! $content->editLink() !!}
+	{!! $content->editorLink() !!}
 	<div class="u-mv-70 @if (!$content->getLayout()) l-episode__centre l-episode__centre--wide @endif">
 		<picture>
 			<source srcset="{{ $content->image->desktop_image }}" media="(min-width: 700px)">

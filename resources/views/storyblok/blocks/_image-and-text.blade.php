@@ -2,7 +2,7 @@
 //dd($content->text);
 ?>
 
-{!! $content->editLink() !!}
+{!! $content->editorLink() !!}
 <div class="l-episode__span image-and-text">
 	@if ($content->image->hasFile())
 		<img src="{{ $content->image->filename }}" class="u-w masked-image" alt="{{ $content->image->alt }}">

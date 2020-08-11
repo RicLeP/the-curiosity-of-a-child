@@ -2,7 +2,7 @@
 //dd($content->images);
 ?>
 
-{!! $content->editLink() !!}
+{!! $content->editorLink() !!}
 <div class="l-episode__centre--wide">
 	<div class="gallery">
 		<swiper class="swiper" :options="gallerySwiper">
