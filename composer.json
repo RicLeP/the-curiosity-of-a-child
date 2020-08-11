@@ -22,7 +22,7 @@
         "laravel/tinker": "^2.0",
         "ozdemirburak/iris": "^2.1",
         "printful/php-api-sdk": "^2.2",
-        "riclep/laravel-storyblok": "dev-develop"
+        "riclep/laravel-storyblok": "2.0.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

@@ -53,22 +53,24 @@ $story->listen_links[0]->transform(function ($item, $key) {
 				<div class="t-4 fgc-white l-episode__centre episode__intro">
 					{!! $story->intro !!}
 
-					<aside class="listen-links t-centred u-mt-100 u-mb-30">
-						<h2 class="u-mb-20 t-3">Listen to the episode</h2>
+					@if ($story->listen_links)
+						<aside class="listen-links t-centred u-mt-100 u-mb-30">
+							<h2 class="u-mb-20 t-3">Listen to the episode</h2>
 
-						{!! $story->listen_links[0]->editLink() !!}
-						<div class="t-5 listen-links__links u-mb-25">
-							@foreach($story->listen_links[0] as $key => $listen_link)
-								<a href="{{ $listen_link }}" class="listen-links__link" target="_blank">
-									<img src="{{ asset('img/icon-' . str_replace('_', '-', $key) . '.svg') }}" alt="" width="50" class="listen-links__icon">
+							{!! $story->listen_links[0]->editLink() !!}
+							<div class="t-5 listen-links__links u-mb-25">
+								@foreach($story->listen_links[0] as $key => $listen_link)
+									<a href="{{ $listen_link }}" class="listen-links__link" target="_blank">
+										<img src="{{ asset('img/icon-' . str_replace('_', '-', $key) . '.svg') }}" alt="" width="50" class="listen-links__icon">
 
-									{{ ucwords(str_replace('_', ' ', $key)) }}
-								</a>
-							@endforeach
-						</div>
+										{{ ucwords(str_replace('_', ' ', $key)) }}
+									</a>
+								@endforeach
+							</div>
 
-						<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a>?</p>
-					</aside>
+							<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a></p>
+						</aside>
+					@endif
 				</div>
 			</div>
 		</div>

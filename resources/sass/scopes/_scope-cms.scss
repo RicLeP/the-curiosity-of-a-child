@@ -75,6 +75,7 @@ It sets up basic formatting rules so the user is not required to
 	}
 
 	a:link, a:visited {
+		color: inherit;
 		text-decoration: underline;
 	}
 }
