@@ -13,11 +13,11 @@
 	@media all and (max-width: 900px) {
 		grid-template-columns: 5% 1fr 5%;
 
-		& :first-child {
+		& > :first-child {
 			grid-column: span 3;
 		}
 
-		& :last-child {
+		& > :last-child {
 			grid-column: 2 / span 1;
 		}
 	}
