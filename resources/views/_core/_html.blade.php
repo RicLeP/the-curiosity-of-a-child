@@ -18,6 +18,8 @@
 	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
 	<meta name="theme-color" content="{{ config('core.theme_colour') }}">
 
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+
 	@yield('meta')
 
 	<link rel="stylesheet" href="https://use.typekit.net/sqb5yuy.css">

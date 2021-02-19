@@ -5,6 +5,7 @@ namespace App\Storyblok\Blocks;
 
 
 use Riclep\Storyblok\Fields\DateTime;
+use Riclep\Storyblok\Fields\Textarea;
 use Riclep\Storyblok\Traits\AppliesTypography;
 
 class Episode extends \App\Storyblok\Block
@@ -12,7 +13,8 @@ class Episode extends \App\Storyblok\Block
 	use AppliesTypography;
 
 	protected $casts = [
-		'date' => DateTime::class
+		'date' => DateTime::class,
+		'transcript' => Textarea::class,
 	];
 
 	protected $applyTypography = ['title', 'subtitle'];
@@ -24,6 +26,4 @@ class Episode extends \App\Storyblok\Block
 	public function getDateAttribute() {
 		return strtoupper($this->content()['date']->content()->format('j M Y'));
 	}
-
-
 }

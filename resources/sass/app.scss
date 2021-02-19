@@ -26,6 +26,7 @@
 // scopes
 /* purgecss start ignore */
 @import "scopes/scope-cms";
+@import "scopes/scope-transcript";
 /* purgecss end ignore */
 
 @import "layouts/l-2-sections";
@@ -49,6 +50,7 @@
 @import "blocks/masked-image";
 @import "blocks/quote";
 @import "blocks/rich-link";
+@import "blocks/transcript";
 @import "blocks/tweet";
 @import "blocks/video-player";
 

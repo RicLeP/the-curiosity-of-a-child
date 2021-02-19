@@ -29,6 +29,8 @@ class Theme extends \App\Storyblok\Block
 	{
 		$colours = $this->theme();
 
-		return '--theme-from-alpha: ' . $colours['from_alpha'] . '; ' . '--theme-from: ' . $colours['from'] . '; ' . '--theme-to-alpha: ' . $colours['to_alpha'] . '; ' . '--theme-to: ' . $colours['to'] . '; --theme-texture: url(' . ('https://a.storyblok.com/f/87028/1500x4004/928cf6cb1c/bg-texture-1.jpg') . ');';
+		$backgroundImage = $this->texture->filename ?: 'https://a.storyblok.com/f/87028/1500x4004/928cf6cb1c/bg-texture-1.jpg';
+
+		return '--theme-from-alpha: ' . $colours['from_alpha'] . '; ' . '--theme-from: ' . $colours['from'] . '; ' . '--theme-to-alpha: ' . $colours['to_alpha'] . '; ' . '--theme-to: ' . $colours['to'] . '; --theme-texture: url(' . $backgroundImage . ');';
 	}
 }

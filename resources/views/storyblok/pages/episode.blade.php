@@ -95,7 +95,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 		@endif
 
 		@if (count($story->features))
-			<aside class="listen-links t-centred u-mt-minus-150 t-4 fgc-white">
+			<aside class="listen-links t-centred u-mt-minus-150 t-4 fgc-white u-w--centred u-w-s">
 				<h2 class="u-mb-20 t-3">Listen to the episode</h2>
 
 				{!! $story->listen_links[0]->editorLink() !!}
@@ -111,6 +111,18 @@ $story->listen_links[0]->transform(function ($item, $key) {
 
 				<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a></p>
 			</aside>
+		@endif
+
+		@if ($story->transcript)
+			<article class="u-w--centred u-w-s fgc-white transcript">
+				<h3 class="t-3 u-mb-5">Transcript</h3>
+
+				<p>This transcript is automatically generated so may contain errors. <button @click="showTranscript = true" class="transcript__button">Show</button></p>
+
+				<div class="transcript__content scope-transcript" v-if="showTranscript">
+					{!! $story->transcript !!}
+				</div>
+			</article>
 		@endif
 	</main>
 @endsection

@@ -15,6 +15,7 @@ Vue.use(VueGoogleMaps, {
 	},
 })
 
+window.axios = require('axios');
 
 const app = new Vue({
 	el: '#app',
@@ -39,11 +40,38 @@ const app = new Vue({
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev'
 				}
-			}
+			},
+			liveData: {},
+			showTranscript: false
 		}
 	},
 
 	mounted() {
+		const request = axios.CancelToken.source();
+
+		window.storyblok.on('input', (payload) => {
+			// Current unsaved Story without _editable properties
+		//	console.log(payload.story.content);
+
+
+
+			axios.post('/live-field', {
+				content: payload.story.content,
+				cancelToken: request.token
+			}).then((response) => {
+				console.log(response.data);
+				this.liveData = response.data;
+			});
+
+			// Add _editable properties to keep the Storyblok JS Bridge active after the content updates.
+		//	let updatedStoryContent = window.storyblok.addComments(payload.story.content, payload.story.id)
+
+			// Story object including _editable properties for each component.
+		//	console.log(updatedStoryContent)
+
+			// Use to update your projects content state
+
+		})
 	}
 });
 
