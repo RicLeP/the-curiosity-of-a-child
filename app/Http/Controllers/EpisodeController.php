@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 
 use App\Storyblok\Folders\Episodes;
-use Printful\PrintfulApiClient;
 use Riclep\Storyblok\StoryblokFacade as StoryBlok;
 
 class EpisodeController extends Controller
