@@ -9,13 +9,17 @@
 
 	<p><a href="{{ $record['URL'] }}" target="_blank">{{ $record['URL'] }}</a></p>
 
-	<p>@polybookapp note below:</p>
+	<p>@polybookapp:</p>
 
 	<p>--{{ $record['TITLE'] }}--</p>
 
 	<p>{{ $record['SHARE_LINK'] }}</p>
 
 	<p>{{ $record['HASH_TAGS'] }}</p>
+
+	<p>{{ $record['DATE_START'] }} - {{ $record['DATE_END'] }}</p>
+
+	<p>{{ $record['LOCATION'] }}</p>
 
 	<hr>
 
