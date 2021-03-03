@@ -7,7 +7,7 @@
 
 	<p>{{ $record['SUMMARY'] }}</p>
 
-	<p>{{ $record['URL'] }}</p>
+	<p><a href="{{ $record['URL'] }}" target="_blank">{{ $record['URL'] }}</a></p>
 
 	<p>@polybookapp note below:</p>
 

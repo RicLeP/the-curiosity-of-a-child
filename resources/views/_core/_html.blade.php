@@ -12,8 +12,8 @@
 	<link rel="manifest" href="/img/favicon/site.webmanifest">
 	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0e3a4d">
 	<link rel="shortcut icon" href="/img/favicon/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="IoD Jersey">
-	<meta name="application-name" content="IoD Jersey">
+	<meta name="apple-mobile-web-app-title" content="The Curiosity of a Child">
+	<meta name="application-name" content="The Curiosity of a Child">
 	<meta name="msapplication-TileColor" content="{{ config('core.theme_colour') }}">
 	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
 	<meta name="theme-color" content="{{ config('core.theme_colour') }}">
