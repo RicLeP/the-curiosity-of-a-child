@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 //Route::view('pixi', 'pages.pixi');
 
+Route::get('poly', '\App\Http\Controllers\PolybookController@index');
+
 Route::get('/', '\App\Http\Controllers\EpisodeController@index');
 Route::get('/{slug?}', '\App\Http\Controllers\EpisodeController@show')->where('slug', '(.*)');
 
