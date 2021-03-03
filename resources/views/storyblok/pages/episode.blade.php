@@ -5,7 +5,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	dump($key);
 });
 */
-//dd()
+//dd($story);
 ?>
 
 
@@ -15,6 +15,32 @@ $story->listen_links[0]->transform(function ($item, $key) {
 @section('title')
 	{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - @parent
 @stop
+
+@section('json-ld')
+	@if ($story->mp3_url)
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org/",
+			"@type": "PodcastEpisode",
+			"url": "https://thecuriosityofachild.com/{{ $story->meta()['slug'] }}",
+			"name": "{{ $story->meta()['name'] }}",
+			"datePublished": "{{ $story->published_date_string }}",
+			"timeRequired": "PT{{ $story->duration }}M",
+			"description": "{{ strip_tags($story->intro) }}",
+			"associatedMedia": {
+				"@type": "MediaObject",
+				"contentUrl": "{{ $story->mp3_url }}"
+			},
+			"partOfSeries": {
+				"@type": "PodcastSeries",
+				"name": "The Curiosity of a Child",
+				"url": "https://thecuriosityofachild.com"
+			}
+		 }
+		}
+		</script>
+	@endif
+@endsection
 
 @section('content')
 	{!! $story->block()->editorLink() !!}

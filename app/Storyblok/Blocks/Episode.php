@@ -26,4 +26,8 @@ class Episode extends \App\Storyblok\Block
 	public function getDateAttribute() {
 		return strtoupper($this->content()['date']->content()->format('j M Y'));
 	}
+
+	public function getPublishedDateStringAttribute() {
+		return strtoupper($this->content()['date']->content()->format('Y-m-d'));
+	}
 }

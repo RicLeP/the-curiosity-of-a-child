@@ -22,6 +22,8 @@
 
 	@yield('meta')
 
+	@yield('json-ld')
+
 	<link rel="stylesheet" href="https://use.typekit.net/sqb5yuy.css">
 
 	<link href="{{ mix('css/app.css') }}" rel="stylesheet">
