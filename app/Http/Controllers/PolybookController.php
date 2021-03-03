@@ -14,18 +14,18 @@ class PolybookController extends Controller
 		$csv = Reader::createFromPath(storage_path('polybook.csv'), 'r');
 		$csv->setHeaderOffset(0);
 
-	/*	$header = $csv->getHeader(); //returns the CSV header record
-		$records = collect($csv->getRecords()); //returns all the CSV records as an Iterator object
-*/
+
 		$records = collect($csv->getRecords())->slice(5)->reverse()->transform(function ($record) {
 			$record['HASH_TAGS'] = '#Podcast #' . collect(explode(',', $record['TAGS_KEYWORD']))->transform(function ($tag) {
 					return Str::studly($tag);
 				})->implode(' #');
 
+			$record['URL'] = 'https://thecuriosityofachild.com/ep/' . (int) filter_var($record['SOURCE'], FILTER_SANITIZE_NUMBER_INT);
+
 			return $record;
 		});
 
-	//	dd($records);
+		dd($records);
 
 		return view('polybook', [
 			'records' => $records,
