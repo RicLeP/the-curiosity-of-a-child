@@ -14,7 +14,6 @@ class PolybookController extends Controller
 		$csv = Reader::createFromPath(storage_path('polybook.csv'), 'r');
 		$csv->setHeaderOffset(0);
 
-
 		$records = collect($csv->getRecords())->slice(5)->reverse()->transform(function ($record) {
 			$record['HASH_TAGS'] = '#Podcast #' . collect(explode(',', $record['TAGS_KEYWORD']))->transform(function ($tag) {
 					return Str::studly($tag);
@@ -24,8 +23,6 @@ class PolybookController extends Controller
 
 			return $record;
 		});
-
-		dd($records);
 
 		return view('polybook', [
 			'records' => $records,
