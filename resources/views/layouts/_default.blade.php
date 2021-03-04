@@ -19,6 +19,7 @@
 	<meta name="twitter:site" content="@curichildpod">
 	<meta name="twitter:creator" content="@curichildpod">
 	<meta name="twitter:title" content="The Curiosity of a Child Podcast">
+	<meta name="twitter:text:title" content="The Curiosity of a Child Podcast">
 	<meta name="twitter:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters.">
 	<meta name="twitter:image" content="{{ asset('img/twitter-default.png') }}">
 	<meta name="twitter:image:alt" content="The Curiosity of a Child Podcast">

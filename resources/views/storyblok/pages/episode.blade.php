@@ -55,6 +55,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta name="twitter:site" content="@curichildpod">
 	<meta name="twitter:creator" content="@curichildpod">
 	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }}">
+	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }}">
 	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
 	<meta name="twitter:image" content="{{ $story->teaser_image }}">
 	<meta name="twitter:image:alt" content="The Curiosity of a Child Podcast">
