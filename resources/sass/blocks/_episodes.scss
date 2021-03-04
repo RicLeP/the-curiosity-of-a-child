@@ -1,6 +1,14 @@
 
 
 .episodes {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+
+	margin-left: auto;
+	margin-right: auto;
+	width: 88%;
+
 	&__episode {
 		margin-bottom: 30px;
 		overflow: hidden;

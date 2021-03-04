@@ -117,7 +117,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 								@endforeach
 							</div>
 
-							<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a></p>
+							<p class="t-5">Please leave a review on one of the networks above as it’s how we grow and why not say hi on <a href="https://twitter.com/curichildpod" class="link-underlined">Twitter</a>, <a href="https://www.instagram.com/curichildpod/" class="link-underlined">Instagram</a>, <a href="https://www.facebook.com/curichildpod/" class="link-underlined">Facebook</a> or <a href="mailto:hello@thecuriosityofachild.com" class="link-underlined">email</a>? We’d love to heard from you.</p>
 						</aside>
 					@endif
 				</div>
@@ -158,7 +158,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 					@endforeach
 				</div>
 
-				<p class="t-5">Please leave a review on one of the networks above and why not <a href="https://twitter.com/curichildpod" class="link-underlined">say hi on Twitter?</a></p>
+				<p class="t-5">Please leave a review on one of the networks above as it’s how we grow and why not say hi on <a href="https://twitter.com/curichildpod" class="link-underlined">Twitter</a>, <a href="https://www.instagram.com/curichildpod/" class="link-underlined">Instagram</a>, <a href="https://www.facebook.com/curichildpod/" class="link-underlined">Facebook</a> or <a href="mailto:hello@thecuriosityofachild.com" class="link-underlined">email</a>? We’d love to heard from you.</p>
 			</aside>
 		@endif
 
