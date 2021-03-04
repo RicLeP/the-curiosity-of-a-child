@@ -14,8 +14,8 @@
 	<meta property="og:url" content="https://thecuriosityofachild.com/">
 	<meta property="og:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters. ">
 	<meta property="og:type" content="website">
-	<meta name="og:image" content="{{ asset('img/twitter-default.png') }}">
-	<meta name="og:locale" content="en_GB">
+	<meta property="og:image" content="{{ asset('img/twitter-default.png') }}">
+	<meta property="og:locale" content="en_GB">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">

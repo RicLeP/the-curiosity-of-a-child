@@ -52,8 +52,8 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta property="og:type" content="article">
 	<meta property="og:article:published_time" content="{{ $story->date->content()->toIso8601String() }}">
 	<meta property="og:article:modified_time" content="{{ $story->meta()['updated_at']->toIso8601String() }}">
-	<meta name="og:image" content="{{ $story->teaser_image }}">
-	<meta name="og:locale" content="en_GB">
+	<meta property="og:image" content="{{ $story->teaser_image }}">
+	<meta property="og:locale" content="en_GB">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">
