@@ -42,6 +42,24 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	@endif
 @endsection
 
+@section('meta')
+	<meta property="description" content="">
+
+	<meta property="og:title" content="The Curiosity of a Child Podcast">
+	<meta property="og:site_name" content="The Curiosity of a Child Podcast">
+	<meta property="og:url" content="https://thecuriosityofachild.com/">
+	<meta property="og:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters. ">
+	<meta property="og:type" content="website">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@curichildpod">
+	<meta name="twitter:creator" content="@curichildpod">
+	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }}">
+	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
+	<meta name="twitter:image" content="{{ $story->teaser_image }}">
+	<meta name="twitter:image:alt" content="The Curiosity of a Child Podcast">
+@stop
+
 @section('content')
 	{!! $story->block()->editorLink() !!}
 	<main class="bgc-black episode bg-texture" style="{{ $story->block()->theme() }}">
