@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1f731a0bb9008680d4dc9914e37e443",
+    "content-hash": "661ac868706727296c44eb60e46b72a6",
     "packages": [
         {
             "name": "apix/cache",
@@ -211,6 +211,82 @@
                 }
             ],
             "time": "2021-01-20T22:51:39+00:00"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.2.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
+                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.55",
+                "psr/log": "^1.0",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/ca-bundle/issues",
+                "source": "https://github.com/composer/ca-bundle/tree/1.2.9"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-12T12:10:35+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -557,6 +633,65 @@
             "time": "2020-12-29T14:50:06+00:00"
         },
         {
+            "name": "embed/embed",
+            "version": "v3.4.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/Embed.git",
+                "reference": "99f6d95aebd94251573e4f4febf14bc6aba28697"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/99f6d95aebd94251573e4f4febf14bc6aba28697",
+                "reference": "99f6d95aebd94251573e4f4febf14bc6aba28697",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "ext-curl": "*",
+                "ext-dom": "*",
+                "ext-mbstring": "*",
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpunit/phpunit": "^5.7|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Embed\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to retrieve page info using oembed, opengraph, etc",
+            "homepage": "https://github.com/oscarotero/Embed",
+            "keywords": [
+                "embed",
+                "embedly",
+                "oembed",
+                "opengraph",
+                "twitter cards"
+            ],
+            "support": {
+                "email": "oom@oscarotero.com",
+                "issues": "https://github.com/oscarotero/Embed/issues",
+                "source": "https://github.com/oscarotero/Embed/tree/v3.4.13"
+            },
+            "time": "2020-12-24T09:42:20+00:00"
+        },
+        {
             "name": "fideloper/proxy",
             "version": "4.4.1",
             "source": {
@@ -693,37 +828,43 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.5",
+            "version": "7.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e"
+                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
-                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0aa74dfb41ae110835923ef10a9d803a22d50e79",
+                "reference": "0aa74dfb41ae110835923ef10a9d803a22d50e79",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.6.1",
-                "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "^1.17.0"
+                "guzzlehttp/promises": "^1.4",
+                "guzzlehttp/psr7": "^1.7",
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-client": "^1.0"
+            },
+            "provide": {
+                "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+                "php-http/client-integration-tests": "^3.0",
+                "phpunit/phpunit": "^8.5.5 || ^9.3.5",
                 "psr/log": "^1.1"
             },
             "suggest": {
+                "ext-curl": "Required for CURL handler support",
+                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.5-dev"
+                    "dev-master": "7.1-dev"
                 }
             },
             "autoload": {
@@ -743,6 +884,11 @@
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://sagikazarmark.hu"
                 }
             ],
             "description": "Guzzle is a PHP HTTP client library",
@@ -753,14 +899,34 @@
                 "framework",
                 "http",
                 "http client",
+                "psr-18",
+                "psr-7",
                 "rest",
                 "web service"
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5"
+                "source": "https://github.com/guzzle/guzzle/tree/7.2.0"
             },
-            "time": "2020-06-16T21:01:06+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/alexeyshockov",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/gmponos",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-10T11:47:56+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -891,76 +1057,6 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.7.0"
             },
             "time": "2020-09-30T07:37:11+00:00"
-        },
-        {
-            "name": "imliam/laravel-env-set-command",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imliam/laravel-env-set-command.git",
-                "reference": "118af7a263e7b7f3c060c9a82267e7e4cc091c31"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imliam/laravel-env-set-command/zipball/118af7a263e7b7f3c060c9a82267e7e4cc091c31",
-                "reference": "118af7a263e7b7f3c060c9a82267e7e4cc091c31",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^7.0|^8.0",
-                "illuminate/support": "^7.0|^8.0",
-                "php": "^7.3|^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5|^8.0|^9.0",
-                "roave/security-advisories": "dev-master"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "ImLiam\\EnvironmentSetCommand\\EnvironmentSetCommandServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ImLiam\\EnvironmentSetCommand\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Liam Hammett",
-                    "email": "liam@liamhammett.com",
-                    "homepage": "https://liamhammett.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Set a .env file variable from the command line",
-            "homepage": "https://github.com/imliam/laravel-env-set-command",
-            "keywords": [
-                "artisan",
-                "env",
-                "environment",
-                "imliam",
-                "laravel-env-set-command",
-                "variables"
-            ],
-            "support": {
-                "issues": "https://github.com/imliam/laravel-env-set-command/issues",
-                "source": "https://github.com/imliam/laravel-env-set-command/tree/v1.3.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/imliam",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-01-09T13:54:18+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2295,6 +2391,58 @@
             "time": "2019-01-08T18:20:26+00:00"
         },
         {
+            "name": "psr/http-client",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-client.git",
+                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP clients",
+            "homepage": "https://github.com/php-fig/http-client",
+            "keywords": [
+                "http",
+                "http-client",
+                "psr",
+                "psr-18"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-client/tree/master"
+            },
+            "time": "2020-06-29T06:28:15+00:00"
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -2739,27 +2887,27 @@
         },
         {
             "name": "riclep/laravel-storyblok",
-            "version": "2.0.7",
+            "version": "2.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RicLeP/laravel-storyblok.git",
-                "reference": "3b8311adecfde5c6f6a52eaa7dc8cf6d887fee0a"
+                "reference": "070fe8ebc5fd4522a629494188fcbe8742f7a556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/3b8311adecfde5c6f6a52eaa7dc8cf6d887fee0a",
-                "reference": "3b8311adecfde5c6f6a52eaa7dc8cf6d887fee0a",
+                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/070fe8ebc5fd4522a629494188fcbe8742f7a556",
+                "reference": "070fe8ebc5fd4522a629494188fcbe8742f7a556",
                 "shasum": ""
             },
             "require": {
+                "embed/embed": "^3.4",
                 "ext-json": "*",
                 "illuminate/support": "^6.0|^7.0|^8.0",
-                "imliam/laravel-env-set-command": "^1.0",
                 "league/commonmark": "^1.5",
                 "mundschenk-at/php-typography": "^6.5",
-                "php": "^7.1",
+                "php": "^7.1|^8.0",
                 "spatie/schema-org": "^2.14",
-                "storyblok/php-client": "^1.3",
+                "storyblok/php-client": "^1.4",
                 "storyblok/richtext-resolver": "dev-master"
             },
             "require-dev": {
@@ -2805,9 +2953,9 @@
             ],
             "support": {
                 "issues": "https://github.com/RicLeP/laravel-storyblok/issues",
-                "source": "https://github.com/RicLeP/laravel-storyblok/tree/2.0.7"
+                "source": "https://github.com/RicLeP/laravel-storyblok/tree/2.5.8"
             },
-            "time": "2020-09-09T08:46:29+00:00"
+            "time": "2021-03-04T10:55:42+00:00"
         },
         {
             "name": "spatie/schema-org",
@@ -2883,21 +3031,21 @@
         },
         {
             "name": "storyblok/php-client",
-            "version": "1.3.4",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/storyblok/php-client.git",
-                "reference": "935613d06b2e9d647842d77a5486641aeb39d705"
+                "reference": "b7d53bde52755bd5cba7577ba1caab698c444a8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/storyblok/php-client/zipball/935613d06b2e9d647842d77a5486641aeb39d705",
-                "reference": "935613d06b2e9d647842d77a5486641aeb39d705",
+                "url": "https://api.github.com/repos/storyblok/php-client/zipball/b7d53bde52755bd5cba7577ba1caab698c444a8c",
+                "reference": "b7d53bde52755bd5cba7577ba1caab698c444a8c",
                 "shasum": ""
             },
             "require": {
                 "apix/cache": "^1.2",
-                "guzzlehttp/guzzle": "^6.2"
+                "guzzlehttp/guzzle": "^7.0"
             },
             "type": "library",
             "autoload": {
@@ -2925,9 +3073,9 @@
             ],
             "support": {
                 "issues": "https://github.com/storyblok/php-client/issues",
-                "source": "https://github.com/storyblok/php-client/tree/master"
+                "source": "https://github.com/storyblok/php-client/tree/1.4.0"
             },
-            "time": "2020-07-21T12:08:36+00:00"
+            "time": "2020-09-09T13:19:10+00:00"
         },
         {
             "name": "storyblok/richtext-resolver",
@@ -5804,16 +5952,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.5.13",
+            "version": "2.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "5e9ef386aaad9985cee2ac23281a27568d083b7e"
+                "reference": "17097f7a83e200d90d1cf9f4d1b35c1001513a47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/5e9ef386aaad9985cee2ac23281a27568d083b7e",
-                "reference": "5e9ef386aaad9985cee2ac23281a27568d083b7e",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/17097f7a83e200d90d1cf9f4d1b35c1001513a47",
+                "reference": "17097f7a83e200d90d1cf9f4d1b35c1001513a47",
                 "shasum": ""
             },
             "require": {
@@ -5877,7 +6025,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-02-16T12:46:19+00:00"
+            "time": "2021-03-04T08:48:01+00:00"
         },
         {
             "name": "facade/ignition-contracts",

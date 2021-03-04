@@ -12,7 +12,7 @@ class Episode extends \App\Storyblok\Block
 {
 	use AppliesTypography;
 
-	protected $casts = [
+	protected $_casts = [
 		'date' => DateTime::class,
 		'transcript' => Textarea::class,
 	];
@@ -23,7 +23,7 @@ class Episode extends \App\Storyblok\Block
 		return $this->theme[0] ?? null;
 	}
 
-	public function getDateAttribute() {
+	public function getFormattedDateAttribute() {
 		return strtoupper($this->content()['date']->content()->format('j M Y'));
 	}
 

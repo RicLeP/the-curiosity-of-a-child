@@ -9,7 +9,7 @@ use Riclep\Storyblok\Fields\Textarea;
 
 class Quote extends \App\Storyblok\Block
 {
-	protected $casts = [
+	protected $_casts = [
 		'quote' => Textarea::class,
 	];
 }

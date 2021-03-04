@@ -17,13 +17,13 @@
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^7.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "league/csv": "^9.6",
         "ozdemirburak/iris": "^2.1",
         "printful/php-api-sdk": "^2.2",
-        "riclep/laravel-storyblok": "^2.0"
+        "riclep/laravel-storyblok": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

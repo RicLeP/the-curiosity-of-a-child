@@ -5,7 +5,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	dump($key);
 });
 */
-//dd($story);
+//dd($story->date);
 ?>
 
 
@@ -47,9 +47,13 @@ $story->listen_links[0]->transform(function ($item, $key) {
 
 	<meta property="og:title" content="The Curiosity of a Child Podcast">
 	<meta property="og:site_name" content="The Curiosity of a Child Podcast">
-	<meta property="og:url" content="https://thecuriosityofachild.com/">
+	<meta property="og:url" content="https://thecuriosityofachild.com/{{ $story->meta()['slug'] }}">
 	<meta property="og:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters. ">
-	<meta property="og:type" content="website">
+	<meta property="og:type" content="article">
+	<meta property="og:article:published_time" content="{{ $story->date->content()->toIso8601String() }}">
+	<meta property="og:article:modified_time" content="{{ $story->meta()['updated_at']->toIso8601String() }}">
+	<meta name="og:image" content="{{ $story->teaser_image }}">
+	<meta name="og:locale" content="en_GB">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">
@@ -81,7 +85,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 								<path id="curve" fill="none" d="m 120,100 a 50,50 0 0 1 -100,0 50,50 0 0 1 100,0 z"/>
 								<text>
 									<textPath xlink:href="#curve" startOffset="150" fill="#fff">
-										{{ $story->date }}
+										{{ $story->formatted_date }}
 									</textPath>
 								</text>
 							</svg>
