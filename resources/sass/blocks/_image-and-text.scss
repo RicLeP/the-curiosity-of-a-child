@@ -21,4 +21,10 @@
 			grid-column: 2 / span 1;
 		}
 	}
+
+	img {
+		max-height: 90vh;
+
+		object-fit: contain;
+	}
 }

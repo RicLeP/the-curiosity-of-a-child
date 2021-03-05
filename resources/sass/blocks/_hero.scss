@@ -24,7 +24,7 @@
 		}
 
 		@media all and (min-width: 450px) {
-			margin-top: 40px;
+			margin-top: 30px;
 		}
 
 		@media all and (min-width: 670px) {
@@ -48,7 +48,7 @@
 		margin-bottom: .2em;
 
 		font-family: $font-1-family;
-		font-size: 50px;
+		font-size: 45px;
 		font-weight: $font-1-regular;
 		letter-spacing: .05ch;
 
@@ -68,7 +68,7 @@
 
 	&__subtitle {
 		font-family: $font-1-family;
-		font-size: 30px;
+		font-size: 27px;
 		font-weight: $font-1-regular;
 		letter-spacing: .05ch;
 
@@ -91,7 +91,7 @@
 }
 
 .hero-image + .hero__content {
-	margin-top: -30px;
+	margin-top: -10px;
 
 	@media all and (min-width: 670px) {
 		margin-top: -120px;

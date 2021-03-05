@@ -5,7 +5,11 @@ Specify all the typographic styles that are going to be reused.
 html {
 	font-family: $font-2-family;
 	font-weight: $font-2-regular;
-	font-size: 22px;
+	font-size: 20px;
+
+	@media all and (min-width: 600px) {
+		font-size: 22px;
+	}
 }
 
 // Helper for each font used on the website. Use these only when a .t-# style doesn’t fit
@@ -32,14 +36,22 @@ the screen size then create their styles within the block itself
 .t {
 	&-1 {
 		font-family: $font-1-family;
-		font-size: 80px;
+		font-size: 50px;
 		font-weight: $font-1-regular;
 		line-height: 1.09;
+
+		@media all and (min-width: 500px) {
+			font-size: 60px;
+		}
+
+		@media all and (min-width: 700px) {
+			font-size: 80px;
+		}
 	}
 
 	&-2 {
 		font-family: $font-1-family;
-		font-size: 45px;
+		font-size: 40px;
 		font-weight: $font-1-regular;
 		line-height: 1.09;
 
@@ -66,13 +78,12 @@ the screen size then create their styles within the block itself
 
 	&-4 {
 		font-family: $font-2-family;
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: $font-2-regular;
-		line-height: 1.6;
+		line-height: 1.4;
 
 		@media all and (min-width: 600px) {
 			font-size: 28px;
-			line-height: 1.8;
 		}
 	}
 

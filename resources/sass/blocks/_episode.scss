@@ -3,9 +3,9 @@
 .episode {
 	&__intro {
 		margin-bottom: calc(10vh + 200px);
-		margin-top: 7vh;
+		margin-top: 4vh;
 
-		@media all and (min-width: 1200px) {
+		@media all and (min-width: 1400px) {
 			margin-top: 14vh;
 		}
 	}

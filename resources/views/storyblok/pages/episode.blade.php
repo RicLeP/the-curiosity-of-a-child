@@ -92,7 +92,6 @@ $story->listen_links[0]->transform(function ($item, $key) {
 						</div>
 					</div>
 
-					<p class="t-uppercase t-4 hero__date">{{ $story->formatted_date }}</p>
 					<h1 class="hero__title">{!! $story->title  !!}</h1>
 					<h2 class="hero__subtitle">{!! $story->subtitle !!}</h2>
 				</div>
@@ -103,7 +102,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 					{!! $story->intro !!}
 
 					@if ($story->listen_links)
-						<aside class="listen-links t-centred u-mt-100 u-mb-30">
+						<aside class="listen-links t-centred u-mt-70 u-mb-30">
 							<h2 class="u-mb-20 t-3">Listen to the episode</h2>
 
 							{!! $story->listen_links[0]->editorLink() !!}
@@ -127,7 +126,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 		@foreach($story->features as $feature)
 			{!! $feature->editorLink() !!}
 			<section class="fgc-white feature bg-texture l-episode" style="{{ $feature->theme() }}">
-				<header class="l-episode__span feature__hero u-mb-60">
+				<header class="l-episode__span feature__hero u-mb-10">
 					@include('storyblok.blocks._feature-' . $feature->hero[0]->component(), ['content' => $feature->hero[0], 'title' => $feature->title])
 				</header>
 

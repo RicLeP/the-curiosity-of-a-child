@@ -66,7 +66,7 @@
 							<h2 class="t-3"><a href="{{ $episode->meta()['slug'] }}" class="link">{{ $episode->number }}: {!! $episode->title !!}</a></h2>
 							<h3 class="t-4 u-mb-10">{!! $episode->subtitle !!}</h3>
 
-							<p class="t-5 u-mb-20">{{ $episode->date }}</p>
+							<p class="t-5 u-mb-20"><time>{{ $episode->formatted_date }}</time></p>
 
 							<div class="scope-cms u-mb-20">{!! $episode->intro !!}</div>
 
