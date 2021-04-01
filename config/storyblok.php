@@ -4,10 +4,10 @@ return [
 
 	/*
     |--------------------------------------------------------------------------
-    | storyblok Preview API key
+    | Storyblok Preview API key
     |--------------------------------------------------------------------------
     |
-    | Enter your storyblok Preview API key to communicate with their API.
+    | Enter your Storyblok Preview API key to communicate with their API.
     | The preview key allows you to access draft content and is used when
     | in the editor or when debug mode is enabled.
     |
@@ -16,10 +16,10 @@ return [
 
 	/*
     |--------------------------------------------------------------------------
-    | storyblok Public API key
+    | Storyblok Public API key
     |--------------------------------------------------------------------------
     |
-    | Enter your storyblok Public API key to communicate with their API.
+    | Enter your Storyblok Public API key to communicate with their API.
     | This key is used when your website is live and debug is off.
     |
     */
@@ -27,7 +27,7 @@ return [
 
 	/*
     |--------------------------------------------------------------------------
-    | storyblok draft mode
+    | Storyblok draft mode
     |--------------------------------------------------------------------------
     |
     | Request draft data
@@ -38,10 +38,33 @@ return [
 
 	/*
     |--------------------------------------------------------------------------
-    | storyblok debug
+    | Storyblok Personal access token
     |--------------------------------------------------------------------------
     |
-    | Enable debug mode for storyblok. This prints useful data to the screen.
+    | Enter your Storyblok Personal access token to access their management API
+    |
+    */
+	'oauth_token' => env('STORYBLOK_OAUTH_TOKEN', null),
+
+
+
+	/*
+    |--------------------------------------------------------------------------
+    | Storyblok Space ID
+    |--------------------------------------------------------------------------
+    |
+    | Enter your Storyblok space ID for use with the management API
+    |
+    */
+	'space_id' => env('STORYBLOK_SPACE_ID', null),
+
+
+	/*
+    |--------------------------------------------------------------------------
+    | Storyblok debug
+    |--------------------------------------------------------------------------
+    |
+    | Enable debug mode for Storyblok. This prints useful data to the screen.
     |
     */
 	'debug' => env('STORYBLOK_DEBUG'),
@@ -51,7 +74,7 @@ return [
     | Enable caching
     |--------------------------------------------------------------------------
     |
-    | Enable caching the storyblok API response.
+    | Enable caching the Storyblok API response.
     |
     */
 	'cache' => true,
@@ -74,7 +97,7 @@ return [
     | Sets the namespace for the Page and Block classes
     |
     */
-	'component_class_namespace' => 'App\Storyblok\\',
+	'component_class_namespace' => ['App\Storyblok\\'],
 
 	/*
     |--------------------------------------------------------------------------
@@ -85,6 +108,16 @@ return [
     |
     */
 	'view_path' => 'storyblok.',
+
+	/*
+    |--------------------------------------------------------------------------
+    | Cache duration
+    |--------------------------------------------------------------------------
+    |
+    | Sets the folder where views will be stored under /resources/views
+    |
+    */
+	'webhook_secret' => env('STORYBLOK_WEBHOOK_SECRET'),
 
 
 
