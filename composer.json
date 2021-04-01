@@ -15,11 +15,14 @@
 		{
 			"type": "vcs",
 			"url" : "git@github.com:chrisdicarlo/laravel-deployer.git"
+		},
+		{
+			"type": "vcs",
+			"url" : "git@github.com:RicLeP/php-client.git"
 		}
 	],
     "require": {
         "barryvdh/reflection-docblock": "^2.0",
-        "darkghosthunter/laraload": "^2.2",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
