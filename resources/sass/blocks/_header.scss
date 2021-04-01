@@ -33,8 +33,6 @@
 		@media all and (min-width: 450px) {
 			display: grid;
 			align-items: center;
-			grid-template-columns: 230px 1fr;
-
 			grid-template-columns: repeat(2, max-content);
 		}
 
