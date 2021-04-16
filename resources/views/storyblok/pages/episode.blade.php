@@ -43,12 +43,12 @@ $story->listen_links[0]->transform(function ($item, $key) {
 @endsection
 
 @section('meta')
-	<meta property="description" content="">
+	<meta property="description" content="{{ strip_tags($story->intro) }}">
 
-	<meta property="og:title" content="The Curiosity of a Child Podcast">
+	<meta property="og:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta property="og:site_name" content="The Curiosity of a Child Podcast">
 	<meta property="og:url" content="https://thecuriosityofachild.com/{{ $story->meta()['slug'] }}">
-	<meta property="og:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters. ">
+	<meta property="og:description" content="{{ strip_tags($story->intro) }}">
 	<meta property="og:type" content="article">
 	<meta property="og:article:published_time" content="{{ $story->date->content()->toIso8601String() }}">
 	<meta property="og:article:modified_time" content="{{ $story->meta()['updated_at']->toIso8601String() }}">
@@ -58,8 +58,8 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">
 	<meta name="twitter:creator" content="@curichildpod">
-	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }}">
-	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }}">
+	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
+	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
 	<meta name="twitter:image" content="{{ $story->teaser_image }}">
 	<meta name="twitter:image:alt" content="The Curiosity of a Child Podcast">
