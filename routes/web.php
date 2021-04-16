@@ -17,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/poly', '\App\Http\Controllers\PolybookController@index');
 Route::get('/ep/{number}', '\App\Http\Controllers\EpisodeUrlShortenerController@index');
-
+////////////////// preview URL with /storyblok-live/  ?
+Route::post('/{slug?}', '\App\Http\Controllers\EpisodeController@live')->where('slug', '(.*)');
 Route::get('/', '\App\Http\Controllers\EpisodeController@index');
 Route::get('/{slug?}', '\App\Http\Controllers\EpisodeController@show')->where('slug', '(.*)');
+
 
 Route::get('ffff', function () {
 

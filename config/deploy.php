@@ -115,9 +115,17 @@ return [
     */
 
     'hosts' => [
-        '161.35.47.17' => [
+        'thecuriosityofachild.com' => [
+        	'stage' => 'production',
             'deploy_path' => '/srv/users/thecuriosityofachild-com/deployments/thecuriosityofachild-com',
             'user' => 'thecuriosityofachild-com',
+			'hostname'   => '161.35.47.17',
+        ],
+        'staging.thecuriosityofachild.com' => [
+        	'stage' => 'staging',
+            'deploy_path' => '/srv/users/thecuriosityofachild-com/deployments/staging-thecuriosityofachild-c',
+            'user' => 'thecuriosityofachild-com',
+			'hostname'   => '161.35.47.17',
         ],
     ],
 

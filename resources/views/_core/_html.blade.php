@@ -67,14 +67,23 @@
 			accessToken: '{{ config('storyblok.api_preview_key') }}'
 		});
 
+
 		storyblok.pingEditor(function() {
 			if (storyblok.inEditor) {
 				storyblok.enterEditmode
 			}
 		});
 
-		storyblok.on('change', function() {
-			window.location.reload(true);
+		storyblok.on('input', function(event) {
+			//window.location.reload(true);
+
+			axios.post('{{ url()->current() }}', {
+				data: event
+			}).then((response) => {
+				console.log(response);
+
+				document.getElementById('live').innerHTML = response.data;
+			});
 		});
 
 		storyblok.on('published', function() {

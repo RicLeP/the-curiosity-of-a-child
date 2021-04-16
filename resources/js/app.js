@@ -47,9 +47,9 @@ const app = new Vue({
 	},
 
 	mounted() {
-		const request = axios.CancelToken.source();
+		//const request = axios.CancelToken.source();
 
-		window.storyblok.on('input', (payload) => {
+		/*window.storyblok.on('input', (payload) => {
 			// Current unsaved Story without _editable properties
 		//	console.log(payload.story.content);
 
@@ -71,7 +71,7 @@ const app = new Vue({
 
 			// Use to update your projects content state
 
-		})
+		})*/
 	}
 });
 

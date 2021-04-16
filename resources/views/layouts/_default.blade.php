@@ -31,7 +31,9 @@
 	<div id="app" class="bgc-black">
 		@include('partials._header')
 
+		<div id="live">
 		@yield('content')
+		</div>
 
 		@include('partials._footer')
 	</div>

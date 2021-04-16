@@ -3,3 +3,6 @@ recipe: laravel
 config:
   webroot: public
   php: 7.4
+excludes:
+  - vendor
+  - node_modules
