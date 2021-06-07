@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 //Route::view('pixi', 'pages.pixi');
 
+Route::get('/sitemap', '\App\Http\Controllers\SitemapController@index');
+
+
 Route::get('/poly', '\App\Http\Controllers\PolybookController@index');
 Route::get('/ep/{number}', '\App\Http\Controllers\EpisodeUrlShortenerController@index');
 ////////////////// preview URL with /storyblok-live/  ?

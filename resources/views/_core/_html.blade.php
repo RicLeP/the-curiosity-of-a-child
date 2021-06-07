@@ -40,10 +40,6 @@
 		}}
 	</style>
 
-	@if (config('app.debug'))
-		<meta name="robots" content="noindex">
-	@endif
-
 	@if (config('core.google_analytics_enabled'))
 		<script async src="https://www.googletagmanager.com/gtag/js?id={{ config('core.google_analytics_code') }}"></script>
 		<script>
@@ -61,9 +57,92 @@
 
 @if (config('storyblok.edit_mode'))
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script type="text/javascript" src="//app.storyblok.com/f/storyblok-latest.js"></script>
+	<script type="text/javascript" src="//app.storyblok.com/f/storyblok-v2-latest.js"></script>
 	<script type="text/javascript">
-		storyblok.init({
+
+
+		const storyblokInstance = new StoryblokBridge({
+			accessToken: '{{ config('storyblok.api_preview_key') }}'
+		})
+
+		storyblokInstance.on(['published', 'change'], () => {
+			location.reload(true)
+		})
+
+		storyblokInstance.on(['input'], (event) => {
+
+			const CancelToken = axios.CancelToken;
+			let source = CancelToken.source();
+
+			source && source.cancel('Operation canceled due to new request.');
+
+			// save the new request for cancellation
+			source = axios.CancelToken.source();
+
+			axios.post('{{ url()->current() }}', {
+				data: event
+			}, {
+				cancelToken: source.token
+			}).then((response) => {
+				console.log(response);
+
+				document.getElementById('live').innerHTML = response.data;
+
+
+
+
+
+				const storyblokInstance = new StoryblokBridge({
+					accessToken: '{{ config('storyblok.api_preview_key') }}'
+				})
+
+				storyblokInstance.pingEditor(() => {
+
+
+
+					if (storyblokInstance.isInEditor()) {
+
+						// Load draft version of story
+
+					} else {
+
+						// Load published version of story
+
+					}
+
+				})
+
+
+
+
+				/*storyblok.pingEditor(function() {
+					if (storyblok.inEditor) {
+						storyblok.enterEditmode
+					}
+				});*/
+			});
+		})
+
+
+
+		// Call pingEditor to see if the user is in the editor
+
+		storyblokInstance.pingEditor(() => {
+
+			if (storyblokInstance.isInEditor()) {
+
+				// Load draft version of story
+
+			} else {
+
+				// Load published version of story
+
+			}
+
+		})
+
+
+		/*storyblok.init({
 			accessToken: '{{ config('storyblok.api_preview_key') }}'
 		});
 
@@ -83,6 +162,12 @@
 				console.log(response);
 
 				document.getElementById('live').innerHTML = response.data;
+
+				storyblok.pingEditor(function() {
+					if (storyblok.inEditor) {
+						storyblok.enterEditmode
+					}
+				});
 			});
 		});
 
@@ -90,7 +175,7 @@
 			axios.post('{{ route('clear-storyblok-cache') }}').then((response) => {
 				console.log(response);
 			});
-		});
+		});*/
 	</script>
 @endif
 
