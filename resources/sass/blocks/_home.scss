@@ -1,13 +1,9 @@
 
 
 .home {
-	padding-top: 50px;
+	padding-top: 170px;
 
-	@media all and (min-width: 450px) {
+	@media all and (min-width: 550px) {
 		padding-top: 100px;
-	}
-
-	@media all and (max-width: 499px) {
-		margin-top: 40px;
 	}
 }
