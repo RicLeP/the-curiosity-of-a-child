@@ -18,6 +18,8 @@
 	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
 	<meta name="theme-color" content="{{ config('core.theme_colour') }}">
 
+	<link rel="canonical" href="{{ config('app.url') }}/{{ $story->meta()['slug'] !== 'home' ? $story->meta()['slug'] : '' }}">
+
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	@yield('meta')

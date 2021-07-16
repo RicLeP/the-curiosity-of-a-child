@@ -9,11 +9,13 @@
 		<loc>https://thecuriosityofachild.com</loc>
 		<lastmod>{{ $episodes[0]->meta('updated_at')->format('Y-m-d') }}</lastmod>
 		<priority>0.8</priority>
+		<changefreq>weekly</changefreq>
 	</url>
 	@foreach($episodes as $episode)
 		<url>
 			<loc>https://thecuriosityofachild.com/{{ $episode->meta('slug') }}</loc>
 			<lastmod>{{ $episode->meta('updated_at')->format('Y-m-d') }}</lastmod>
+			<changefreq>monthly</changefreq>
 		</url>
 	@endforeach
 </urlset>
