@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 //Route::view('pixi', 'pages.pixi');
 
 Route::get('/sitemap', '\App\Http\Controllers\SitemapController@index');

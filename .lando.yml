@@ -2,6 +2,6 @@ name: thecuriosityofachild
 recipe: laravel
 config:
   webroot: public
-  php: 7.4
+  php: '8.0'
 excludes:
-  - vendor
+#  - vendor
