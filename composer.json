@@ -7,32 +7,26 @@
         "laravel"
     ],
     "license": "MIT",
-	"repositories":[
-		{
-			"type": "vcs",
-			"url" : "git@bitbucket.org:betleywhitehorneimage/serverpilot-deployer.git"
-		}
-	],
     "require": {
-        "php": "^7.2.5",
+        "php": "^8.0.0",
+        "algolia/algoliasearch-client-php": "^3.1",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0",
-        "laravel/framework": "^7.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "league/csv": "^9.6",
         "ozdemirburak/iris": "^2.1",
         "printful/php-api-sdk": "^2.2",
-        "riclep/laravel-storyblok": "^2.5"
+        "riclep/laravel-storyblok": "^2.5",
+        "spatie/laravel-sitemap": "^6.0"
     },
     "require-dev": {
-        "facade/ignition": "^2.0",
+        "facade/ignition": "^2.3.6",
         "fzaninotto/faker": "^1.9.1",
-        "lorisleiva/laravel-deployer": "^0.3.2",
         "mockery/mockery": "^1.3.1",
-        "nunomaduro/collision": "^4.1",
-        "phpunit/phpunit": "^8.5",
-        "riclep/serverpilot-deployer": "dev-master"
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.0"
     },
     "config": {
         "optimize-autoloader": true,
