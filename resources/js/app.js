@@ -41,6 +41,11 @@ const app = new Vue({
 					prevEl: '.swiper-button-prev'
 				}
 			},
+			autoSwiper: {
+				autoplay: {
+					delay: 3000
+				},
+			},
 			liveData: {},
 			showTranscript: false
 		}
