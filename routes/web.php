@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //Route::view('pixi', 'pages.pixi');
 
 Route::get('/sitemap', '\App\Http\Controllers\SitemapController@index');
-
+Route::get('/social-grace/{slug}', '\App\Http\Controllers\SocialGraceController@show')->where('slug', '(.*)')->name('manner');
 
 Route::get('/poly', '\App\Http\Controllers\PolybookController@index');
 Route::get('/ep/{number}', '\App\Http\Controllers\EpisodeUrlShortenerController@index');
@@ -25,7 +25,6 @@ Route::get('/ep/{number}', '\App\Http\Controllers\EpisodeUrlShortenerController@
 Route::post('/{slug?}', '\App\Http\Controllers\EpisodeController@live')->where('slug', '(.*)');
 Route::get('/', '\App\Http\Controllers\EpisodeController@index');
 Route::get('/{slug?}', '\App\Http\Controllers\EpisodeController@show')->where('slug', '(.*)');
-
 
 Route::get('ffff', function () {
 

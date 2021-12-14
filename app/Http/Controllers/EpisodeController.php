@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\SocialGraces\EpisodeManner;
 use App\Storyblok\Folders\Episodes;
 use Illuminate\Http\Request;
 use Riclep\Storyblok\StoryblokFacade as StoryBlok;
@@ -18,7 +19,6 @@ class EpisodeController extends Controller
 		return Storyblok::read('home')->render([
 			'episodes' => $folder->read(),
 		]);
-
 	}
 
 	public function show($slug)
@@ -28,7 +28,11 @@ class EpisodeController extends Controller
 
 		dd($p);*/
 
-		return Storyblok::read($slug, ['linked_links.links'])->render();
+		//dd(config('social-graces.chromium_arguments'));
+
+		return Storyblok::read($slug, ['linked_links.links'])->render([
+			'manner' => new EpisodeManner(),
+		]);
 	}
 
 	public function live(Request $request, $slug)

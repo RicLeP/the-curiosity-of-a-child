@@ -18,8 +18,10 @@
         "league/csv": "^9.6",
         "ozdemirburak/iris": "^2.1",
         "printful/php-api-sdk": "^2.2",
-        "riclep/laravel-storyblok": "^2.5",
-        "spatie/laravel-sitemap": "^6.0"
+        "riclep/laravel-storyblok": "^2.9",
+        "riclep/social-graces": "dev-develop",
+        "spatie/laravel-sitemap": "^6.0",
+	    "storyblok/php-client": "^1.6"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
