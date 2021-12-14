@@ -58,7 +58,57 @@
 			</div>
 
 			<div class="episodes">
-				@foreach($episodes as $episode)
+				@foreach($episodes as $key => $episode)
+					@if ($key === 4)
+						<div class="episodes__episode">
+							<a href="https://shop.thecuriosityofachild.com/">
+
+								<swiper class="swiper episodes__episode-image" :options="autoSwiper">
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/baby-short-sleeve-one-piece-black-front-61800b702ccab.jpg" alt="" class="u-w">
+									</swiper-slide>
+
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/youth-premium-tee-black-front-60d738a37974e.jpg" alt="" class="u-w">
+									</swiper-slide>
+
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/all-over-print-premium-pillow-22x22-front-lifestyle-3-60d637bc3b7d6.jpg" alt="" class="u-w">
+									</swiper-slide>
+
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/all-over-print-neck-gaiter-white-front-617ff492cd62f.jpg" alt="" class="u-w">
+									</swiper-slide>
+
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/unisex-tri-blend-t-shirt-teal-triblend-front-60c49c6c3be1e.jpg" alt="" class="u-w">
+									</swiper-slide>
+
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/white-ceramic-mug-with-color-inside-black-11oz-front-60d62e0d3f84f.jpg" alt="" class="u-w">
+									</swiper-slide>
+
+									<swiper-slide>
+										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/black-foot-sublimated-socks-flat-617ff5aa42e16.jpg" alt="" class="u-w">
+									</swiper-slide>
+								</swiper>
+							</a>
+
+							<div class="episodes__episode-body">
+								<h2 class="t-3"><a href="https://shop.thecuriosityofachild.com/" class="link">Visit the store!</a></h2>
+								<h3 class="t-4 u-mb-10">Show your curiosity!</h3>
+
+								<div class="scope-cms u-mb-20">
+									<p>From t-shirts to mugs, gaming to curiosity show your support and help the podcast by visiting our store.</p>
+								</div>
+
+								<p>
+									<a href="https://shop.thecuriosityofachild.com/" class="link-underlined">Explore the store</a>
+								</p>
+							</div>
+						</div>
+					@endif
+
 					<article class="episodes__episode">
 						<a href="{{ $episode->meta()['slug'] }}"><img src="{{ $episode->teaser_image->transform()->resize(800, 450) }}" alt="" class="u-w episodes__episode-image"></a>
 
