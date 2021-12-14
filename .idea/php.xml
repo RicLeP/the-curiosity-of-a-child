@@ -143,6 +143,9 @@
       <path value="$PROJECT_DIR$/vendor/algolia/algoliasearch-client-php" />
       <path value="$PROJECT_DIR$/vendor/imgix/imgix-php" />
       <path value="$PROJECT_DIR$/vendor/riclep/social-graces" />
+      <path value="$PROJECT_DIR$/vendor/laravel/octane" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
