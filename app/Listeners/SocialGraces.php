@@ -19,6 +19,6 @@ class SocialGraces
     {
 	    preg_match('#\((.*?)\)#', $event->webhookPayload['text'], $slug);
 	    $manner = new EpisodeManner();
-	    $manner->source($slug[1])->please();
+	    $manner->source(route('manner', $slug[1]))->please();
     }
 }
