@@ -8,7 +8,7 @@
 		</div>
 
 		<div style="position: absolute; bottom: 80px;">
-			<h3 style="background: linear-gradient(48deg, {{ $story->theme[0]->from }} 0%, {{ $story->theme[0]->to }} 100%); padding: 12px 12px 9px 12px; border-radius: 5px; font-size: 24pt; display: inline-block; text-transform: uppercase;" class="t-4 u-mb-15">Episode: {{ $story->number }} {{ $story->emoji }}</h3>
+			<h3 style="background: linear-gradient(48deg, {{ $story->theme[0]->from }} 0%, {{ $story->theme[0]->to }} 100%); padding: 12px 12px 9px 12px; border-radius: 5px; font-size: 24pt; display: inline-block; text-transform: uppercase;" class="t-4 u-mb-15">Episode: {{ $story->number }}</h3>
 			<h1 class="t-1">{!! Str::replaceLast(' ', '&nbsp', $story->title) !!}</h1>
 			<h2 class="t-3">{!! Str::replaceLast(' ', '&nbsp', $story->subtitle) !!}</h2>
 		</div>

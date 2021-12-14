@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d4931f3446374b62814667a2ac9e9ef",
+    "content-hash": "748d6f93e0ac4ec584ca820cbc280c91",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -7526,6 +7526,46 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "deployer/dist",
+            "version": "v7.0.0-rc.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/distribution.git",
+                "reference": "a4835d64da949be445fc6d0184ad9f294b8a21bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/distribution/zipball/a4835d64da949be445fc6d0184ad9f294b8a21bf",
+                "reference": "a4835d64da949be445fc6d0184ad9f294b8a21bf",
+                "shasum": ""
+            },
+            "replace": {
+                "deployer/deployer": "self.version"
+            },
+            "bin": [
+                "dep"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "Deployer Phar Distribution",
+            "homepage": "https://deployer.org",
+            "support": {
+                "docs": "https://deployer.org/docs",
+                "issues": "https://github.com/deployphp/deployer/issues",
+                "source": "https://github.com/deployphp/deployer"
+            },
+            "time": "2021-11-21T22:28:44+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.4.0",
