@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Listeners\SocialGraces;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -19,7 +20,8 @@ class EventServiceProvider extends ServiceProvider
 	 */
 	protected $listen = [
 		StoryblokPublished::class => [
-			ClearCache::class
+			ClearCache::class,
+			SocialGraces::class
 		],
 		StoryblokUnpublished::class => [
 			ClearCache::class
