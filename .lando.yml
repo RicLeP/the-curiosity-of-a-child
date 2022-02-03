@@ -18,4 +18,4 @@ config:
         - "npm install --global --unsafe-perm puppeteer"
         - "chmod -R o+rx /usr/local/lib/node_modules/puppeteer/.local-chromium"
 excludes:
-#  - vendor
+  - vendor

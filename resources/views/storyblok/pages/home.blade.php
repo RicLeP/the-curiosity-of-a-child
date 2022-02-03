@@ -53,7 +53,9 @@
 						</a>
 					</div>
 
-					<p class="t-5">Please leave a review on one of the networks above as it’s how we grow and why not say hi on <a href="https://twitter.com/curichildpod" class="link-underlined">Twitter</a>, <a href="https://www.instagram.com/curichildpod/" class="link-underlined">Instagram</a>, <a href="https://www.facebook.com/curichildpod/" class="link-underlined">Facebook</a> or <a href="mailto:hello@thecuriosityofachild.com" class="link-underlined">email</a>? We’d love to heard from you.</p>
+					<p class="t-5 u-mb-30">Please leave a review on one of the networks above as it’s how we grow and why not say hi on <a href="https://twitter.com/curichildpod" class="link-underlined">Twitter</a>, <a href="https://www.instagram.com/curichildpod/" class="link-underlined">Instagram</a>, <a href="https://www.facebook.com/curichildpod/" class="link-underlined">Facebook</a> or <a href="mailto:hello@thecuriosityofachild.com" class="link-underlined">email</a>? We’d love to heard from you.</p>
+
+					<iframe title="The Curisoity of a Child Trailer" allowtransparency="true" style="border: none; min-width: min(100%, 430px);" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=gt3ib-10024b1-pb&from=pb6admin&share=1&download=0&rtl=0&fonts=Arial&skin=f6f6f6&font-color=auto&btn-skin=3ab278" width="100%" height="150"></iframe>
 				</aside>
 			</div>
 

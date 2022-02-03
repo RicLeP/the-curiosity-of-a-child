@@ -134,7 +134,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/nicmart/tree" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/glide" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/image" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-package-tools" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/robots-txt" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/browsershot" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/crawler" />
@@ -145,6 +144,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/imgix/imgix-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/riclep/social-graces" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/deployer/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-package-tools" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

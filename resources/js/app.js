@@ -4,10 +4,13 @@ import { Tweet } from 'vue-tweet-embed'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VideoHero from "./components/VideoHero";
 import PixiHero from "./components/PixiHero";
+import SiteSearch from "./components/SiteSearch";
 import PixiImageHero from "./components/PixiImageHero";
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import InstantSearch from 'vue-instantsearch';
 
 Vue.use(Cloudinary);
+Vue.use(InstantSearch);
 
 Vue.use(VueGoogleMaps, {
 	load: {
@@ -27,7 +30,8 @@ const app = new Vue({
 		Tweet,
 		PixiHero,
 		PixiImageHero,
-		VideoHero
+		VideoHero,
+		SiteSearch
 	},
 
 	data() {

@@ -23,5 +23,7 @@
 		</div>
 
 		<a href="https://thatsnotcanon.com/" target="_blank"><img src="{{ asset('img/logo-thats-not-canon.png') }}" alt="That’s Not Canon" width="50" class="header__canon"></a>
+
+		<site-search></site-search>
 	</nav>
 </header>

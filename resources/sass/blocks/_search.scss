@@ -1,0 +1,50 @@
+
+
+.ais-InstantSearch {
+	grid-column: span 2;
+
+	padding: 0 20px 12px;
+}
+
+.search {
+	width: 282px;
+
+	&__input {
+		padding: 8px;
+		width: 100%;
+
+		border-radius: 3px;
+
+		font-size: 16px;
+	}
+
+	&__results {
+		padding: 0 10px 5px;
+
+		background-color: #fff;
+	}
+
+	&__hit {
+		&:not(:last-child) {
+			border-bottom: solid 1px map_get($colours, body-text);
+		}
+	}
+
+	&__link {
+		display: block;
+
+		padding: 10px;
+
+		font-size: 16px;
+		text-decoration: none;
+
+		&:link, &:visited {
+			color: #444;
+		}
+
+		&:hover, &:active {
+			color: #444;
+			background-color: #eee;
+		}
+	}
+}
