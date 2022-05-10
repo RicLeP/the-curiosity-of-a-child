@@ -1,5 +1,5 @@
 
-
+/* purgecss start ignore */
 .ais-InstantSearch {
 	grid-column: span 2;
 
@@ -19,14 +19,14 @@
 	}
 
 	&__results {
-		padding: 0 10px 5px;
+		padding: 0 0 5px;
 
 		background-color: #fff;
 	}
 
 	&__hit {
 		&:not(:last-child) {
-			border-bottom: solid 1px map_get($colours, body-text);
+			border-bottom: solid 1px #ddd;
 		}
 	}
 
@@ -47,4 +47,28 @@
 			background-color: #eee;
 		}
 	}
+
+	&__algolia {
+		padding: 0 10px 5px;
+
+		background-color: #fff;
+
+		font-size: 14px;
+		text-align: right;
+
+		& a:link, & a:visited {
+			color: #444;
+			text-decoration: none;
+		}
+
+		& a:hover, & a:active {
+			color: #444;
+		}
+
+		svg {
+			vertical-align: middle;
+			width: 60px;
+		}
+	}
 }
+/* purgecss end ignore */
