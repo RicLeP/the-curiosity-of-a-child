@@ -58,15 +58,15 @@
 				</aside>
 			</div>
 
-			<div class="u-w--centred u-w-flush u-w-xl is-2022">
-				<a href="https://www.intelligentspeechconference.com/" target="_blank">
-					<picture>
-						<source srcset="{{ asset('img/intelligent-speech-banner.svg') }}" media="(min-width: 800px)">
-						<img src="{{ asset('img/intelligent-speech-banner--mobile.svg') }}" alt="Intelligent Speech Conference 2022" class="u-w u-mb-60">
-					</picture>
-				</a>
-				<a href="https://www.intelligentspeechconference.com/" target="_blank"><img src="{{ asset('img/intelligent-speech-promo.svg') }}" alt="10% off with promo code: curiosity" class="is-2022__promo"></a>
-			</div>
+{{--			<div class="u-w--centred u-w-flush u-w-xl is-2022">--}}
+{{--				<a href="https://www.intelligentspeechconference.com/" target="_blank">--}}
+{{--					<picture>--}}
+{{--						<source srcset="{{ asset('img/intelligent-speech-banner.svg') }}" media="(min-width: 800px)">--}}
+{{--						<img src="{{ asset('img/intelligent-speech-banner--mobile.svg') }}" alt="Intelligent Speech Conference 2022" class="u-w u-mb-60">--}}
+{{--					</picture>--}}
+{{--				</a>--}}
+{{--				<a href="https://www.intelligentspeechconference.com/" target="_blank"><img src="{{ asset('img/intelligent-speech-promo.svg') }}" alt="10% off with promo code: curiosity" class="is-2022__promo"></a>--}}
+{{--			</div>--}}
 
 
 			<div class="episodes">
