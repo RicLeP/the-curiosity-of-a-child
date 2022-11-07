@@ -19,10 +19,10 @@
         "league/csv": "^9.6",
         "ozdemirburak/iris": "^2.1",
         "printful/php-api-sdk": "^2.2",
-        "riclep/laravel-storyblok": "^2.9",
+        "riclep/laravel-storyblok": "dev-feature/language",
         "riclep/social-graces": "dev-develop",
         "spatie/laravel-sitemap": "^6.0",
-	    "storyblok/php-client": "^1.6"
+        "wnx/sidecar-browsershot": "^1.4"
     },
     "require-dev": {
         "deployer/dist": "^v7.0.0-rc.3",

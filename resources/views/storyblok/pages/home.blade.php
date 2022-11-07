@@ -1,4 +1,5 @@
 <?php
+
 //ddd($episodes);
 
 ?>
@@ -70,7 +71,7 @@
 
 
 			<div class="episodes">
-			@foreach($episodes as $key => $episode)
+			@foreach($episodes->stories as $key => $episode)
 					@if ($key === 4)
 						<div class="episodes__episode">
 							<a href="https://shop.thecuriosityofachild.com/">
