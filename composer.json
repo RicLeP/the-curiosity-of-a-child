@@ -21,6 +21,7 @@
         "printful/php-api-sdk": "^2.2",
         "riclep/laravel-storyblok": "dev-feature/language",
         "riclep/social-graces": "dev-develop",
+        "spatie/browsershot": "^3.57",
         "spatie/laravel-sitemap": "^6.0",
         "wnx/sidecar-browsershot": "^1.4"
     },

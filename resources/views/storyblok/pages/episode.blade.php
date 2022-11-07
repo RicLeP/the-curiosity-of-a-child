@@ -52,6 +52,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta property="og:type" content="article">
 	<meta property="og:article:published_time" content="{{ $story->date->content()->toIso8601String() }}">
 	<meta property="og:article:modified_time" content="{{ $story->meta()['updated_at']->toIso8601String() }}">
+	<meta property="og:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">
 	<meta property="og:locale" content="en_GB">
 
 	<meta name="twitter:card" content="summary_large_image">
@@ -60,7 +61,8 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
-	<meta name="twitter:image:alt" content="The Curiosity of a Child Podcast">
+	<meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">
+	<meta name="twitter:image:alt" content="{{ strip_tags($story->title) }} {{ strip_tags($story->subtitle) }}">
 @stop
 
 @section('content')
@@ -90,7 +92,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 						</div>
 					</div>
 
-					<h1 class="hero__title">{!! $story->title  !!}</h1>
+					<h1 class="hero__title">{!! $story->title !!}</h1>
 					<h2 class="hero__subtitle">{!! $story->subtitle !!}</h2>
 				</div>
 			</header>
