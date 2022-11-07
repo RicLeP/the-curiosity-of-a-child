@@ -26,8 +26,10 @@ class SitemapController extends Controller
 		$folder->settings(['per_page' => 50]);
 		$folder->slug('episodes');
 
-		return view('sitemap', [
+		// return view with xml/application response header type
+		return response()->view('sitemap', [
 			'episodes' => $folder->read(),
-		]);
+		])->header('Content-Type', 'xml/application');
+
 	}
 }
