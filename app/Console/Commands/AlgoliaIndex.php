@@ -50,7 +50,7 @@ class AlgoliaIndex extends Command
 	    $index = $client->initIndex(config('algolia.index'));
 
 
-	    $folder->read()->each(function ($episode) use ($index) {
+	    $folder->read()->stories->each(function ($episode) use ($index) {
 			$payload = [
 				'name' => $episode->meta('name'),
 				'title' => $episode->title . ' ' . $episode->subtitle,

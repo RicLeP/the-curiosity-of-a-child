@@ -1,0 +1,29 @@
+
+
+.is-2022 {
+	position: relative;
+
+	&__promo {
+		position: absolute;
+		left: 3%;
+		top: -60%;
+		z-index: 99;
+
+		width: 33%;
+
+		@media all and (min-width: 500px) {
+			width: 20%;
+
+			left: -2%;
+			top: -14%;
+		}
+
+		@media all and (min-width: 700px) {
+			width: 12%;
+			min-width: 110px;
+
+			left: -2%;
+			top: -14%;
+		}
+	}
+}

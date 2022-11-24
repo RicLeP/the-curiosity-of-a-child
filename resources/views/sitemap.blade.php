@@ -7,11 +7,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://thecuriosityofachild.com</loc>
-		<lastmod>{{ $episodes[0]->meta('updated_at')->format('Y-m-d') }}</lastmod>
+		<lastmod>{{ $episodes->stories[0]->meta('updated_at')->format('Y-m-d') }}</lastmod>
 		<priority>0.8</priority>
 		<changefreq>weekly</changefreq>
 	</url>
-	@foreach($episodes as $episode)
+	@foreach($episodes->stories as $episode)
 		<url>
 			<loc>https://thecuriosityofachild.com/{{ $episode->meta('slug') }}</loc>
 			<lastmod>{{ $episode->meta('updated_at')->format('Y-m-d') }}</lastmod>
