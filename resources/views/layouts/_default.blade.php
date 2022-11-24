@@ -7,7 +7,7 @@
 
 
 @section('meta')
-	<meta property="description" content="">
+	<meta property="description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters.">
 
 	<meta property="og:title" content="The Curiosity of a Child Podcast">
 	<meta property="og:site_name" content="The Curiosity of a Child Podcast">
