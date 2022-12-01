@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\SocialGraces\EpisodeManner;
+use App\Storyblok\Folder;
 use App\Storyblok\Folders\Episodes;
 use Illuminate\Http\Request;
 use Riclep\Storyblok\StoryblokFacade as StoryBlok;
@@ -13,11 +14,12 @@ class EpisodeController extends Controller
 {
 
 	public function index() {
-		$folder = new Episodes();
-		$folder->slug('episodes');
-
 		return Storyblok::read('home')->render([
-			'episodes' => $folder->read(),
+			'episodes' => (new Folder())
+				->slug('episodes')
+				->perPage(50)
+				->sort('content.date')
+				->read(),
 		]);
 	}
 

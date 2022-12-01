@@ -24,7 +24,7 @@ class SitemapController extends Controller
 	public function index() {
 		$folder = new Episodes();
 		$folder->settings(['per_page' => 50]);
-		$folder->slug('episodes');
+		$folder->slug('episodes')->sort('content.date');
 
 		// return view with xml/application response header type
 		return response()->view('sitemap', [
