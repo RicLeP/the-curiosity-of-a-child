@@ -4,7 +4,7 @@
 namespace App\Storyblok\Blocks;
 
 
-use Riclep\Storyblok\Traits\AppliesTypography;
+use Riclep\StoryblokTypography\Traits\AppliesTypography;
 
 /**
  * Class representation for Storyblok feature component.
@@ -18,7 +18,7 @@ class Feature extends \App\Storyblok\Block
 {
 	use AppliesTypography;
 
-	protected $applyTypography = ['title'];
+	protected array $applyTypography = ['title'];
 
 	public function theme() {
 		return $this->theme[0];

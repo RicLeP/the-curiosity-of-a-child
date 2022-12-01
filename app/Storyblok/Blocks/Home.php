@@ -4,13 +4,13 @@
 namespace App\Storyblok\Blocks;
 
 
-use Riclep\Storyblok\Traits\AppliesTypography;
+use Riclep\StoryblokTypography\Traits\AppliesTypography;
 
 class Home extends \App\Storyblok\Block
 {
 	use AppliesTypography;
 
-	protected $applyTypography = ['title'];
+	protected array $applyTypography = ['title'];
 
 	public function theme()
 	{

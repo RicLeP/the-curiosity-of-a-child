@@ -6,7 +6,7 @@ namespace App\Storyblok\Blocks;
 
 use Riclep\Storyblok\Fields\DateTime;
 use Riclep\Storyblok\Fields\Textarea;
-use Riclep\Storyblok\Traits\AppliesTypography;
+use Riclep\StoryblokTypography\Traits\AppliesTypography;
 
 /**
  * Class representation for Storyblok episode component.
@@ -33,12 +33,12 @@ class Episode extends \App\Storyblok\Block
 {
 	use AppliesTypography;
 
-	protected $_casts = [
+	protected array $_casts = [
 		'date' => DateTime::class,
 		'transcript' => Textarea::class,
 	];
 
-	protected $applyTypography = ['title', 'subtitle'];
+	protected array $applyTypography = ['title', 'subtitle'];
 
 	public function theme() {
 		return $this->theme[0] ?? null;

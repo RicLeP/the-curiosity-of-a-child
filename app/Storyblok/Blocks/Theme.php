@@ -25,7 +25,7 @@ class Theme extends \App\Storyblok\Block
 		];
 	}
 
-	public function __toString()
+	public function __toString(): string
 	{
 		$colours = $this->theme();
 

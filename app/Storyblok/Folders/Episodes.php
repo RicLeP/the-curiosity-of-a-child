@@ -6,5 +6,5 @@ namespace App\Storyblok\Folders;
 
 class Episodes extends \App\Storyblok\Folder
 {
-	protected $perPage = 50;
+	protected int $perPage = 50;
 }

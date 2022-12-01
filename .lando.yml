@@ -4,4 +4,4 @@ config:
   webroot: public
   php: '8.1'
 excludes:
-  - vendor
+#  - vendor
