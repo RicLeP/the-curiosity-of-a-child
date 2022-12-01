@@ -4417,16 +4417,16 @@
         },
         {
             "name": "riclep/laravel-storyblok",
-            "version": "2.19.1",
+            "version": "2.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RicLeP/laravel-storyblok.git",
-                "reference": "7a19851006112b79aee318f1aba0b33a837a344c"
+                "reference": "bb00c53fb94b304b6a807a0395f29e40a1b93bcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/7a19851006112b79aee318f1aba0b33a837a344c",
-                "reference": "7a19851006112b79aee318f1aba0b33a837a344c",
+                "url": "https://api.github.com/repos/RicLeP/laravel-storyblok/zipball/bb00c53fb94b304b6a807a0395f29e40a1b93bcf",
+                "reference": "bb00c53fb94b304b6a807a0395f29e40a1b93bcf",
                 "shasum": ""
             },
             "require": {
@@ -4486,7 +4486,7 @@
             ],
             "support": {
                 "issues": "https://github.com/RicLeP/laravel-storyblok/issues",
-                "source": "https://github.com/RicLeP/laravel-storyblok/tree/2.19.1"
+                "source": "https://github.com/RicLeP/laravel-storyblok/tree/2.19.2"
             },
             "funding": [
                 {
@@ -4494,7 +4494,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2022-12-01T14:57:56+00:00"
+            "time": "2022-12-01T15:52:38+00:00"
         },
         {
             "name": "riclep/laravel-storyblok-css",
