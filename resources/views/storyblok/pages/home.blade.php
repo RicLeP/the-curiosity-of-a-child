@@ -1,6 +1,6 @@
 <?php
 
-//ddd($episodes);
+//ddd($story);
 
 ?>
 
@@ -18,7 +18,7 @@
 			<div class="u-w--centred u-w-s">
 				<h1 class="t-1 u-mb-30">{!! $story->title !!}</h1>
 
-				<div class="t-4">
+				<div class="t-4 scope-cms">
 					{!! $story->intro !!}
 				</div>
 
