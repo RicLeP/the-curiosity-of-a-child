@@ -28,7 +28,9 @@
 
 	<link rel="stylesheet" href="https://use.typekit.net/sqb5yuy.css">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+	<link rel="stylesheet" href="/build/assets/app.fa9bf94b.css">
+
+{{--    @vite(['resources/css/app.css'])--}}
 
 	<style type="text/css">
 		@media not all and (min-resolution:.001dpcm)
