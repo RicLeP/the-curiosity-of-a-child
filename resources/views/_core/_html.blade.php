@@ -28,8 +28,7 @@
 
 	<link rel="stylesheet" href="https://use.typekit.net/sqb5yuy.css">
 
-	<link href="{{ mix('css/app.css') }}" rel="stylesheet">
-	<script src="{{ mix('js/app.js') }}" defer></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 	<style type="text/css">
 		@media not all and (min-resolution:.001dpcm)

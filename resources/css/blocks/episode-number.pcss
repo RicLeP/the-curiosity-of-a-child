@@ -1,0 +1,57 @@
+
+
+.episode-number {
+	position: relative;
+
+	&__number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		height: 50px;
+		width: 50px;
+		margin-bottom: 20px;
+
+		background-color: #fff;
+		border-radius: 100%;
+
+		font-family: $font-1-family;
+		font-size: 40px;
+		font-weight: $font-1-regular;
+
+		animation: episode-number 0.3s cubic-bezier(0,0,.38,1.7) backwards;
+		animation-delay: .3s;
+
+		@media all and (min-width: 600px) {
+			height: 70px;
+			width: 70px;
+
+			font-size: 58px;
+		}
+	}
+
+	&__date {
+		position: absolute;
+		top: -39px;
+		left: -20px;
+
+		width: 80px;
+
+		@media all and (min-width: 600px) {
+			top: -51px;
+			left: -26px;
+
+			width: 108px;
+		}
+	}
+}
+
+@keyframes episode-number {
+	from {
+		transform: scale(0) rotate(-20deg);
+	}
+
+	to {
+		transform: scale(1) rotate(0deg);
+	}
+}

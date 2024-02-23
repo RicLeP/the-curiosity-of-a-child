@@ -2,7 +2,7 @@
 
 <header class="header">
 	<a href="/">
-		<img src="{{ asset('img/logo-coac.svg') }}" alt="The Curioisty of a Child" width="200" class="header__logo">
+		<img src="{{ asset('img/logo-cuririosity-of.svg') }}" alt="The Curioisty of a Child" width="200" class="header__logo">
 	</a>
 
 	<nav class="header__nav">
@@ -21,8 +21,6 @@
 				<a href="https://www.youtube.com/channel/UC0aOceHhNdhQFL933t7oeIQ" target="_blank"><img src="{{ asset('img/icon-youtube.svg') }}" alt="Watch on YouTube" width="25"></a>
 			</div>
 		</div>
-
-		<a href="https://thatsnotcanon.com/" target="_blank"><img src="{{ asset('img/logo-thats-not-canon.png') }}" alt="That’s Not Canon" width="50" class="header__canon"></a>
 
 		<site-search></site-search>
 	</nav>

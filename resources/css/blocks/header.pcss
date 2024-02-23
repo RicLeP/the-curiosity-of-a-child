@@ -1,0 +1,109 @@
+
+
+.header {
+	//position: sticky;
+	top: 0;
+	z-index: 99;
+
+	width: 100%;
+
+	&__logo {
+		position: absolute;
+		left: 8%;
+		top: 150px;
+		z-index: 99;
+
+		width: 120px;
+
+		@media all and (min-width: 550px) {
+			top: 40px;
+
+			width: 120px;
+		}
+	}
+
+	&__nav {
+		position: fixed;
+		top: 0;
+		z-index: 99;
+
+		background-color: #000;
+
+		@media all and (max-width: 549px) {
+			width: 100%;
+		}
+
+		@media all and (min-width: 450px) {
+			display: grid;
+			align-items: center;
+			grid-template-columns: repeat(2, max-content);
+		}
+
+		@media all and (min-width: 550px) {
+			right: 5%;
+			top: 40px;
+
+			background-color: rgba(110, 130, 130, .6);
+			border-radius: 3px;
+		}
+	}
+
+	&__links {
+		padding: 10px;
+		width: 100%;
+
+		@media all and (min-width: 550px) {
+			padding: 12px 10px 6px;
+			width: 240px;
+
+			backdrop-filter: blur(8px);
+		}
+
+		a:link, a:visited {
+			display: block;
+
+			margin: 6px 19px;
+
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+
+			@media all and (min-width: 550px) {
+				margin: 0 7px 12px;
+			}
+		}
+	}
+
+	&__links-site {
+		display: flex;
+		flex-wrap: wrap;
+		//gap: 18px;
+
+		@media all and (min-width: 550px) {
+			justify-content: center;
+
+			backdrop-filter: blur(8px);
+		}
+	}
+
+	&__links-social {
+		display: flex;
+		flex-wrap: wrap;
+		//gap: 18px;
+
+		@media all and (min-width: 550px) {
+			justify-content: center;
+
+			backdrop-filter: blur(8px);
+		}
+	}
+
+	&__canon {
+		justify-self: end;
+		margin-right: 12px;
+
+		@media all and (max-width: 549px) {
+			display: none;
+		}
+	}
+}

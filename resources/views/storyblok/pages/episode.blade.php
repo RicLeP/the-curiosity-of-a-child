@@ -52,8 +52,10 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta property="og:type" content="article">
 	<meta property="og:article:published_time" content="{{ $story->date->content()->toIso8601String() }}">
 	<meta property="og:article:modified_time" content="{{ $story->meta()['updated_at']->toIso8601String() }}">
-	<?php // <meta property="og:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}"> ?>
-	<meta property="og:locale" content="en_GB">
+    @if (config('app.env') !== 'dev')
+        <meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">
+    @endif
+    <meta property="og:locale" content="en_GB">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">
@@ -61,7 +63,9 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
-	<meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">
+    @if (config('app.env') !== 'dev')
+	    <meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">
+    @endif
 	<meta name="twitter:image:alt" content="{{ strip_tags($story->title) }} {{ strip_tags($story->subtitle) }}">
 @stop
 

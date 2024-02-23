@@ -1,0 +1,45 @@
+
+
+.feature {
+	margin-top: -300px;
+	padding-top: 170px;
+	padding-bottom: 300px;
+
+	mask-image: linear-gradient(180deg, var(--theme-from-alpha) 0%, var(--theme-from) 10%, var(--theme-to) 90%, var(--theme-to-alpha) 100%);
+	mask-size: 100% 100%;
+	mask-repeat: no-repeat;
+	mask-position: center;
+
+	-webkit-mask-image: linear-gradient(180deg, #0000 0%, #000 200px, #000 calc(100% - 150px), #0000 100%);
+	-webkit-mask-size: 100% 100%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+
+	&__hero {
+		position: relative;
+	}
+
+	&__hero-image {
+		mask-image: url(../img/image-border--2.png);
+		mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		mask-position: center;
+
+		-webkit-mask-image: url(../img/image-border--2.png);
+		-webkit-mask-size: 100% 100%;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-position: center;
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 0;
+		left: 5%;
+
+		width: 90%;
+
+		@media all and (min-width: 650px) {
+			bottom: 20px;
+		}
+	}
+}
