@@ -61,7 +61,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
 	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
-	<?php // <meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}"> ?>
+	<meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">
 	<meta name="twitter:image:alt" content="{{ strip_tags($story->title) }} {{ strip_tags($story->subtitle) }}">
 @stop
 
