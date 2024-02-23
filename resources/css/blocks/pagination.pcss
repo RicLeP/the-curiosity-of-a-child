@@ -1,0 +1,73 @@
+
+
+.pagination {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    grid-column: 1 / -1;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    line-height: 1;
+
+    &__content {
+        display: flex;
+
+        align-items: center;
+        justify-items: center;
+
+        gap: 24px;
+    }
+
+    &__link {
+        display: block;
+
+        aspect-ratio: 1;
+
+        padding: 2px 11px 6px 11px; // not sure why this is sizing wierdly
+
+        background-color: var(--c-hot);
+        border-radius: 8px;
+
+        color: #fff;
+        text-decoration: none;
+
+        transform: rotate(45deg);
+
+        &--prev {
+            padding: 3px 14px 5px 8px;
+        }
+
+        & > span {
+            display: block;
+
+            transform: rotate(-45deg);
+        }
+
+        &:not([disabled]) {
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+
+                color: var(--c-hot);
+            }
+        }
+
+        &--active {
+            background-color: transparent;
+        }
+    }
+
+    &__page {
+        color: var(--c-hot);
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

@@ -13,13 +13,17 @@ use Riclep\Storyblok\StoryblokFacade as StoryBlok;
 class EpisodeController extends Controller
 {
 
-	public function index() {
+	public function index(Request $request) {
+
+        $episodes = new Episodes();
+        $episodes->settings([
+            'page' => (int)$request->get('page') ?: 1,
+        ]);
+
+
+
 		return Storyblok::read('home')->render([
-			'episodes' => (new Folder())
-				->slug('episodes')
-				->perPage(50)
-				->sort('content.date')
-				->read(),
+			'episodes' => $episodes->read(),
 		]);
 	}
 

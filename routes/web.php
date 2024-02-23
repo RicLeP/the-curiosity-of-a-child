@@ -26,7 +26,3 @@ Route::get('/ep/{number}', '\App\Http\Controllers\EpisodeUrlShortenerController@
 Route::post('/{slug?}', '\App\Http\Controllers\EpisodeController@live')->where('slug', '(.*)');
 Route::get('/', '\App\Http\Controllers\EpisodeController@index');
 Route::get('/{slug?}', '\App\Http\Controllers\EpisodeController@show')->where('slug', '(.*)')->name('episode.show');
-
-Route::get('ffff', function () {
-
-})->name('clear-storyblok-cache');

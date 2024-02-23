@@ -18,10 +18,6 @@
 			<div class="u-w--centred u-w-s">
 				<h1 class="t-1 u-mb-30">{!! $story->title !!}</h1>
 
-				<div class="t-4 scope-cms">
-					{!! $story->intro !!}
-				</div>
-
 				<aside class="listen-links t-centred u-mt-50 u-mb-70">
 					<h2 class="u-mb-20 t-3">Listen to the podcast</h2>
 
@@ -55,7 +51,7 @@
 
 					<p class="t-5 u-mb-30">Please leave a review on one of the networks above as it’s how we grow and why not say hi on <a href="https://twitter.com/curichildpod" class="link-underlined">Twitter</a>, <a href="https://www.instagram.com/curichildpod/" class="link-underlined">Instagram</a>, <a href="https://www.facebook.com/curichildpod/" class="link-underlined">Facebook</a> or <a href="mailto:hello@thecuriosityofachild.com" class="link-underlined">email</a>? We’d love to heard from you.</p>
 
-					<iframe title="The Curisoity of a Child Trailer" allowtransparency="true" style="border: none; min-width: min(100%, 430px);" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=gt3ib-10024b1-pb&from=pb6admin&share=1&download=0&rtl=0&fonts=Arial&skin=f6f6f6&font-color=auto&btn-skin=3ab278" width="100%" height="150"></iframe>
+					<iframe title="The Curisoity of !? Podcast Trailer" allowtransparency="true" style="border: none; min-width: min(100%, 430px);" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=gt3ib-10024b1-pb&from=pb6admin&share=1&download=0&rtl=0&fonts=Arial&skin=f6f6f6&font-color=auto&btn-skin=3ab278" width="100%" height="150"></iframe>
 				</aside>
 			</div>
 
@@ -72,55 +68,55 @@
 
 			<div class="episodes">
 			@foreach($episodes->stories as $key => $episode)
-					@if ($key === 4)
-						<div class="episodes__episode">
-							<a href="https://shop.thecuriosityofachild.com/">
+{{--					@if ($key === 4)--}}
+{{--						<div class="episodes__episode">--}}
+{{--							<a href="https://shop.thecuriosityofachild.com/">--}}
 
-								<swiper class="swiper episodes__episode-image" :options="autoSwiper">
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/baby-short-sleeve-one-piece-black-front-61800b702ccab.jpg" alt="" class="u-w">
-									</swiper-slide>
+{{--								<swiper class="swiper episodes__episode-image">--}}
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/baby-short-sleeve-one-piece-black-front-61800b702ccab.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
 
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/youth-premium-tee-black-front-60d738a37974e.jpg" alt="" class="u-w">
-									</swiper-slide>
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/youth-premium-tee-black-front-60d738a37974e.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
 
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/all-over-print-premium-pillow-22x22-front-lifestyle-3-60d637bc3b7d6.jpg" alt="" class="u-w">
-									</swiper-slide>
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/all-over-print-premium-pillow-22x22-front-lifestyle-3-60d637bc3b7d6.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
 
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/all-over-print-neck-gaiter-white-front-617ff492cd62f.jpg" alt="" class="u-w">
-									</swiper-slide>
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/all-over-print-neck-gaiter-white-front-617ff492cd62f.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
 
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/unisex-tri-blend-t-shirt-teal-triblend-front-60c49c6c3be1e.jpg" alt="" class="u-w">
-									</swiper-slide>
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/unisex-tri-blend-t-shirt-teal-triblend-front-60c49c6c3be1e.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
 
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/white-ceramic-mug-with-color-inside-black-11oz-front-60d62e0d3f84f.jpg" alt="" class="u-w">
-									</swiper-slide>
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/06/white-ceramic-mug-with-color-inside-black-11oz-front-60d62e0d3f84f.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
 
-									<swiper-slide>
-										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/black-foot-sublimated-socks-flat-617ff5aa42e16.jpg" alt="" class="u-w">
-									</swiper-slide>
-								</swiper>
-							</a>
+{{--									<swiper-slide>--}}
+{{--										<img src="https://shop.thecuriosityofachild.com/wp-content/uploads/2021/11/black-foot-sublimated-socks-flat-617ff5aa42e16.jpg" alt="" class="u-w">--}}
+{{--									</swiper-slide>--}}
+{{--								</swiper>--}}
+{{--							</a>--}}
 
-							<div class="episodes__episode-body">
-								<h2 class="t-3"><a href="https://shop.thecuriosityofachild.com/" class="link">Visit the store!</a></h2>
-								<h3 class="t-4 u-mb-10">Show your curiosity!</h3>
+{{--							<div class="episodes__episode-body">--}}
+{{--								<h2 class="t-3"><a href="https://shop.thecuriosityofachild.com/" class="link">Visit the store!</a></h2>--}}
+{{--								<h3 class="t-4 u-mb-10">Show your curiosity!</h3>--}}
 
-								<div class="scope-cms u-mb-20">
-									<p>From t-shirts to mugs, gaming to curiosity show your support and help the podcast by visiting our store.</p>
-								</div>
+{{--								<div class="scope-cms u-mb-20">--}}
+{{--									<p>From t-shirts to mugs, gaming to curiosity show your support and help the podcast by visiting our store.</p>--}}
+{{--								</div>--}}
 
-								<p>
-									<a href="https://shop.thecuriosityofachild.com/" class="link-underlined">Explore the store</a>
-								</p>
-							</div>
-						</div>
-					@endif
+{{--								<p>--}}
+{{--									<a href="https://shop.thecuriosityofachild.com/" class="link-underlined">Explore the store</a>--}}
+{{--								</p>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--					@endif--}}
 
 					<article class="episodes__episode">
 						<a href="{{ $episode->meta()['slug'] }}"><img src="{{ $episode->teaser_image->transform()->resize(800, 450) }}" alt="" class="u-w episodes__episode-image"></a>
@@ -140,6 +136,13 @@
 
 					</article>
 				@endforeach
+
+				{!! $episodes->paginate()->links('partials._pagiantion') !!}
+			</div>
+
+
+			<div class="u-w--centred u-w-s t-4 scope-cms">
+				{!! $story->intro !!}
 			</div>
 		</section>
 

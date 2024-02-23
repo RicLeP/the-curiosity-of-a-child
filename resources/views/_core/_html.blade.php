@@ -10,10 +10,10 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/img/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#0e3a4d">
+	<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#e6007e">
 	<link rel="shortcut icon" href="/img/favicon/favicon.ico">
-	<meta name="apple-mobile-web-app-title" content="The Curiosity of a Child Podcast">
-	<meta name="application-name" content="The Curiosity of a Child Podcast">
+	<meta name="apple-mobile-web-app-title" content="The Curiosity of !? Podcast">
+	<meta name="application-name" content="The Curiosity of !? Podcast">
 	<meta name="msapplication-TileColor" content="{{ config('core.theme_colour') }}">
 	<meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
 	<meta name="theme-color" content="{{ config('core.theme_colour') }}">
@@ -27,8 +27,6 @@
 	@yield('json-ld')
 
 	<link rel="stylesheet" href="https://use.typekit.net/sqb5yuy.css">
-
-{{--	<link rel="stylesheet" href="/build/assets/app.fa9bf94b.css">--}}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

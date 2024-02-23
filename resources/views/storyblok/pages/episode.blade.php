@@ -33,7 +33,7 @@ $story->listen_links[0]->transform(function ($item, $key) {
 			},
 			"partOfSeries": {
 				"@type": "PodcastSeries",
-				"name": "The Curiosity of a Child",
+				"name": "The Curiosity of !? Podcast",
 				"url": "https://thecuriosityofachild.com"
 			}
 		 }
@@ -45,8 +45,8 @@ $story->listen_links[0]->transform(function ($item, $key) {
 @section('meta')
 	<meta property="description" content="{{ strip_tags($story->intro) }}">
 
-	<meta property="og:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
-	<meta property="og:site_name" content="The Curiosity of a Child Podcast">
+	<meta property="og:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of !? Podcast">
+	<meta property="og:site_name" content="The Curiosity of !? Podcast">
 	<meta property="og:url" content="https://thecuriosityofachild.com/{{ $story->meta()['slug'] }}">
 	<meta property="og:description" content="{{ strip_tags($story->intro) }}">
 	<meta property="og:type" content="article">
@@ -60,8 +60,8 @@ $story->listen_links[0]->transform(function ($item, $key) {
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">
 	<meta name="twitter:creator" content="@curichildpod">
-	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
-	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of a Child Podcast">
+	<meta name="twitter:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of !? Podcast">
+	<meta name="twitter:text:title" content="{{ $story->emoji }} {{ $story->meta()['name'] }} - Episode {{ $story->number }} - The Curiosity of !? Podcast">
 	<meta name="twitter:description" content="{{ strip_tags($story->intro) }}">
     @if (config('app.env') !== 'dev')
 	    <meta name="twitter:image" content="{{ $manner->source(route('manner', $story->meta()['slug']))->thanks() }}">

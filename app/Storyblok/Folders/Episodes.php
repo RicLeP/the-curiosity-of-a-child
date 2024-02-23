@@ -6,5 +6,7 @@ namespace App\Storyblok\Folders;
 
 class Episodes extends \App\Storyblok\Folder
 {
-	protected int $perPage = 60;
+    protected string $slug = 'episode';
+    protected string $sortBy = 'content.date';
+	protected int $perPage = 12;
 }

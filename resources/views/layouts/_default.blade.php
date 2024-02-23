@@ -2,15 +2,15 @@
 @extends('_core._html')
 
 @section('title')
-	The Curiosity of a Child Podcast
+	The Curiosity of !? Podcast
 @stop
 
 
 @section('meta')
 	<meta property="description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters.">
 
-	<meta property="og:title" content="The Curiosity of a Child Podcast">
-	<meta property="og:site_name" content="The Curiosity of a Child Podcast">
+	<meta property="og:title" content="The Curiosity of a !? Podcast">
+	<meta property="og:site_name" content="The Curiosity of a !? Podcast">
 	<meta property="og:url" content="https://thecuriosityofachild.com/">
 	<meta property="og:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters. ">
 	<meta property="og:type" content="website">
@@ -20,11 +20,11 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@curichildpod">
 	<meta name="twitter:creator" content="@curichildpod">
-	<meta name="twitter:title" content="The Curiosity of a Child Podcast">
-	<meta name="twitter:text:title" content="The Curiosity of a Child Podcast">
+	<meta name="twitter:title" content="The Curiosity of a !? Podcast">
+	<meta name="twitter:text:title" content="The Curiosity of a !? Podcast">
 	<meta name="twitter:description" content="A father and son discuss things they are curious about from science and history to monsters and games. We look at the quirky and unusual from around the world as well as seeking out local history, events and characters.">
     <meta name="twitter:image" content="{{ asset('img/twitter-default.png') }}">
-	<meta name="twitter:image:alt" content="The Curiosity of a Child Podcast">
+	<meta name="twitter:image:alt" content="The Curiosity of a !? Podcast">
 @stop
 
 @section('body')

@@ -49,6 +49,7 @@
 @import "blocks/listen-links.pcss";
 @import "blocks/map.pcss";
 @import "blocks/masked-image.pcss";
+@import "blocks/pagination.pcss";
 @import "blocks/polybook-link.pcss";
 @import "blocks/quote.pcss";
 @import "blocks/rich-link.pcss";

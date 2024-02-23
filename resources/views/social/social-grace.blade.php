@@ -4,7 +4,7 @@
 	<div style="width: 1200px; height: 628px; background-color: rgba(0, 0, 0, .3); padding: 40px 60px; position: relative;" class="fgc-white">
 
 		<div style="display: inline-block; padding: 25px; background-color: #000;">
-			<img src="{{ asset('img/logo-coac.svg') }}" alt="The Curiosity of a Child" width="160">
+			<img src="{{ asset('img/logo-coac.svg') }}" alt="The Curiosity of ?> Podcast" width="160">
 		</div>
 
 		<div style="position: absolute; bottom: 60px;">
