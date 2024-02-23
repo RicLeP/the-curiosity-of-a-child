@@ -3,8 +3,8 @@ Specify all the typographic styles that are going to be reused.
 */
 
 html {
-	font-family: $font-2-family;
-	font-weight: $font-2-regular;
+	font-family: var(--font-2-family);
+	font-weight: var(--font-2-regular);
 	font-size: 20px;
 
 	@media all and (min-width: 600px) {
@@ -14,18 +14,18 @@ html {
 
 // Helper for each font used on the website. Use these only when a .t-# style doesn’t fit
 .f-1 {
-	font-family: $font-1-family;
-	font-weight: $font-1-regular;
+	font-family: var(--font-1-family);
+	font-weight: var(--font-1-regular);
 }
 
 .f-2 {
-	font-family: $font-2-family;
-	font-weight: $font-2-regular;
+	font-family: var(--font-2-family);
+	font-weight: var(--font-2-regular);
 }
 
 .f-3 {
-	font-family: $font-3-family;
-	font-weight: $font-3-bold;
+	font-family: var(--font-3-family);
+	font-weight: var(--font-3-bold);
 }
 
 /*
@@ -35,9 +35,9 @@ the screen size then create their styles within the block itself
 */
 .t {
 	&-1 {
-		font-family: $font-1-family;
+		font-family: var(--font-1-family);
 		font-size: 50px;
-		font-weight: $font-1-regular;
+		font-weight: var(--font-1-regular);
 		line-height: 1.09;
 
 		@media all and (min-width: 500px) {
@@ -50,9 +50,9 @@ the screen size then create their styles within the block itself
 	}
 
 	&-2 {
-		font-family: $font-1-family;
+		font-family: var(--font-1-family);
 		font-size: 40px;
-		font-weight: $font-1-regular;
+		font-weight: var(--font-1-regular);
 		line-height: 1.09;
 
 		@media all and (min-width: 600px) {
@@ -65,9 +65,9 @@ the screen size then create their styles within the block itself
 	}
 
 	&-3 {
-		font-family: $font-1-family;
+		font-family: var(--font-1-family);
 		font-size: 28px;
-		font-weight: $font-1-regular;
+		font-weight: var(--font-1-regular);
 		letter-spacing: .06ch;
 		line-height: 1.2;
 
@@ -77,9 +77,9 @@ the screen size then create their styles within the block itself
 	}
 
 	&-4 {
-		font-family: $font-2-family;
+		font-family: var(--font-2-family);
 		font-size: 22px;
-		font-weight: $font-2-regular;
+		font-weight: var(--font-2-regular);
 		line-height: 1.4;
 
 		@media all and (min-width: 600px) {
@@ -88,16 +88,16 @@ the screen size then create their styles within the block itself
 	}
 
 	&-5 {
-		font-family: $font-2-family;
+		font-family: var(--font-2-family);
 		font-size: 18px;
-		font-weight: $font-2-regular;
+		font-weight: var(--font-2-regular);
 		line-height: 1.2;
 	}
 
 	&-6 {
-		font-family: $font-2-family;
+		font-family: var(--font-2-family);
 		font-size: 14px;
-		font-weight: $font-2-regular;
+		font-weight: var(--font-2-regular);
 		line-height: 1.2;
 	}
 }

@@ -5,7 +5,7 @@ Typographic utilities
 */
 
 html {
-	color: map_get($colours, body-text);
+	color: var(--c-body-text);
 }
 
 b, strong {
@@ -18,7 +18,7 @@ Utilities
 */
 .t {
 	&-regular {
-		font-weight: $font-1-family;
+		font-weight: var(--font-1-family);
 	}
 
 	&-bold {
@@ -38,15 +38,15 @@ Utilities
 	}
 
 	&-leading-loose {
-		line-height: $leading-loose !important; // has to override scopes
+		line-height: var(--leading-loose) !important; // has to override scopes
 	}
 
 	&-leading-standard {
-		line-height: $leading-standard;
+		line-height: var(--leading-standard);
 	}
 
 	&-leading-tight {
-		line-height: $leading-tight !important; // has to override scopes
+		line-height: var(--leading-tight) !important; // has to override scopes
 	}
 
 	/*

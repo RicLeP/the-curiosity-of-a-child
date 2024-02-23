@@ -22,6 +22,6 @@
 			</div>
 		</div>
 
-		<site-search></site-search>
+{{--		<site-search></site-search>--}}
 	</nav>
 </header>

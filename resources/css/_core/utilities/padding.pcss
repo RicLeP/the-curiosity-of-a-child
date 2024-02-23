@@ -4,54 +4,47 @@ Use them to to space out core blocks of content.
 */
 
 .u-p {
-	// all sides
-	@each $space in $spaces {
-		&-#{$space} {
-			padding: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &-$(space) {
+        padding: $(space)px;
+    }
+    }
 
-	// vertical
-	@each $space in $spaces {
-		&v-#{$space} {
-			padding-bottom: #{$space}px;
-			padding-top: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &v-$(space) {
+            padding-bottom: $(space)px;
+            padding-top: $(space)px;
+        }
+    }
 
-	// horizontal
-	@each $space in $spaces {
-		&h-#{$space} {
-			padding-left: #{$space}px;
-			padding-right: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &h-$(space) {
+            padding-left: $(space)px;
+            padding-right: $(space)px;
+        }
+    }
 
-	// bottom
-	@each $space in $spaces {
-		&b-#{$space} {
-			padding-bottom: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &b-$(space) {
+            padding-bottom: $(space)px;
+        }
+    }
 
-	// top
-	@each $space in $spaces {
-		&t-#{$space} {
-			padding-top: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &t-$(space) {
+            padding-top: $(space)px;
+        }
+    }
 
-	// right
-	@each $space in $spaces {
-		&r-#{$space} {
-			padding-right: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &r-$(space) {
+            padding-right: $(space)px;
+        }
+    }
 
-	// left
-	@each $space in $spaces {
-		&l-#{$space} {
-			padding-left: #{$space}px;
-		}
-	}
+    @each $space in var(--spaces) {
+        &l-$(space) {
+            padding-left: $(space)px;
+        }
+    }
 }

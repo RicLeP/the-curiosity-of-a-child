@@ -27,26 +27,44 @@ Colours are defined in _settings.scss
 
 /* purgecss start ignore */
 .bgc {
-	@each $key, $value in $colours {
-		&-#{$key} {
-			background-color: map_get($colours, $key)
-		}
-	}
+    @each $key, $value in var(--colours) {
+        &-$(key) {
+        background-color: $(value);
+    }
+    }
 }
 
 .fgc {
-	@each $key, $value in $colours {
-		&-#{$key} {
-			color: map_get($colours, $key)
-		}
-	}
+    @each $key, $value in var(--colours) {
+        &-$(key) {
+        color: $(value);
+    }
+    }
+
+    &-inherit {
+        color: inherit;
+    }
 }
 
 .fill {
-	@each $key, $value in $colours {
-		&-#{$key} {
-			fill: map_get($colours, $key)
-		}
-	}
+    @each $key, $value in var(--colours) {
+        &-$(key) {
+        fill: $(value);
+    }
+    }
+}
+
+.stroke {
+    @each $key, $value in var(--colours) {
+        &-$(key) {
+        stroke: $(value);
+    }
+    }
+}
+
+:root{
+    @each $key, $value in var(--colours) {
+        --c-$(key): $(value);
+    }
 }
 /* purgecss end ignore */

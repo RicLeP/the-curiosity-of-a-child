@@ -1,91 +1,88 @@
-
-
 /*
 List all the colours used on the site. See
 */
-
-$colours: (
-		body-text: #707375,
-		white: #fff,
-		black: #000,
-		polybook: #e5ba1e
+:root {
+    --colours: (
+    body-text: #707375,
+    white: #fff,
+    black: #000,
+    polybook: #e5ba1e
 );
 
-/*
-Make a note of any fonts used on the website, where they are from,
-what weights there are, what the weight maps to on the site, e.g.
-‘bold’ maps to the medium weight of the font.
+    /*
+    Make a note of any fonts used on the website, where they are from,
+    what weights there are, what the weight maps to on the site, e.g.
+    ‘bold’ maps to the medium weight of the font.
 
-CSS weights
-100		Thin (Hairline)
-200		Extra Light (Ultra Light)
-300		Light
-400		Normal (Regular)
-500		Medium
-600		Semi Bold (Demi Bold)
-700		Bold
-800		Extra Bold (Ultra Bold)
-900		Black (Heavy)
-950		Extra Black (Ultra Black)
+    CSS weights
+    100		Thin (Hairline)
+    200		Extra Light (Ultra Light)
+    300		Light
+    400		Normal (Regular)
+    500		Medium
+    600		Semi Bold (Demi Bold)
+    700		Bold
+    800		Extra Bold (Ultra Bold)
+    900		Black (Heavy)
+    950		Extra Black (Ultra Black)
 
-Font 1:
-The first font should be te primary one used for the majority of body copy
-Ric’s Typekit
-Kepler Std Condensed Display
-font-family: kepler-std-condensed-display, serif;
-font-weight: 400;
-font-style: normal;
+    Font 1:
+    The first font should be te primary one used for the majority of body copy
+    Ric’s Typekit
+    Kepler Std Condensed Display
+    font-family: kepler-std-condensed-display, serif;
+    font-weight: 400;
+    font-style: normal;
 
-Font 2:
-FreightSans Pro Book
-font-family: freight-sans-pro, sans-serif;
-font-weight: 400;
-font-style: normal;
+    Font 2:
+    FreightSans Pro Book
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
-Font 3:
-FreightSansCndPro Bold
-font-family: freight-sans-condensed-pro, sans-serif;
-font-weight: 700;
-font-style: normal;
-*/
-
-
-
-$font-1-family: "kepler-std-condensed-display", Georgia, serif;
-$font-1-regular: 400;
+    Font 3:
+    FreightSansCndPro Bold
+    font-family: freight-sans-condensed-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    */
 
 
-$font-2-family: "freight-sans-pro", Arial, sans-serif;
-$font-2-regular: 400;
+	--font-1-family: "kepler-std-condensed-display", Georgia, serif;
+	--font-1-regular: 400;
 
-$font-3-family: "freight-sans-condensed-pro", Arial, sans-serif;
-$font-3-bold: 700;
 
-/*
-We reset the line-height to 1 stop odd spacing being added, here
-we define leading used for general copy on the site including
-tighter and looser variants
-*/
-$leading-loose: 1.9;
-$leading-standard: 1.65;
-$leading-tight: 1.2;
+	--font-2-family: "freight-sans-pro", Arial, sans-serif;
+	--font-2-regular: 400;
 
-// Sets all the margin and padding utility pixel sizes
-$spaces: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 17, 20, 22, 24, 25, 30, 32, 35, 40, 45, 50, 55, 60, 70, 75, 80, 85, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200;
+	--font-3-family: "freight-sans-condensed-pro", Arial, sans-serif;
+	--font-3-bold: 700;
 
-$widths: (
+		/*
+		We reset the line-height to 1 stop odd spacing being added, here
+		we define leading used for general copy on the site including
+		tighter and looser variants
+		*/
+	--leading-loose: 1.9;
+	--leading-standard: 1.65;
+	--leading-tight: 1.2;
+
+	// Sets all the margin and padding utility pixel sizes
+	--spaces: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 17, 20, 22, 24, 25, 30, 32, 35, 40, 45, 50, 55, 60, 70, 75, 80, 85, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200;
+	--widths: (
 		s: 750px,
 		m: 1040px,
 		l: 1200px,
 		xl: 1700px
-);
-$percentage-width: 88%;
+	);
 
-// How much space should we leave above anchor links when scrolled to?
-$scroll-margin-top: 100px;
+	--percentage-width: 88%;
+	--scroll-margin-top: 100px;
+// How much space should we leave above anchor links when scrolled to? $scroll-margin-top: 100 px;
+}
 
 ::selection {
-	background-color: #666;
+    background-color: #666;
 
-	color: #fff;
+    color: #fff;
 }
