@@ -1,0 +1,182 @@
+/*
+RARE reset, this has additional rules to the standard normalize ones.
+*/
+
+
+
+//  #      ##  #   #   ##   #  # #####
+//  #     #  #  # #   #  #  #  #   #
+//  #     #  #   #    #  #  #  #   #
+//  #     ####   #    #  #  #  #   #
+//  ####  #  #   #     ##    ##    #
+//
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+Lists in navigation don’t need bullets
+*/
+
+nav {
+	ul {
+		list-style-type: none;
+
+		> li {
+			list-style-type: none;
+		}
+	}
+}
+
+
+
+// ##### #   #  ###    ##    ###  ###    ##   ###   #  # #   #
+//   #    # #   #  #  #  #  #     #  #  #  #  #  #  #  #  # #
+//   #     #    ###   #  #  # ##  ###   #  #  ###   ####   #
+//   #     #    #     #  #  #  #  # #   ####  #     #  #   #
+//   #     #    #      ##    ###  #  #  #  #  #     #  #   #
+//
+
+/*
+Reduce the standard line-height for everything so we can control the vertical rhythm better
+*/
+
+html, body {
+	line-height: 1;
+}
+
+/*
+The the screen bouncing when it hits the scroll limits
+*/
+html, body {
+	overscroll-behavior: none;
+
+	@media not all and (prefers-reduced-motion: reduce) {
+		scroll-behavior: smooth;
+	}
+}
+
+/*
+We don’t want to make any assumptions over how the typography will be styled.
+The tags are purely semantic and not an aid to the visual hierarchy.
+*/
+
+h1, h2, h3, h4, h5, h6, p, ul, ul, dd, dl, th, td, q, blockquote {
+	margin: 0;
+	padding: 0;
+
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+figure {
+	margin: 0;
+}
+
+cite {
+	font-style: normal;
+}
+
+table {
+	width: 100%;
+
+	border-collapse: collapse;
+}
+
+caption {
+	padding: 5px;
+
+	text-align: left;
+}
+
+th {
+	padding: 5px;
+
+	text-align: left;
+}
+
+td {
+	padding: 5px;
+}
+
+/*
+It’s not really smaller text, it’s used for supporting copy such as describing the format required for an input tag.
+*/
+small {
+	font-size: inherit;
+}
+
+
+//  #  #  ###    ###   ###  ####  #     #      ##   #  #  ####   ##   #  #   ###
+//  ####   #    #     #     #     #     #     #  #  ## #  #     #  #  #  #  #
+//  ####   #     ##   #     ###   #     #     #  #  # ##  ###   #  #  #  #   ##
+//  #  #   #       #  #     #     #     #     ####  #  #  #     #  #  #  #     #
+//  #  #  ###   ###    ###  ####  ####  ####  #  #  #  #  ####   ##    ##   ###
+//
+
+[id] {
+	scroll-margin-top: var(--scroll-margin-top);
+}
+
+input, option, textarea {
+	border: solid 1px #ccc;
+}
+
+legend {
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0.001em 0 0 0;
+	min-width: 0;
+
+	border: 0;
+}
+
+/*
+Removes the bevels from the buttons
+*/
+button {
+	border: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+	display: table-cell;
+}
+
+iframe {
+	vertical-align: top;
+
+	border: 0;
+}
+
+/*
+Stops images have a weird little space below them
+*/
+img {
+	vertical-align: top;
+}
+
+address {
+	font-style: inherit;
+}
+
+// See: https://vuejs.org/v2/api/#v-cloak
+[v-cloak] {
+	display: none;
+}
+
+button:focus {
+	outline: 0;
+}

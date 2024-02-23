@@ -2,7 +2,7 @@
 
 <header class="header">
 	<a href="/">
-		<img src="{{ asset('img/logo-coac.svg') }}" alt="The Curioisty of a Child" width="200" class="header__logo">
+		<img src="{{ asset('img/logo-cuririosity-of.svg') }}" alt="The Curioisty of a Child" width="200" class="header__logo">
 	</a>
 
 	<nav class="header__nav">
@@ -22,8 +22,6 @@
 			</div>
 		</div>
 
-		<a href="https://thatsnotcanon.com/" target="_blank"><img src="{{ asset('img/logo-thats-not-canon.png') }}" alt="That’s Not Canon" width="50" class="header__canon"></a>
-
-		<site-search></site-search>
+{{--		<site-search></site-search>--}}
 	</nav>
 </header>

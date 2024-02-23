@@ -1,0 +1,28 @@
+
+
+.video-player {
+	&__scaler {
+		width: 100%;
+
+		/*mask-image: url(../img/image-overlay.png);
+		mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		mask-position: center;*/
+	}
+
+
+	&__player {
+		height: 0;
+		padding-bottom: 56.25%; // 16:9
+		position: relative;
+		padding-top: 25px;
+	}
+
+	&__embed {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}

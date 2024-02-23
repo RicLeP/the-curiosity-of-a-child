@@ -1,0 +1,74 @@
+
+/* purgecss start ignore */
+.ais-InstantSearch {
+	grid-column: span 2;
+
+	padding: 0 20px 12px;
+}
+
+.search {
+	width: 282px;
+
+	&__input {
+		padding: 8px;
+		width: 100%;
+
+		border-radius: 3px;
+
+		font-size: 16px;
+	}
+
+	&__results {
+		padding: 0 0 5px;
+
+		background-color: #fff;
+	}
+
+	&__hit {
+		&:not(:last-child) {
+			border-bottom: solid 1px #ddd;
+		}
+	}
+
+	&__link {
+		display: block;
+
+		padding: 10px;
+
+		font-size: 16px;
+		text-decoration: none;
+
+		&:link, &:visited {
+			color: #444;
+		}
+
+		&:hover, &:active {
+			color: #444;
+			background-color: #eee;
+		}
+	}
+
+	&__algolia {
+		padding: 0 10px 5px;
+
+		background-color: #fff;
+
+		font-size: 14px;
+		text-align: right;
+
+		& a:link, & a:visited {
+			color: #444;
+			text-decoration: none;
+		}
+
+		& a:hover, & a:active {
+			color: #444;
+		}
+
+		svg {
+			vertical-align: middle;
+			width: 60px;
+		}
+	}
+}
+/* purgecss end ignore */

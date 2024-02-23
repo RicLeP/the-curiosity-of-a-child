@@ -1,0 +1,98 @@
+/*
+These classes are used to space items vertically and consistently.
+Use them to to space out core blocks of content.
+*/
+
+.u-m {
+    /*vertical*/
+    @each $space in var(--spaces) {
+        &v-$(space) {
+            margin-bottom: $(space)px;
+            margin-top: $(space)px;
+        }
+    }
+
+// horizontal
+    @each $space in var(--spaces) {
+        &h-$(space) {
+            margin-left: $(space)px;
+            margin-right: $(space)px;
+        }
+    }
+
+    /* bottom*/
+    &b-none {
+        margin-bottom: 0;
+    }
+
+    &b-auto {
+        margin-bottom: auto;
+    }
+
+    @each $space in var(--spaces) {
+        &b-$(space) {
+            margin-bottom: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &b-minus-$(space) {
+            margin-bottom: -$(space)px;
+        }
+    }
+
+// top
+    &t-none {
+        margin-bottom: 0;
+    }
+
+    &t-auto {
+        margin-top: auto;
+    }
+
+    @each $space in var(--spaces) {
+        &t-$(space) {
+            margin-top: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &t-minus-$(space) {
+            margin-top: -$(space)px;
+        }
+    }
+
+    /* right*/
+    &r-auto {
+        margin-right: auto;
+    }
+
+    @each $space in var(--spaces) {
+        &r-$(space) {
+            margin-right: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &r-minus-$(space) {
+            margin-right: -$(space)px;
+        }
+    }
+
+    /* left*/
+    &l-auto {
+        margin-left: auto;
+    }
+
+    @each $space in var(--spaces) {
+        &l-$(space) {
+            margin-left: $(space)px;
+        }
+    }
+
+    @each $space in var(--spaces) {
+        &l-minus-$(space) {
+            margin-left: -$(space)px;
+        }
+    }
+}

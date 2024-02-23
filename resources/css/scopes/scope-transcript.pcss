@@ -1,0 +1,16 @@
+/*
+This scope is for HTML content from the CMS
+It sets up basic formatting rules so the user is not required to
+*/
+
+.scope-transcript {
+	line-height: var(--leading-tight);
+
+	p {
+		margin-top: 0;
+
+		&:not(:last-child) {
+			margin-bottom: .7em;
+		}
+	}
+}

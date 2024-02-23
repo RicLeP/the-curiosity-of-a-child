@@ -1,0 +1,46 @@
+
+
+.polybook-link {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 150px 1fr;
+
+
+	backdrop-filter: blur(8px);
+	background-color: rgba(110, 130, 130, .6);
+	border-radius: 3px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+
+	overflow: hidden;
+
+	@media all and (min-width: 600px) {
+		width: max-content;
+	}
+
+	&__content {
+		padding: 12px 20px;
+	}
+
+	&__button {
+		display: inline-block;
+
+		padding: 8px 12px;
+
+		border-radius: 20px;
+		background-color: #e5ba1e;
+
+		font-size: 16px;
+		text-transform: uppercase;
+
+		&:link, &:visited {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		&:hover, &:active {
+			color: #000;
+		}
+	}
+}

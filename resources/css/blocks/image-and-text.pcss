@@ -1,0 +1,30 @@
+
+
+.image-and-text {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 50% minmax(300px, 500px) 1fr;
+	grid-gap: 30px 20px;
+
+	@media all and (min-width: 600px) {
+		grid-gap: 80px;
+	}
+
+	@media all and (max-width: 900px) {
+		grid-template-columns: 5% 1fr 5%;
+
+		& > :first-child {
+			grid-column: span 3;
+		}
+
+		& > :last-child {
+			grid-column: 2 / span 1;
+		}
+	}
+
+	img {
+		max-height: 90vh;
+
+		object-fit: contain;
+	}
+}

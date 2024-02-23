@@ -1,0 +1,141 @@
+
+
+.hero {
+	grid-column: span 5;
+
+	position: relative;
+
+	margin-bottom: 5vh;
+
+	@media all and (max-width: 549px) {
+		margin-top: 130px;
+	}
+
+
+	&__content {
+		position: relative;
+
+		margin-left: 8%;
+		margin-right: 8%;
+		margin-top: 50px;
+
+        filter: drop-shadow(0px 0px 24px rgba(0,0,0,.2));
+
+		@media all and (min-width: 400px) {
+			margin-top: 0;
+		}
+
+		@media all and (min-width: 450px) {
+			margin-top: 30px;
+		}
+
+		@media all and (min-width: 670px) {
+			margin-top: -40px;
+		}
+
+		@media all and (min-width: 900px) {
+			margin-top: -100px;
+		}
+
+		@media all and (min-width: 1100px) {
+			margin-top: -170px;
+		}
+
+		@media all and (min-width: 1400px) {
+			margin-top: -220px;
+		}
+	}
+
+	&__title {
+		margin-bottom: .2em;
+
+		font-family: var(--font-1-family);
+		font-size: 45px;
+		font-weight: var(--font-1-regular);
+		letter-spacing: .05ch;
+
+		@media all and (min-width: 415px) {
+			font-size: 15vw;
+		}
+
+		@media all and (min-width: 680px) {
+			font-size: 100px;
+		}
+
+		@media all and (min-width: 1000px) {
+			animation: episode-title 2s ease-out backwards;
+			animation-delay: .5s;
+		}
+	}
+
+	&__subtitle {
+		font-family: var(--font-1-family);
+		font-size: 27px;
+		font-weight: var(--font-1-regular);
+		letter-spacing: .05ch;
+
+		animation: episode-subtitle 1s ease-out backwards;
+		animation-delay: 2.3s;
+
+		@media all and (min-width: 475px) {
+			font-size: 6vw;
+		}
+
+		@media all and (min-width: 680px) {
+			font-size: 40px;
+		}
+	}
+
+	&__date {
+		animation: episode-subtitle 1s ease-out backwards;
+		animation-delay: 1.2s;
+	}
+}
+
+.hero-image + .hero__content {
+	margin-top: -10px;
+
+	@media all and (min-width: 670px) {
+		margin-top: -120px;
+	}
+
+	@media all and (min-width: 900px) {
+		margin-top: -230px;
+	}
+
+	@media all and (min-width: 1100px) {
+		margin-top: -300px;
+	}
+
+	@media all and (min-width: 1400px) {
+		margin-top: -420px;
+	}
+}
+
+@keyframes episode-title {
+	from {
+		opacity: 0;
+
+		letter-spacing: .1ch;
+
+		transform: translateX(-50px);
+	}
+
+	to {
+		opacity: 1;
+
+		letter-spacing: .05ch;
+
+		transform: translateX(0px);
+	}
+}
+
+@keyframes episode-subtitle {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

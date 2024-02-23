@@ -1,0 +1,39 @@
+
+/*
+Used to fix the width of elements on the website. We give spans their maximum width - that used for desktop,
+then a percentage width. By setting this less then 100% smaller screens will keep a little space on each side that
+scales are the device does.
+*/
+.u-w {
+    width: 100%;
+
+    /*
+    Centre an element on the page
+    */
+    &--centred {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @each $width in var(--widths) {
+        &-$(width) {
+        width: 100%;
+        max-width: $(width)px;
+    }
+    }
+
+    @each $width in 50, 60, 70, 80, 90 {
+        &m-$(width) {
+            max-width: $(width)%;
+        }
+    }
+
+    /*
+    Make box flush to edges on smaller screens
+    */
+    @media all and (max-width: 680px) {
+        &-flush {
+            width: 100%;
+        }
+    }
+}
