@@ -15,12 +15,13 @@ scales are the device does.
         margin-right: auto;
     }
 
-    @each $width in var(--widths) {
-        &-$(width) {
-        width: 100%;
-        max-width: $(width)px;
+    @each $key, $width in var(--widths) {
+        &-$(key) {
+        width: 88%;
+        max-width: $(width);
     }
     }
+
 
     @each $width in 50, 60, 70, 80, 90 {
         &m-$(width) {

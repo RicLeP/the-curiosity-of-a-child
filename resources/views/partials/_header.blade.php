@@ -17,7 +17,6 @@
 				<a href="https://twitter.com/curichildpod" target="_blank"><img src="{{ asset('img/icon-twitter.svg') }}" alt="Follow us on Twitter" width="25"></a>
 				<a href="https://www.instagram.com/curichildpod/" target="_blank"><img src="{{ asset('img/icon-instagram.svg') }}" alt="Follow us on Instagram" width="21"></a>
 				<a href="https://www.facebook.com/curichildpod/" target="_blank"><img src="{{ asset('img/icon-facebook.svg') }}" alt="Find us on Facebook" width="21"></a>
-				<a href="https://www.polybook.live/content-creator/the-curiosity-of-a-child" target="_blank"><img src="{{ asset('img/icon-polybook.png') }}" alt="Facts on Polybook" width="25"></a>
 				<a href="https://www.youtube.com/channel/UC0aOceHhNdhQFL933t7oeIQ" target="_blank"><img src="{{ asset('img/icon-youtube.svg') }}" alt="Watch on YouTube" width="25"></a>
 			</div>
 		</div>

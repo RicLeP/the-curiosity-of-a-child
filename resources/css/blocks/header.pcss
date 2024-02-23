@@ -8,14 +8,18 @@
 	width: 100%;
 
 	&__logo {
-		position: absolute;
+		position: fixed;
 		left: 8%;
-		top: 150px;
-		z-index: 99;
+		top: 12px;
+		z-index: 200;
 
-		width: 120px;
+		width: 60px;
+
+		filter: drop-shadow(0 0 30px rgba(9, 56, 31, 0.5));
 
 		@media all and (min-width: 550px) {
+			position: absolute;
+
 			top: 40px;
 
 			width: 120px;
@@ -54,15 +58,16 @@
 
 		@media all and (min-width: 550px) {
 			padding: 12px 10px 6px;
-			width: 240px;
+			width: 250px;
 
 			backdrop-filter: blur(8px);
+			border-radius: 12px;
 		}
 
 		a:link, a:visited {
 			display: block;
 
-			margin: 6px 19px;
+			margin: 6px 12px;
 
 			color: #fff;
 			font-weight: bold;
@@ -77,33 +82,23 @@
 	&__links-site {
 		display: flex;
 		flex-wrap: wrap;
-		//gap: 18px;
+		gap: 4px;
+		justify-content: end;
 
 		@media all and (min-width: 550px) {
 			justify-content: center;
-
-			backdrop-filter: blur(8px);
 		}
 	}
 
 	&__links-social {
 		display: flex;
 		flex-wrap: wrap;
-		//gap: 18px;
+		gap: 4px;
+		justify-content: end;
 
 		@media all and (min-width: 550px) {
 			justify-content: center;
-
-			backdrop-filter: blur(8px);
-		}
-	}
-
-	&__canon {
-		justify-self: end;
-		margin-right: 12px;
-
-		@media all and (max-width: 549px) {
-			display: none;
+			gap: 8px;
 		}
 	}
 }
