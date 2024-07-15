@@ -11,6 +11,9 @@ class RedirectController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return redirect()->away('https://curiosityofpod.com' . request()->getRequestUri(), 301);
+        return 'error';
+
+
+        //return redirect()->away('https://curiosityofpod.com' . request()->getRequestUri(), 301);
     }
 }
